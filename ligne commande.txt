@@ -1,0 +1,5 @@
+UPDATE Traduction :
+lupdate principale.ui -ts "translations/fr-FR.ts" "translations/en-GB.ts" 
+
+BUILD PyInstaller : (Penser a copier le repertoire Config dans le repertoire destination du fichier EXE)
+pyinstaller "EFK.spec"

@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="gfx">
+    <file>gfx/france.png</file>
+    <file>gfx/royaumeunis.png</file>
+    <file>gfx/EFK.png</file>
+    <file>gfx/tt.jpeg</file>
+    <file>gfx/danger.png</file>
+    <file>gfx/favoris.png</file>
+    <file>gfx/point_interrogation.png</file>
+    <file>gfx/Steam_Icon.png</file>
+    <file>gfx/supprimer.png</file>
+    <file>gfx/valide.png</file>
+  </qresource>
+  <qresource prefix="translation">
+    <file>translations/en-GB.qm</file>
+    <file>translations/fr-FR.qm</file>
+  </qresource>
+</RCC>
