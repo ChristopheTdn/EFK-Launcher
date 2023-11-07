@@ -14,7 +14,8 @@ import ressources_rc
 
 class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
     """
-    Class documentation goes here.
+    Fenetre principale Interface EFK Launcher
+    avec gestion des evenements et signaux
     """
     def __init__(self, parent=None):
         """
