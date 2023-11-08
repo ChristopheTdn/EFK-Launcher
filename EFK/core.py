@@ -18,7 +18,7 @@ def init_application(self):
     loadConfig(self)
     init_MODManager(self)
     init_Difficulty(self)
-    
+
 
 def loadConfig(self):
     with open("config/EFKLauncher/config.json", "r") as fichier:
@@ -30,7 +30,13 @@ def loadConfig(self):
     elif CONFIG["Langue"] == "en-GB":
         self.radioButton_English.setChecked(True)
     changeLangue(self,CONFIG["Langue"])
+    if CONFIG["DebugMode"]:
+        self.checkBox_DebugMode.setChecked(True)
+    else:
+        self.checkBox_DebugMode.setChecked(False)
+
     setFlags(self)
+
 
 def setFlags(self):
     """
