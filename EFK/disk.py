@@ -10,6 +10,7 @@ from PyQt6 import QtWidgets
 from PyQt6 import QtGui
 from pathlib import Path
 from . import disk
+from . import core
 
 def get_userPZDir(self):
     repertoire = str((Path.home()).joinpath("zomboid")).replace("\\","/")
@@ -130,7 +131,8 @@ def configSave(self, key, valeur):
 
 def delFile(self):
     """_summary_
-    """    
+    """
+    core.writeLog(self, 'DelFile', ' Process WIPE MAP Start...')    
     listeProtect =["delfile.exe",
                "delfile.py",
                "fichiers.txt"]
@@ -139,11 +141,12 @@ def delFile(self):
             for line in f:
                 listeProtect.append(line.strip())
     except :
-        print('ERROR : Impossible de trouver le fichier "fichiers.txt" dans le repertoire.')
+        core.writeLog('DelFile',f' ERROR > fichiers.txt missing in EFK Launcher config dir.')
 
     files = os.listdir(self.lineEdit_RepertoireSaveGame.text())
     # pour chaque fichier, test si les fichiers sont dans la liste de fichier à conserver sinon, efface
     for file in files:
         if file not in listeProtect and file[0] != ".":
             os.remove(os.path.join(self.lineEdit_RepertoireSaveGame.text(), file))
-            print(f"{file} effacé...")
+            core.writeLog('Delfile', f"{file} deleted")
+    core.writeLog(self, 'DelFile', ' Process WIPE MAP ending...')

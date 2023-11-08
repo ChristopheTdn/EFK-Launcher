@@ -75,6 +75,8 @@ def runPz(self):
                                      self.lineEdit_ExePZ.text())
     self.process.start()
 
+def writeLog(self,title, texte):
+    self.textEdit_Log.insertHtml(f'<strong>{title}</strong> : {texte}<br>')
 
 ################################################################
 
