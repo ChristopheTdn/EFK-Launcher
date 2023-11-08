@@ -25,16 +25,18 @@ def loadConfig(self):
         CONFIG = json.load(fichier)
     self.lineEdit_ExePZ.setText(CONFIG["ExePZ"])
     self.lineEdit_RepertoireSaveGame.setText(CONFIG["SaveGame"])
+    
     if CONFIG["Langue"] == "fr-FR":
         self.radioButton_France.setChecked(True)        
     elif CONFIG["Langue"] == "en-GB":
         self.radioButton_English.setChecked(True)
     changeLangue(self,CONFIG["Langue"])
+    
     if CONFIG["DebugMode"]:
         self.checkBox_DebugMode.setChecked(True)
     else:
         self.checkBox_DebugMode.setChecked(False)
-
+        
     setFlags(self)
 
 

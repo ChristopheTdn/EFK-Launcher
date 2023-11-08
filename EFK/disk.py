@@ -126,4 +126,24 @@ def configSave(self, key, valeur):
         fichier.seek(0)
         json.dump(config, fichier, indent=4)
         fichier.truncate()
-        
+
+
+def delFile(self):
+    """_summary_
+    """    
+    listeProtect =["delfile.exe",
+               "delfile.py",
+               "fichiers.txt"]
+    try :
+        with open('config/delfile/fichiers.txt', 'r') as f:
+            for line in f:
+                listeProtect.append(line.strip())
+    except :
+        print('ERROR : Impossible de trouver le fichier "fichiers.txt" dans le repertoire.')
+
+    files = os.listdir(self.lineEdit_RepertoireSaveGame.text())
+    # pour chaque fichier, test si les fichiers sont dans la liste de fichier à conserver sinon, efface
+    for file in files:
+        if file not in listeProtect and file[0] != ".":
+            os.remove(os.path.join(self.lineEdit_RepertoireSaveGame.text(), file))
+            print(f"{file} effacé...")

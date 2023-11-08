@@ -29,7 +29,17 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         self.setupUi(self)
         EFK.core.init_application(self)
     
+    @pyqtSlot(bool)
+    def on_checkBox_DebugMode_toggled(self, checked):
+        """
+        Slot documentation goes here.
 
+        @param checked DESCRIPTION
+        @type bool
+        """
+        # TODO: not implemented yet
+        EFK.disk.configSave(self, 'DebugMode', checked)
+        
     @pyqtSlot()
     def on_pushButton_RunPZ_clicked(self):
         """
@@ -88,7 +98,15 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet     
         EFK.disk.get_ExePZ(self)
-     
+
+    @pyqtSlot()
+    def on_pushButton_WIPE_clicked(self):  
+        """
+        Lance le WIPE MAP
+        """
+        # TODO: not implemented yet     
+        EFK.disk.delFile(self)
+
     @pyqtSlot(bool)
     def on_checkBox_ProfileEFKStandard_toggled(self, checked):
         """
@@ -110,7 +128,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.disk.test_MODManager_ADV(self, checked)
-    
+
     @pyqtSlot()
     def on_radioButton_France_clicked(self):
         """
