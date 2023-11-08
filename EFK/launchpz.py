@@ -2,9 +2,9 @@ from PyQt6 import QtCore
 
 
 class LaunchPz(QtCore.QObject):
-    def __init__(self, Ui):
-        super(LaunchPz, self).__init__()
-        self.commande = r"F:\SteamLibrary\steamapps\common\ProjectZomboid\ProjectZomboid64.bat"
+    def __init__(self, Ui ,exePZ):
+        super(LaunchPz, self ).__init__()
+        self.commande = exePZ
         self.Ui = Ui
         self.process = None
         self.argument = ""

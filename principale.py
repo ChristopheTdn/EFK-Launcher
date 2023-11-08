@@ -4,7 +4,7 @@
 Module implementing Fenetre_Principale.
 """
 
-from PyQt6.QtCore import pyqtSlot,QTranslator
+from PyQt6.QtCore import pyqtSlot, QTranslator
 from PyQt6.QtWidgets import QMainWindow
 from PyQt6 import QtGui
 from Ui_principale import Ui_Fenetre_Principale
@@ -33,7 +33,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
     @pyqtSlot()
     def on_pushButton_RunPZ_clicked(self):
         """
-        Slot documentation goes here.
+        Lance l'executable PZ dans un Process.
         """
         # TODO: not implemented yet
         EFK.core.runPz(self)
@@ -41,25 +41,35 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
     @pyqtSlot()
     def on_lineEdit_ProfilPZ_editingFinished(self):
         """
-        Evenement appelé lors de la validation de la ligne de saisie
-        de Ui.lineEdit_ProfilPZ
+        test modification du LineEdit pour determiner
+        la validité du lien vers le repertoire du
+        profil de session en cours
         """
-        # TODO: not implemented yet
         EFK.disk.verif_lien(self,
                             directory=self.lineEdit_ProfilPZ.text(),
                             icon=self.label_IconStatus_ProfilPZ)
-        
 
     @pyqtSlot()
     def on_lineEdit_RepertoireSaveGame_editingFinished(self):
         """
-        test signal
+        test modification du LineEdit pour determiner
+        la validité du lien vers le repertoire de la
+        sauvegarde en cours d'edition
         """
         # TODO: not implemented yet
         EFK.disk.verif_lien(self,
                             directory=self.lineEdit_RepertoireSaveGame.text(),
                             icon=self.label_IconStatus_RepertoireSaveGame)
 
+    @pyqtSlot()
+    def on_lineEdit_ExePZ_editingFinished(self):
+        """
+        test modification du LineEdit pour determiner
+        la validité du lien pour l executable de PZ
+        """
+        EFK.disk.verif_lien(self,
+                            file=self.lineEdit_ExePZ.text(),
+                            icon=self.label_IconStatus_ExePZ)
 
     @pyqtSlot()
     def on_pushButton_SetRepertoireSaveGame_clicked(self):  
@@ -99,7 +109,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         @type bool
         """
         # TODO: not implemented yet
-        EFK.disk.test_MODManager_ADV(self,checked)
+        EFK.disk.test_MODManager_ADV(self, checked)
     
     @pyqtSlot()
     def on_radioButton_France_clicked(self):

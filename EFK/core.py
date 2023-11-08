@@ -18,6 +18,7 @@ def init_application(self):
     loadConfig(self)
     init_MODManager(self)
     init_Difficulty(self)
+    
 
 def loadConfig(self):
     with open("config/EFKLauncher/config.json", "r") as fichier:
@@ -29,6 +30,22 @@ def loadConfig(self):
     elif CONFIG["Langue"] == "en-GB":
         self.radioButton_English.setChecked(True)
     changeLangue(self,CONFIG["Langue"])
+    setFlags(self)
+
+def setFlags(self):
+    """
+    Verifie l'ensemble des liens pour en determiner la validité
+    et modifier les icones correspondant sur l interface
+    """
+    disk.verif_lien(self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ)
+    disk.verif_lien(self, directory=self.lineEdit_RepertoireSaveGame.text(), icon=self.label_IconStatus_RepertoireSaveGame)
+    disk.verif_lien(self, directory=self.lineEdit_ProfilPZ.text(), icon=self.label_IconStatus_ProfilPZ)
+    # MOD Manager
+    disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Lua/saved_modlists.txt", icon=self.label_IconStatus_MODManager)
+    # Preset Difficulty
+    disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Easy.cfg", icon=self.label_IconStatus_difficultEASY)
+    disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK STD.cfg", icon=self.label_IconStatus_difficultSTD)
+    disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Hard.cfg", icon=self.label_IconStatus_difficultHARD)
 
 def changeLangue(self, langue):
     app = QtWidgets.QApplication.instance()
@@ -46,7 +63,8 @@ def init_Difficulty(self):
     disk.get_MODManager(self)
 
 def runPz(self):
-    self.process = launchpz.LaunchPz(self)
+    self.process = launchpz.LaunchPz(self,
+                                     self.lineEdit_ExePZ.text())
     self.process.start()
 
 
