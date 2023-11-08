@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="gfx">
+    <file>gfx/checked.png</file>
     <file>gfx/france.png</file>
     <file>gfx/royaumeunis.png</file>
     <file>gfx/EFK.png</file>
