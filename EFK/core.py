@@ -87,8 +87,9 @@ def runPz(self):
     self.process.start()
 
 def writeLog(self,title, texte):
+    cursor = self.textEdit_Log.textCursor()
     self.textEdit_Log.insertHtml(f'<strong>{title}</strong> : {texte}<br>')
-
+    self.textEdit_Log.ensureCursorVisible()
 ################################################################
 
 if __name__ == "__main__":

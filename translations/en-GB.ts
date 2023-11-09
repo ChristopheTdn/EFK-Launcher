@@ -81,7 +81,7 @@
     <message>
         <location filename="../principale.ui" line="328"/>
         <source>DEBUG </source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../principale.ui" line="344"/>
@@ -151,7 +151,7 @@
     <message>
         <location filename="../principale.ui" line="467"/>
         <source>choisir</source>
-        <translation>Get</translation>
+        <translation>Find</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="603"/>

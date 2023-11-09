@@ -37,6 +37,7 @@ def get_saveGameDir(self):
     self.lineEdit_RepertoireSaveGame.setText(name)
     self.pushButton_WIPE.setEnabled(False)
     self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
+    self.label_IconStatus_RepertoireSaveGame.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
     if name != "" :
         if disk.verif_lien(self,
                         directory=os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox", name),
@@ -44,7 +45,7 @@ def get_saveGameDir(self):
             disk.configSave(self, "SaveGame", name)
             self.pushButton_WIPE.setEnabled(True)
             self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
-
+            self.label_IconStatus_RepertoireSaveGame.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
 
 def get_ExePZ(self):
     """
@@ -166,12 +167,13 @@ def delFile(self):
         core.writeLog('DelFile',f' ERROR > fichiers.txt missing in EFK Launcher config dir.')
 
     if self.lineEdit_RepertoireSaveGame.text() != "":
-        files = os.listdir(os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",self.lineEdit_RepertoireSaveGame.text()))
+        repertoire = os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",self.lineEdit_RepertoireSaveGame.text())
+        files = os.listdir(repertoire)
         # pour chaque fichier, test si les fichiers sont dans la liste de fichier à conserver sinon, efface
         for file in files:
             if file not in listeProtect and file[0] != ".":
-                os.remove(os.path.join(self.lineEdit_RepertoireSaveGame.text(), file))
-                core.writeLog('Delfile', f"{file} deleted")
+                os.remove(os.path.join(repertoire, file))
+                core.writeLog(self,'Delfile', f"{file} deleted")
     else:
         core.writeLog('DelFile',f' ERROR > Save Dir is not validate for WIPE MAP process.')            
     core.writeLog(self, 'DelFile', ' Process WIPE MAP ending...')
