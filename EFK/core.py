@@ -7,6 +7,7 @@ from PyQt6 import QtWidgets
 from PyQt6 import QtGui,QtCore
 from . import launchpz
 import sys
+import os
 from . import disk
 import json
 
@@ -45,9 +46,19 @@ def setFlags(self):
     Verifie l'ensemble des liens pour en determiner la validité
     et modifier les icones correspondant sur l interface
     """
+
     disk.verif_lien(self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ)
-    disk.verif_lien(self, directory=self.lineEdit_RepertoireSaveGame.text(), icon=self.label_IconStatus_RepertoireSaveGame)
     disk.verif_lien(self, directory=self.lineEdit_ProfilPZ.text(), icon=self.label_IconStatus_ProfilPZ)
+    if disk.verif_lien(self,
+                       directory=os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",self.lineEdit_RepertoireSaveGame.text()),
+                       icon=self.label_IconStatus_RepertoireSaveGame):
+        self.pushButton_WIPE.setEnabled(True)
+        self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
+    else :
+        self.pushButton_WIPE.setEnabled(False)
+        self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
+        
+
     # MOD Manager
     disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Lua/saved_modlists.txt", icon=self.label_IconStatus_MODManager)
     # Preset Difficulty

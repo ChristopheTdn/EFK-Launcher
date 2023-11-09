@@ -16,11 +16,11 @@ def get_userPZDir(self):
     repertoire = str((Path.home()).joinpath("zomboid")).replace("\\","/")
     
     self.lineEdit_ProfilPZ.setText(repertoire)
-    disk.verif_lien(self,
+    if disk.verif_lien(self,
                     directory=repertoire,
                     icon=self.label_IconStatus_ProfilPZ
-                    )
-    disk.configSave(self, "Profil", repertoire)
+                    ) :
+        disk.configSave(self, "Profil", repertoire)
 
 
 def get_saveGameDir(self):
@@ -33,12 +33,19 @@ def get_saveGameDir(self):
         directory=self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",
         options=QtWidgets.QFileDialog.Option.DontUseNativeDialog,
         )
-    self.lineEdit_RepertoireSaveGame.setText(repertoire)
-    disk.verif_lien(self,
-                    directory=repertoire,
-                    icon=self.label_IconStatus_RepertoireSaveGame)
-    disk.configSave(self,"SaveGame",repertoire)
-    
+    name = os.path.basename(repertoire)
+    self.lineEdit_RepertoireSaveGame.setText(name)
+    self.pushButton_WIPE.setEnabled(False)
+    self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
+    if name != "" :
+        if disk.verif_lien(self,
+                        directory=os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox", name),
+                        icon=self.label_IconStatus_RepertoireSaveGame) :
+            disk.configSave(self, "SaveGame", name)
+            self.pushButton_WIPE.setEnabled(True)
+            self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
+
+
 def get_ExePZ(self):
     """
     Determine L executable PZ 
@@ -52,11 +59,12 @@ def get_ExePZ(self):
         )
     if fichier[0] != "" :
         self.lineEdit_ExePZ.setText(fichier[0])
-        disk.verif_lien(self,
+        if disk.verif_lien(self,
                         file=fichier[0],
-                        icon=self.label_IconStatus_ExePZ)
-        disk.configSave(self,"ExePZ",fichier[0])
-    
+                        icon=self.label_IconStatus_ExePZ) :
+            disk.configSave(self, "ExePZ", fichier[0])
+
+
 def get_MODManager(self):
     """
     Determine la présence du fichier de base MODManager et le complete au besoin 
@@ -69,7 +77,7 @@ def get_MODManager(self):
     disk.verif_lien(self,
                     file=self.lineEdit_ProfilPZ.text()+"/Lua/saved_modlists.txt",
                     icon=self.label_IconStatus_MODManager)
-    # determine la presence des profil Standard et Advanced
+    # determine la presence des profils Standard et Advanced
     with open(self.lineEdit_ProfilPZ.text()+"/Lua/saved_modlists.txt", "r") as file:
             df = file.read()
     
@@ -108,16 +116,30 @@ def verif_lien(self,
                directory="",
                file="",
                icon=None):
+    """Verification du fichier/repertoire passé en parametre
+
+    Args:
+        directory (str, optional): _description_. Defaults to "".
+        file (str, optional): _description_. Defaults to "".
+        icon (_type_, optional): _description_. Defaults to None.
+
+    Returns:
+        bool: True si lien/repertoire existe
+    """    
     if directory != "":
         if os.path.isdir(directory):
-            icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
+            icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
+            return True
         else:
             icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
+            return False
     if file != "":
         if os.path.isfile(file):
-            icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
+            icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
+            return True
         else:
             icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
+            return False
 
 
 def configSave(self, key, valeur):
@@ -143,10 +165,13 @@ def delFile(self):
     except :
         core.writeLog('DelFile',f' ERROR > fichiers.txt missing in EFK Launcher config dir.')
 
-    files = os.listdir(self.lineEdit_RepertoireSaveGame.text())
-    # pour chaque fichier, test si les fichiers sont dans la liste de fichier à conserver sinon, efface
-    for file in files:
-        if file not in listeProtect and file[0] != ".":
-            os.remove(os.path.join(self.lineEdit_RepertoireSaveGame.text(), file))
-            core.writeLog('Delfile', f"{file} deleted")
+    if self.lineEdit_RepertoireSaveGame.text() != "":
+        files = os.listdir(os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",self.lineEdit_RepertoireSaveGame.text()))
+        # pour chaque fichier, test si les fichiers sont dans la liste de fichier à conserver sinon, efface
+        for file in files:
+            if file not in listeProtect and file[0] != ".":
+                os.remove(os.path.join(self.lineEdit_RepertoireSaveGame.text(), file))
+                core.writeLog('Delfile', f"{file} deleted")
+    else:
+        core.writeLog('DelFile',f' ERROR > Save Dir is not validate for WIPE MAP process.')            
     core.writeLog(self, 'DelFile', ' Process WIPE MAP ending...')

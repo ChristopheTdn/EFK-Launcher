@@ -14,35 +14,29 @@
         <translation>Launch PZ</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="50"/>
+        <location filename="../principale.ui" line="60"/>
         <source>Debug Mode</source>
         <translation>Debug Mode</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="67"/>
+        <location filename="../principale.ui" line="80"/>
         <source>Installation</source>
         <translation>Installation</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="79"/>
+        <location filename="../principale.ui" line="92"/>
         <source>MOD Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>MOD Manager</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="91"/>
+        <location filename="../principale.ui" line="104"/>
         <source>Profile EFK Standard</source>
-        <translation type="unfinished"></translation>
+        <translation>Profile EFK Standard</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="107"/>
+        <location filename="../principale.ui" line="120"/>
         <source>Profile EFK Advanced</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="123"/>
-        <location filename="../principale.ui" line="277"/>
-        <source>Force Installation/Réinstallation</source>
-        <translation type="unfinished"></translation>
+        <translation>Profile EFK Advanced</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="155"/>
@@ -52,7 +46,7 @@
     <message>
         <location filename="../principale.ui" line="169"/>
         <source>Préreglage Difficulté</source>
-        <translation type="unfinished"></translation>
+        <translation>Difficult settings</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="181"/>
@@ -70,74 +64,99 @@
         <translation>Hard (EFK_Hard)</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="284"/>
+        <location filename="../principale.ui" line="281"/>
+        <source>MAJ/Réinstallation Scripts</source>
+        <translation>Update / Reinstall Scripts</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="287"/>
         <source>Log</source>
-        <translation type="unfinished"></translation>
+        <translation>Log</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="309"/>
+        <location filename="../principale.ui" line="312"/>
         <source>WARN</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="325"/>
+        <location filename="../principale.ui" line="328"/>
         <source>DEBUG </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="341"/>
+        <location filename="../principale.ui" line="344"/>
         <source>LOG</source>
-        <translation type="unfinished"></translation>
+        <translation>LOG</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="359"/>
-        <source>Repertoire Utilisateur</source>
-        <translation type="unfinished"></translation>
+        <location filename="../principale.ui" line="362"/>
+        <source>Repertoires Utilisateur</source>
+        <translation>User Directories</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="429"/>
+        <location filename="../principale.ui" line="616"/>
+        <source>French</source>
+        <translation>Francais</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="645"/>
+        <source>English</source>
+        <translation>Anglais</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="678"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;Entre 2 raids&lt;br/&gt;- personnage dans la base&lt;br/&gt;- Quitter PZ ou au Menu principal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;Between 2 raids&lt;br/&gt;- player in the base&lt;br/&gt;-Main Menu or Quit PZ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="697"/>
+        <source>Chaine Twitch de Tancred terror</source>
+        <translation>Twitch channel TancredTerror</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="723"/>
+        <source>Chaine YOUTUBE de Tancred terror</source>
+        <translation>YouTube channel TancredTerror</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="755"/>
+        <source>DISCORD de Tancred terror</source>
+        <translation>DISCORD server</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="435"/>
         <source>Profil PZ :</source>
-        <translation type="unfinished"></translation>
+        <translation>PZ Profil :</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="445"/>
+        <location filename="../principale.ui" line="451"/>
         <source>Sauvegardes :</source>
-        <translation type="unfinished"></translation>
+        <translation>Save Game :</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="474"/>
+        <location filename="../principale.ui" line="480"/>
         <source>Exe PZ :</source>
-        <translation type="unfinished"></translation>
+        <translation>PZ Exe  :</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="519"/>
+        <location filename="../principale.ui" line="525"/>
         <source>Localiser</source>
-        <translation type="unfinished"></translation>
+        <translation>Find</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="540"/>
+        <location filename="../principale.ui" line="546"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="694"/>
-        <source>Twitch TancredTerror</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="461"/>
+        <location filename="../principale.ui" line="467"/>
         <source>choisir</source>
-        <translation type="unfinished"></translation>
+        <translation>Get</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="572"/>
-        <source>Aide</source>
-        <translation>Help</translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="613"/>
+        <location filename="../principale.ui" line="603"/>
         <source>WIPE MAP</source>
-        <translation type="unfinished"></translation>
+        <translation>WIPE MAP</translation>
     </message>
 </context>
 </TS>

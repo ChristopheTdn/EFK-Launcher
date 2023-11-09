@@ -9,6 +9,7 @@ from PyQt6.QtWidgets import QMainWindow
 from PyQt6 import QtGui
 from Ui_principale import Ui_Fenetre_Principale
 import EFK
+import webbrowser
 import ressources_rc
 
 
@@ -47,39 +48,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.core.runPz(self)
-        
-    @pyqtSlot()
-    def on_lineEdit_ProfilPZ_editingFinished(self):
-        """
-        test modification du LineEdit pour determiner
-        la validité du lien vers le repertoire du
-        profil de session en cours
-        """
-        EFK.disk.verif_lien(self,
-                            directory=self.lineEdit_ProfilPZ.text(),
-                            icon=self.label_IconStatus_ProfilPZ)
 
-    @pyqtSlot()
-    def on_lineEdit_RepertoireSaveGame_editingFinished(self):
-        """
-        test modification du LineEdit pour determiner
-        la validité du lien vers le repertoire de la
-        sauvegarde en cours d'edition
-        """
-        # TODO: not implemented yet
-        EFK.disk.verif_lien(self,
-                            directory=self.lineEdit_RepertoireSaveGame.text(),
-                            icon=self.label_IconStatus_RepertoireSaveGame)
-
-    @pyqtSlot()
-    def on_lineEdit_ExePZ_editingFinished(self):
-        """
-        test modification du LineEdit pour determiner
-        la validité du lien pour l executable de PZ
-        """
-        EFK.disk.verif_lien(self,
-                            file=self.lineEdit_ExePZ.text(),
-                            icon=self.label_IconStatus_ExePZ)
 
     @pyqtSlot()
     def on_pushButton_SetRepertoireSaveGame_clicked(self):  
@@ -89,7 +58,8 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet     
         EFK.disk.get_saveGameDir(self)
-        
+
+
     @pyqtSlot()
     def on_pushButton_SetExePZ_clicked(self):  
         """
@@ -146,3 +116,27 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         # TODO: not implemented yet
         EFK.core.changeLangue(self, 'en-GB')
         EFK.disk.configSave(self, 'Langue', 'en-GB')
+
+    @pyqtSlot()
+    def on_commandLinkButton_Twitch_clicked(self):  
+        """
+        Ouvre le lien internet TWITCH TANCRED TERROR
+        """
+        # TODO: not implemented yet     
+        webbrowser.open("https://www.twitch.tv/tancredterror")
+    
+    @pyqtSlot()
+    def on_commandLinkButton_Youtube_clicked(self):  
+        """
+        Ouvre le lien internet YOUTUBE TANCRED TERROR
+        """
+        # TODO: not implemented yet     
+        webbrowser.open("https://www.youtube.com/@TancredTerror")
+    
+    @pyqtSlot()
+    def on_commandLinkButton_Discord_clicked(self):  
+        """
+        Ouvre le lien internet DISCORD TANCRED TERROR
+        """
+        # TODO: not implemented yet     
+        webbrowser.open("https://discord.gg/rbd36ERXyu")
