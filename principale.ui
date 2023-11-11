@@ -6,67 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>577</width>
-    <height>565</height>
+    <width>615</width>
+    <height>602</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Escape From Knox County Launcher</string>
+   <string>Escape From Knox County Configurator</string>
   </property>
   <property name="windowIcon">
    <iconset resource="ressources.qrc">
     <normaloff>:/gfx/gfx/tt.jpeg</normaloff>:/gfx/gfx/tt.jpeg</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton_RunPZ">
-    <property name="geometry">
-     <rect>
-      <x>405</x>
-      <y>30</y>
-      <width>156</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Run PZ</string>
-    </property>
-    <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/gfx/gfx/pz.png</normaloff>:/gfx/gfx/pz.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>38</width>
-      <height>38</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_DebugMode">
-    <property name="geometry">
-     <rect>
-      <x>435</x>
-      <y>75</y>
-      <width>101</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Debug Mode</string>
-    </property>
-   </widget>
    <widget class="QTabWidget" name="tabWidget_FenetrePrincipale">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>225</y>
-      <width>551</width>
-      <height>266</height>
+      <x>20</x>
+      <y>255</y>
+      <width>581</width>
+      <height>261</height>
      </rect>
     </property>
     <property name="toolTip">
@@ -84,50 +42,18 @@
        <rect>
         <x>15</x>
         <y>10</y>
-        <width>516</width>
+        <width>551</width>
         <height>81</height>
        </rect>
       </property>
       <property name="title">
        <string>MOD Manager</string>
       </property>
-      <widget class="QCheckBox" name="checkBox_ProfileEFKStandard">
-       <property name="geometry">
-        <rect>
-         <x>255</x>
-         <y>25</y>
-         <width>171</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Profile EFK Standard</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="checkBox_ProfileEFKAdvanced">
-       <property name="geometry">
-        <rect>
-         <x>255</x>
-         <y>45</y>
-         <width>171</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Profile EFK Advanced</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_IconStatus_MODManager">
        <property name="geometry">
         <rect>
-         <x>25</x>
-         <y>35</y>
+         <x>95</x>
+         <y>25</y>
          <width>31</width>
          <height>31</height>
         </rect>
@@ -145,14 +71,14 @@
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>65</x>
-         <y>20</y>
-         <width>151</width>
-         <height>56</height>
+         <x>130</x>
+         <y>25</y>
+         <width>371</width>
+         <height>26</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Présence/création du fichier&lt;br/&gt;&lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Ajout Profil &lt;span style=&quot; font-weight:700;&quot;&gt;STANDARD&lt;/span&gt; et &lt;span style=&quot; font-weight:700;&quot;&gt;ADVANCED&lt;/span&gt; à &lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </widget>
@@ -160,8 +86,8 @@
       <property name="geometry">
        <rect>
         <x>15</x>
-        <y>90</y>
-        <width>516</width>
+        <y>95</y>
+        <width>551</width>
         <height>91</height>
        </rect>
       </property>
@@ -184,7 +110,7 @@
       <widget class="QLabel" name="label_difficultSTD">
        <property name="geometry">
         <rect>
-         <x>200</x>
+         <x>235</x>
          <y>25</y>
          <width>111</width>
          <height>16</height>
@@ -197,7 +123,7 @@
       <widget class="QLabel" name="label_difficultHARD">
        <property name="geometry">
         <rect>
-         <x>355</x>
+         <x>390</x>
          <y>25</y>
          <width>111</width>
          <height>16</height>
@@ -229,7 +155,7 @@
       <widget class="QLabel" name="label_IconStatus_difficultSTD">
        <property name="geometry">
         <rect>
-         <x>235</x>
+         <x>265</x>
          <y>45</y>
          <width>31</width>
          <height>31</height>
@@ -248,7 +174,7 @@
       <widget class="QLabel" name="label_IconStatus_difficultHARD">
        <property name="geometry">
         <rect>
-         <x>390</x>
+         <x>420</x>
          <y>40</y>
          <width>31</width>
          <height>31</height>
@@ -273,7 +199,7 @@
        <rect>
         <x>180</x>
         <y>190</y>
-        <width>166</width>
+        <width>201</width>
         <height>36</height>
        </rect>
       </property>
@@ -291,60 +217,9 @@
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>531</width>
-        <height>176</height>
+        <width>546</width>
+        <height>211</height>
        </rect>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_LOGWarn">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>200</y>
-        <width>75</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>WARN</string>
-      </property>
-      <property name="checked">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_LOGDebug">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>200</y>
-        <width>75</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>DEBUG </string>
-      </property>
-      <property name="checked">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_LOG">
-      <property name="geometry">
-       <rect>
-        <x>325</x>
-        <y>200</y>
-        <width>75</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>LOG</string>
-      </property>
-      <property name="checked">
-       <bool>false</bool>
       </property>
      </widget>
     </widget>
@@ -352,10 +227,10 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>110</y>
-      <width>546</width>
-      <height>101</height>
+      <x>20</x>
+      <y>175</y>
+      <width>581</width>
+      <height>76</height>
      </rect>
     </property>
     <property name="title">
@@ -365,10 +240,15 @@
      <property name="geometry">
       <rect>
        <x>85</x>
-       <y>45</y>
-       <width>331</width>
+       <y>20</y>
+       <width>351</width>
        <height>21</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>true</kerning>
+      </font>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -377,8 +257,8 @@
     <widget class="QLabel" name="label_IconStatus_RepertoireSaveGame">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>65</y>
+       <x>445</x>
+       <y>40</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -397,10 +277,15 @@
      <property name="geometry">
       <rect>
        <x>85</x>
-       <y>70</y>
-       <width>331</width>
+       <y>45</y>
+       <width>351</width>
        <height>21</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <kerning>true</kerning>
+      </font>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -412,8 +297,8 @@
     <widget class="QLabel" name="label_IconStatus_ProfilPZ">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>40</y>
+       <x>445</x>
+       <y>15</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -432,7 +317,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>45</y>
+       <y>20</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -447,8 +332,8 @@
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>5</x>
-       <y>70</y>
+       <x>0</x>
+       <y>45</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -463,8 +348,8 @@
     <widget class="QPushButton" name="pushButton_SetRepertoireSaveGame">
      <property name="geometry">
       <rect>
-       <x>455</x>
-       <y>70</y>
+       <x>490</x>
+       <y>45</y>
        <width>71</width>
        <height>24</height>
       </rect>
@@ -473,73 +358,12 @@
       <string>choisir</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_ExePZ">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>20</y>
-       <width>76</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Exe PZ :</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_ExePZ">
-     <property name="geometry">
-      <rect>
-       <x>85</x>
-       <y>20</y>
-       <width>331</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_IconStatus_ExePZ">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>15</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="ressources.qrc">:/gfx/gfx/supprimer.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_SetExePZ">
-     <property name="geometry">
-      <rect>
-       <x>455</x>
-       <y>20</y>
-       <width>71</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Localiser</string>
-     </property>
-    </widget>
    </widget>
    <widget class="QLabel" name="label_Titre">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>5</y>
+      <x>105</x>
+      <y>10</y>
       <width>261</width>
       <height>71</height>
      </rect>
@@ -558,10 +382,10 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>5</x>
       <y>10</y>
-      <width>86</width>
-      <height>81</height>
+      <width>91</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="text">
@@ -577,8 +401,8 @@
    <widget class="QLabel" name="label_Danger">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>500</y>
+      <x>320</x>
+      <y>540</y>
       <width>51</width>
       <height>46</height>
      </rect>
@@ -596,9 +420,9 @@
    <widget class="QPushButton" name="pushButton_WIPE">
     <property name="geometry">
      <rect>
-      <x>115</x>
-      <y>500</y>
-      <width>121</width>
+      <x>95</x>
+      <y>540</y>
+      <width>166</width>
       <height>41</height>
      </rect>
     </property>
@@ -615,9 +439,9 @@
    <widget class="QRadioButton" name="radioButton_France">
     <property name="geometry">
      <rect>
-      <x>335</x>
-      <y>25</y>
-      <width>56</width>
+      <x>435</x>
+      <y>20</y>
+      <width>106</width>
       <height>26</height>
      </rect>
     </property>
@@ -625,7 +449,7 @@
      <string>French</string>
     </property>
     <property name="text">
-     <string/>
+     <string>Francais</string>
     </property>
     <property name="icon">
      <iconset resource="ressources.qrc">
@@ -644,9 +468,9 @@
    <widget class="QRadioButton" name="radioButton_English">
     <property name="geometry">
      <rect>
-      <x>335</x>
-      <y>65</y>
-      <width>56</width>
+      <x>435</x>
+      <y>50</y>
+      <width>96</width>
       <height>26</height>
      </rect>
     </property>
@@ -654,7 +478,7 @@
      <string>English</string>
     </property>
     <property name="text">
-     <string/>
+     <string>English</string>
     </property>
     <property name="icon">
      <iconset resource="ressources.qrc">
@@ -670,8 +494,8 @@
    <widget class="QLabel" name="label_Titre_2">
     <property name="geometry">
      <rect>
-      <x>365</x>
-      <y>490</y>
+      <x>380</x>
+      <y>525</y>
       <width>196</width>
       <height>71</height>
      </rect>
@@ -748,7 +572,7 @@
    <widget class="QCommandLinkButton" name="commandLinkButton_Discord">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>165</x>
       <y>70</y>
       <width>41</width>
       <height>41</height>
@@ -780,8 +604,8 @@
    <widget class="QLabel" name="label_IconStatus_WIPEMAP">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>500</y>
+      <x>35</x>
+      <y>535</y>
       <width>51</width>
       <height>46</height>
      </rect>
@@ -794,6 +618,43 @@
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCommandLinkButton" name="commandLinkButton_STEAM">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>581</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>La collection de mods EFKC</string>
+    </property>
+    <property name="text">
+     <string>Abonnements à la collection STEAM ESCAPE FROM KNOX COUNTY</string>
+    </property>
+    <property name="icon">
+     <iconset resource="ressources.qrc">
+      <normaloff>:/gfx/gfx/Steam_Icon.png</normaloff>:/gfx/gfx/Steam_Icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>

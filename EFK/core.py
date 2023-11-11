@@ -5,11 +5,11 @@
 
 from PyQt6 import QtWidgets
 from PyQt6 import QtGui,QtCore
-from . import launchpz
 import sys
 import os
 from . import disk
 import json
+import shutil
 
 
 def init_application(self):
@@ -18,13 +18,11 @@ def init_application(self):
     disk.get_userPZDir(self)
     loadConfig(self)
     init_MODManager(self)
-    init_Difficulty(self)
 
 
 def loadConfig(self):
     with open("config/EFKLauncher/config.json", "r") as fichier:
         CONFIG = json.load(fichier)
-    self.lineEdit_ExePZ.setText(CONFIG["ExePZ"])
     self.lineEdit_RepertoireSaveGame.setText(CONFIG["SaveGame"])
     
     if CONFIG["Langue"] == "fr-FR":
@@ -32,14 +30,8 @@ def loadConfig(self):
     elif CONFIG["Langue"] == "en-GB":
         self.radioButton_English.setChecked(True)
     changeLangue(self,CONFIG["Langue"])
-    
-    if CONFIG["DebugMode"]:
-        self.checkBox_DebugMode.setChecked(True)
-    else:
-        self.checkBox_DebugMode.setChecked(False)
-        
-    setFlags(self)
 
+    setFlags(self)
 
 def setFlags(self):
     """
@@ -47,7 +39,6 @@ def setFlags(self):
     et modifier les icones correspondant sur l interface
     """
 
-    disk.verif_lien(self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ)
     disk.verif_lien(self, directory=self.lineEdit_ProfilPZ.text(), icon=self.label_IconStatus_ProfilPZ)
     if disk.verif_lien(self,
                        directory=os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",self.lineEdit_RepertoireSaveGame.text()),
@@ -62,10 +53,18 @@ def setFlags(self):
     # MOD Manager
     disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Lua/saved_modlists.txt", icon=self.label_IconStatus_MODManager)
     # Preset Difficulty
-    disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Easy.cfg", icon=self.label_IconStatus_difficultEASY)
-    disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK STD.cfg", icon=self.label_IconStatus_difficultSTD)
-    disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Hard.cfg", icon=self.label_IconStatus_difficultHARD)
+    if not disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Easy.cfg", icon=self.label_IconStatus_difficultEASY) :
+        shutil.copy('config/difficulty/EFK Easy.cfg', self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/")
+        self.label_IconStatus_difficultEASY.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
 
+    if not disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK STD.cfg", icon=self.label_IconStatus_difficultSTD) :
+        shutil.copy('config/difficulty/EFK STD.cfg', self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/")
+        self.label_IconStatus_difficultSTD.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
+
+    if not disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Hard.cfg", icon=self.label_IconStatus_difficultHARD) :
+        shutil.copy('config/difficulty/EFK Hard.cfg', self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/")
+        self.label_IconStatus_difficultHARD.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
+        
 def changeLangue(self, langue):
     app = QtWidgets.QApplication.instance()
     TRANSLATOR = QtCore.QTranslator()
@@ -77,14 +76,6 @@ def changeLangue(self, langue):
 
 def init_MODManager(self):
     disk.get_MODManager(self)
-
-def init_Difficulty(self):
-    disk.get_MODManager(self)
-
-def runPz(self):
-    self.process = launchpz.LaunchPz(self,
-                                     self.lineEdit_ExePZ.text())
-    self.process.start()
 
 def writeLog(self,title, texte):
     cursor = self.textEdit_Log.textCursor()
