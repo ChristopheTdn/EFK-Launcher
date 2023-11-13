@@ -30,7 +30,23 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         self.setupUi(self)
         EFK.core.init_application(self)
     
-
+    @pyqtSlot()
+    def on_pushButton_SetExePZ_clicked(self):  
+        """
+        Evenement appelé lors du clique sur le bouton pour choisir
+        l'exe PZ
+        """
+        # TODO: not implemented yet     
+        EFK.disk.get_ExePZ(self)
+    
+    @pyqtSlot()
+    def on_pushButton_RunPZ_clicked(self):
+        """
+        Lance l'executable PZ dans un Process.
+        """
+        # TODO: not implemented yet
+        EFK.core.runPz(self)
+        
     @pyqtSlot()
     def on_pushButton_SetRepertoireSaveGame_clicked(self):  
         """
@@ -98,3 +114,13 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet     
         webbrowser.open("https://steamcommunity.com/workshop/filedetails/?id=3048855836")
+        
+    def on_checkBox_DebugMode_toggled(self, checked):
+        """
+        Slot documentation goes here.
+
+        @param checked DESCRIPTION
+        @type bool
+        """
+        # TODO: not implemented yet
+        EFK.disk.configSave(self, 'DebugMode', checked)

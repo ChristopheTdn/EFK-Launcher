@@ -13,6 +13,7 @@ from . import disk
 from . import core
 
 
+
 def get_userPZDir(self):
     repertoire = str((Path.home()).joinpath("zomboid")).replace("\\", "/")
 
@@ -55,6 +56,23 @@ def get_saveGameDir(self):
                 QtGui.QPixmap(":/gfx/gfx/valide.png")
             )
 
+def get_ExePZ(self):
+    """
+    Determine L executable PZ 
+    """
+    fichier = QtWidgets.QFileDialog.getOpenFileName(
+        parent=self,
+        caption="trouve l'executable PZ",
+        directory="c:",
+        filter = "ProjectZomboid64.bat",
+        options=QtWidgets.QFileDialog.Option.DontUseNativeDialog,
+        )
+    if fichier[0] != "":
+        self.lineEdit_ExePZ.setText(fichier[0])
+        if disk.verif_lien(self,
+                        file=fichier[0],
+                        icon=self.label_IconStatus_ExePZ):
+            disk.configSave(self, "ExePZ", fichier[0])
 
 def get_MODManager(self):
     """
@@ -138,6 +156,8 @@ def configSave(self, key, valeur):
 
 def delFile(self):
     """_summary_"""
+    
+    core.writeLog(self, "CLEAR", "")
     core.writeLog(self, "DelFile", " Process WIPE MAP Start...")
     listeProtect = ["delfile.exe", "delfile.py", "fichiers.txt"]
     try:
@@ -152,16 +172,28 @@ def delFile(self):
 
     if self.lineEdit_RepertoireSaveGame.text() != "":
         repertoire = os.path.join(
-            self.lineEdit_ProfilPZ.text() + "/Saves/Sandbox",
+            self.lineEdit_ProfilPZ.text() + "/Saves/Sandbox/",
             self.lineEdit_RepertoireSaveGame.text(),
         )
         files = os.listdir(repertoire)
+        log = ""
         # pour chaque fichier, test si les fichiers sont dans la liste de fichier à conserver sinon, efface
         for file in files:
             if file not in listeProtect and file[0] != ".":
                 try:
-                    os.remove(os.path.join(repertoire, file))
-                    core.writeLog(self, "Delfile", f"{file} deleted")
+                    fichier = os.path.normpath(repertoire+os.path.sep+file)
+                    if os.path.isfile(fichier):
+                        lien = Path(fichier)
+                        lien.unlink()
+                        log += f'<strong>Delfile</strong> : {file} deleted<br>'
+                        
+                        
+                    else:
+                        core.writeLog(
+                                self,
+                                "Delfile",
+                                f"INFO > {file} not found. no deletion")
+                        
                 except:
                     core.writeLog(
                         self,
@@ -173,4 +205,5 @@ def delFile(self):
         core.writeLog(
             "DelFile", f" ERROR > Save Dir is not validate for WIPE MAP process."
         )
+    core.writeLog(self, "Delfile", log)
     core.writeLog(self, "DelFile", " Process WIPE MAP ending...")
