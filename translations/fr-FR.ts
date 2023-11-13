@@ -14,103 +14,123 @@
         <translation>MOD Manager</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="62"/>
-        <source>Profile EFK Standard</source>
-        <translation>Profil EFK Standard</translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="78"/>
-        <source>Profile EFK Advanced</source>
-        <translation>Profil EFK Advanced</translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="113"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Présence/création du fichier&lt;br/&gt;&lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Présence/création du fichier&lt;br/&gt;&lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="127"/>
+        <location filename="../principale.ui" line="95"/>
         <source>Préreglage Difficulté</source>
         <translation>Préreglage Difficulté</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="139"/>
+        <location filename="../principale.ui" line="107"/>
         <source>Facile (EFK_Easy)</source>
         <translation>Facile (EFK_Easy)</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="152"/>
+        <location filename="../principale.ui" line="120"/>
         <source>Standard (EFK_STD)</source>
         <translation>Standard (EFK_STD)</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="165"/>
+        <location filename="../principale.ui" line="133"/>
         <source>Difficile (EFK_Hard)</source>
         <translation>Difficile (EFK_Hard)</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="239"/>
+        <location filename="../principale.ui" line="207"/>
         <source>MAJ/Réinstallation Scripts</source>
         <translation>MAJ/Réinstallation Scripts</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="245"/>
+        <location filename="../principale.ui" line="213"/>
         <source>Log</source>
         <translation>Journal</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="657"/>
+        <location filename="../principale.ui" line="746"/>
         <source>La collection de mods EFKC</source>
         <translation>La collection de mods EFKC</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="660"/>
+        <location filename="../principale.ui" line="749"/>
         <source>Abonnements à la collection STEAM ESCAPE FROM KNOX COUNTY</source>
         <translation>Abonnements à la collection STEAM ESCAPE FROM KNOX COUNTY</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="269"/>
+        <location filename="../principale.ui" line="276"/>
         <source>Repertoires Utilisateur</source>
         <translation>Repertoires Utilisateur</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="465"/>
+        <location filename="../principale.ui" line="81"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Ajout Profil &lt;span style=&quot; font-weight:700;&quot;&gt;STANDARD&lt;/span&gt; et &lt;span style=&quot; font-weight:700;&quot;&gt;ADVANCED&lt;/span&gt; à &lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Ajout Profil &lt;span style=&quot; font-weight:700;&quot;&gt;STANDARD&lt;/span&gt; et &lt;span style=&quot; font-weight:700;&quot;&gt;ADVANCED&lt;/span&gt; à &lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="235"/>
+        <source>WARN</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="248"/>
+        <source>DEBUG</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="261"/>
+        <source>LOG</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="447"/>
+        <source>Exe PZ :</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="554"/>
         <source>French</source>
         <translation>French</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="468"/>
+        <location filename="../principale.ui" line="557"/>
         <source>Francais</source>
         <translation>Francais</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="494"/>
-        <location filename="../principale.ui" line="497"/>
+        <location filename="../principale.ui" line="583"/>
+        <location filename="../principale.ui" line="586"/>
         <source>English</source>
         <translation>English</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="527"/>
+        <location filename="../principale.ui" line="616"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;Entre 2 raids&lt;br/&gt;- personnage dans la base&lt;br/&gt;- Quitter PZ ou au Menu principal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;Entre 2 raids&lt;br/&gt;- personnage dans la base&lt;br/&gt;- Quitter PZ ou au Menu principal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="546"/>
+        <location filename="../principale.ui" line="635"/>
         <source>Chaine Twitch de Tancred terror</source>
         <translation>Chaine Twitch de Tancred terror</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="572"/>
+        <location filename="../principale.ui" line="661"/>
         <source>Chaine YOUTUBE de Tancred terror</source>
         <translation>YOUTUBE de Tancred terror</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="604"/>
+        <location filename="../principale.ui" line="693"/>
         <source>DISCORD de Tancred terror</source>
         <translation>DISCORD de Tancred terror</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="342"/>
+        <location filename="../principale.ui" line="781"/>
+        <source>RUN PZ</source>
+        <translation>Run PZ</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="804"/>
+        <source>Mode DEBUG</source>
+        <translation>Mode Debug</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="365"/>
         <source>Profil PZ :</source>
         <translation>Profil PZ :</translation>
     </message>
@@ -120,22 +140,23 @@
         <translation>Escape From Knox County Configurator</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="358"/>
+        <location filename="../principale.ui" line="381"/>
         <source>Sauvegardes :</source>
         <translation>Sauvegarde :</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="395"/>
+        <location filename="../principale.ui" line="484"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="374"/>
+        <location filename="../principale.ui" line="397"/>
+        <location filename="../principale.ui" line="463"/>
         <source>choisir</source>
         <translation>Localiser</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="452"/>
+        <location filename="../principale.ui" line="541"/>
         <source>WIPE MAP</source>
         <translation>WIPE MAP</translation>
     </message>

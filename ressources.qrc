@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="gfx">
+    <file>gfx/skull.png</file>
+    <file>gfx/CPU.png</file>
     <file>gfx/discord.png</file>
     <file>gfx/pz.png</file>
     <file>gfx/Twitch-logo.png</file>

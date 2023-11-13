@@ -13,8 +13,7 @@ from . import disk
 from . import core
 
 
-
-def get_userPZDir(self):
+def get_userPZDir(self: QtWidgets) -> None:
     repertoire = str((Path.home()).joinpath("zomboid")).replace("\\", "/")
 
     self.lineEdit_ProfilPZ.setText(repertoire)
@@ -22,7 +21,7 @@ def get_userPZDir(self):
         disk.configSave(self, "Profil", repertoire)
 
 
-def get_saveGameDir(self):
+def get_saveGameDir(self: QtWidgets) -> None:
     """
     Determine Le dossier de sauvegarde de PZ
     """
@@ -56,7 +55,7 @@ def get_saveGameDir(self):
                 QtGui.QPixmap(":/gfx/gfx/valide.png")
             )
 
-def get_ExePZ(self):
+def get_ExePZ(self: QtWidgets) -> None:
     """
     Determine L executable PZ 
     """
@@ -74,7 +73,7 @@ def get_ExePZ(self):
                         icon=self.label_IconStatus_ExePZ):
             disk.configSave(self, "ExePZ", fichier[0])
 
-def get_MODManager(self):
+def get_MODManager(self: QtWidgets) -> None:
     """
     Determine la présence du fichier de base MODManager et le complete au besoin
     """
@@ -94,7 +93,7 @@ def get_MODManager(self):
         icon=self.label_IconStatus_MODManager,
     )
 
-def install_MODManager_STD(self):
+def install_MODManager_STD(self: QtWidgets) -> None:
     with open("config/modmanager/EFK_STD.txt", "r") as file:
         EFK_STD = file.read()
     with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r") as file:
@@ -106,7 +105,7 @@ def install_MODManager_STD(self):
         file.write(df)
 
 
-def install_MODManager_ADV(self):
+def install_MODManager_ADV(self: QtWidgets) -> None:
     with open("config/modmanager/EFK_ADV.txt", "r") as file:
         EFK_ADV = file.read()
     with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r") as file:
@@ -118,7 +117,7 @@ def install_MODManager_ADV(self):
         file.write(df)
 
 
-def verif_lien(self, directory="", file="", icon=None):
+def verif_lien(self: QtWidgets, directory="", file="", icon=None) -> None:
     """Verification du fichier/repertoire passé en parametre
 
     Args:
@@ -154,9 +153,9 @@ def configSave(self, key, valeur):
         fichier.truncate()
 
 
-def delFile(self):
+def delFile(self: QtWidgets) -> None:
     """_summary_"""
-    
+
     core.writeLog(self, "CLEAR", "")
     core.writeLog(self, "DelFile", " Process WIPE MAP Start...")
     listeProtect = ["delfile.exe", "delfile.py", "fichiers.txt"]

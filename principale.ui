@@ -6,9 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>615</width>
-    <height>661</height>
+    <width>605</width>
+    <height>760</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>605</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>605</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>605</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Escape From Knox County Configurator</string>
@@ -21,17 +44,17 @@
    <widget class="QTabWidget" name="tabWidget_FenetrePrincipale">
     <property name="geometry">
      <rect>
-      <x>15</x>
-      <y>315</y>
+      <x>10</x>
+      <y>385</y>
       <width>581</width>
-      <height>256</height>
+      <height>266</height>
      </rect>
     </property>
     <property name="toolTip">
      <string/>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -99,7 +122,7 @@
         <rect>
          <x>70</x>
          <y>25</y>
-         <width>91</width>
+         <width>111</width>
          <height>16</height>
         </rect>
        </property>
@@ -110,9 +133,9 @@
       <widget class="QLabel" name="label_difficultSTD">
        <property name="geometry">
         <rect>
-         <x>235</x>
+         <x>225</x>
          <y>25</y>
-         <width>111</width>
+         <width>126</width>
          <height>16</height>
         </rect>
        </property>
@@ -123,9 +146,9 @@
       <widget class="QLabel" name="label_difficultHARD">
        <property name="geometry">
         <rect>
-         <x>390</x>
+         <x>400</x>
          <y>25</y>
-         <width>111</width>
+         <width>121</width>
          <height>16</height>
         </rect>
        </property>
@@ -155,7 +178,7 @@
       <widget class="QLabel" name="label_IconStatus_difficultSTD">
        <property name="geometry">
         <rect>
-         <x>265</x>
+         <x>260</x>
          <y>45</y>
          <width>31</width>
          <height>31</height>
@@ -174,7 +197,7 @@
       <widget class="QLabel" name="label_IconStatus_difficultHARD">
        <property name="geometry">
         <rect>
-         <x>420</x>
+         <x>435</x>
          <y>40</y>
          <width>31</width>
          <height>31</height>
@@ -205,6 +228,44 @@
       </property>
       <property name="text">
        <string>MAJ/Réinstallation Scripts</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_deleteEFK">
+     <attribute name="title">
+      <string>Supprimer EFK</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_UninstallEFK">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>135</x>
+        <y>155</y>
+        <width>296</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bender</family>
+        <pointsize>22</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Supprimer EFK</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ressources.qrc">
+        <normaloff>:/gfx/gfx/skull.png</normaloff>:/gfx/gfx/skull.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>64</width>
+        <height>64</height>
+       </size>
       </property>
      </widget>
     </widget>
@@ -263,12 +324,12 @@
      </widget>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QGroupBox" name="groupBox_UserDir">
     <property name="geometry">
      <rect>
       <x>15</x>
       <y>175</y>
-      <width>581</width>
+      <width>576</width>
       <height>126</height>
      </rect>
     </property>
@@ -286,6 +347,7 @@
      </property>
      <property name="font">
       <font>
+       <pointsize>10</pointsize>
        <kerning>true</kerning>
       </font>
      </property>
@@ -323,6 +385,7 @@
      </property>
      <property name="font">
       <font>
+       <pointsize>10</pointsize>
        <kerning>true</kerning>
       </font>
      </property>
@@ -387,7 +450,7 @@
     <widget class="QPushButton" name="pushButton_SetRepertoireSaveGame">
      <property name="geometry">
       <rect>
-       <x>500</x>
+       <x>495</x>
        <y>80</y>
        <width>71</width>
        <height>24</height>
@@ -408,6 +471,7 @@
      </property>
      <property name="font">
       <font>
+       <pointsize>10</pointsize>
        <kerning>true</kerning>
       </font>
      </property>
@@ -507,7 +571,7 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>590</y>
+      <y>675</y>
       <width>51</width>
       <height>46</height>
      </rect>
@@ -526,9 +590,9 @@
     <property name="geometry">
      <rect>
       <x>95</x>
-      <y>590</y>
+      <y>670</y>
       <width>166</width>
-      <height>41</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -544,8 +608,8 @@
    <widget class="QRadioButton" name="radioButton_France">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>15</y>
+      <x>330</x>
+      <y>25</y>
       <width>106</width>
       <height>26</height>
      </rect>
@@ -573,8 +637,8 @@
    <widget class="QRadioButton" name="radioButton_English">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>45</y>
+      <x>330</x>
+      <y>55</y>
       <width>96</width>
       <height>26</height>
      </rect>
@@ -600,7 +664,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>575</y>
+      <y>660</y>
       <width>196</width>
       <height>71</height>
      </rect>
@@ -710,7 +774,7 @@
     <property name="geometry">
      <rect>
       <x>35</x>
-      <y>585</y>
+      <y>670</y>
       <width>51</width>
       <height>46</height>
      </rect>
@@ -765,10 +829,10 @@
    <widget class="QPushButton" name="pushButton_RunPZ">
     <property name="geometry">
      <rect>
-      <x>450</x>
-      <y>25</y>
-      <width>121</width>
-      <height>41</height>
+      <x>445</x>
+      <y>20</y>
+      <width>141</width>
+      <height>46</height>
      </rect>
     </property>
     <property name="font">
@@ -803,6 +867,67 @@
     <property name="text">
      <string>Mode DEBUG</string>
     </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_EFKEnhanced">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>305</y>
+      <width>581</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>EFK Performance</string>
+    </property>
+    <widget class="QRadioButton" name="radioButton_EFKStandard">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>30</y>
+       <width>216</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>EFK Standard (Low CPU Power)</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_EFKEnhanced">
+     <property name="geometry">
+      <rect>
+       <x>105</x>
+       <y>30</y>
+       <width>216</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>EFK Enhanced (High CPU Power)</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_CPULogo">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>15</y>
+       <width>61</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="ressources.qrc">:/gfx/gfx/CPU.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

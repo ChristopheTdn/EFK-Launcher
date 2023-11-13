@@ -58,7 +58,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
 
 
     @pyqtSlot()
-    def on_pushButton_WIPE_clicked(self):  
+    def on_pushButton_WIPE_clicked(self) -> None:
         """
         Lance le WIPE MAP
         """
@@ -66,7 +66,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.delFile(self)
 
     @pyqtSlot()
-    def on_radioButton_France_clicked(self):
+    def on_radioButton_France_clicked(self) -> None:
         """
         Valide la langue Francaise et modifie l'interface a la volée
         """
@@ -75,7 +75,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.configSave(self, 'Langue', 'fr-FR')
 
     @pyqtSlot()
-    def on_radioButton_English_clicked(self):
+    def on_radioButton_English_clicked(self) -> None:
         """
         Valide la langue Francaise et modifie l'interface a la volée
         """
@@ -124,3 +124,19 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.disk.configSave(self, 'DebugMode', checked)
+        
+    @pyqtSlot()
+    def on_radioButton_EFKEnhanced_clicked(self) -> None:
+        """
+        Valide la langue Francaise et modifie l'interface a la volée
+        """
+        # TODO: not implemented yet
+        EFK.disk.configSave(self, 'EFK_Enhanced', True)
+        
+    @pyqtSlot()    
+    def on_radioButton_EFKStandard_clicked(self) -> None:
+        """
+        Valide la langue Francaise et modifie l'interface a la volée
+        """
+        # TODO: not implemented yet
+        EFK.disk.configSave(self, 'EFK_Enhanced', False)

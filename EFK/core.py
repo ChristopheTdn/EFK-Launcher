@@ -21,28 +21,34 @@ def init_application(self):
     init_MODManager(self)
 
 
-def loadConfig(self):
+def loadConfig(self) -> None:
     with open("config/EFKLauncher/config.json", "r") as fichier:
         CONFIG = json.load(fichier)
     self.lineEdit_ExePZ.setText(CONFIG["ExePZ"])
     self.lineEdit_RepertoireSaveGame.setText(CONFIG["SaveGame"])
     self.checkBox_DebugMode.setChecked(CONFIG["DebugMode"])
-    
+
+    if CONFIG["EFK_Enhanced"]:
+        self.radioButton_EFKEnhanced.setChecked(True)
+    else:
+        self.radioButton_EFKStandard.setChecked(True)
+
     if CONFIG["Langue"] == "fr-FR":
         self.radioButton_France.setChecked(True)        
     elif CONFIG["Langue"] == "en-GB":
         self.radioButton_English.setChecked(True)
-    changeLangue(self,CONFIG["Langue"])
+    changeLangue(self, CONFIG["Langue"])
 
     setFlags(self)
 
-def setFlags(self):
+
+def setFlags(self) -> None:
     """
     Verifie l'ensemble des liens pour en determiner la validité
     et modifier les icones correspondant sur l interface
     """
     disk.verif_lien(self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ)
-    
+
     disk.verif_lien(self, directory=self.lineEdit_ProfilPZ.text(), icon=self.label_IconStatus_ProfilPZ)
     if disk.verif_lien(self,
                        directory=os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",self.lineEdit_RepertoireSaveGame.text()),
@@ -52,7 +58,7 @@ def setFlags(self):
     else :
         self.pushButton_WIPE.setEnabled(False)
         self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
-        
+
 
     # MOD Manager
     disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Lua/saved_modlists.txt", icon=self.label_IconStatus_MODManager)
@@ -69,11 +75,11 @@ def setFlags(self):
         shutil.copy('config/difficulty/EFK Hard.cfg', self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/")
         self.label_IconStatus_difficultHARD.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
 
-def runPz(self):
+def runPz(self) -> None:
     self.process = launchpz.LaunchPz(self,
                                      self.lineEdit_ExePZ.text())
     self.process.start()
-        
+
 def changeLangue(self, langue):
     app = QtWidgets.QApplication.instance()
     TRANSLATOR = QtCore.QTranslator()
@@ -87,8 +93,8 @@ def init_MODManager(self):
     disk.get_MODManager(self)
 
 def writeLog(self,title, texte):
-    
-    if title == "CLEAR" :
+
+    if title == "CLEAR":
         self.textEdit_Log.clear()
     else :
         cursor = self.textEdit_Log.textCursor()

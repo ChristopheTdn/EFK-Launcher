@@ -1,7 +1,8 @@
 {
-    "Langue": "fr-FR",
+    "Langue": "en-GB",
     "SaveGame": "EFK_Game",
     "Profil": "C:/Users/Chris/zomboid",
     "ExePZ": "F:/SteamLibrary/steamapps/common/ProjectZomboid/ProjectZomboid64.bat",
-    "DebugMode": true
+    "DebugMode": true,
+    "EFK_Enhanced": true
 }
