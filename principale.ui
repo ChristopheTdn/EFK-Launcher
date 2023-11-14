@@ -54,7 +54,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -214,22 +214,6 @@
        </property>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton_ReinstallScripts">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>190</y>
-        <width>201</width>
-        <height>36</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>MAJ/Réinstallation Scripts</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="tab_deleteEFK">
      <attribute name="title">
@@ -266,6 +250,22 @@
         <width>64</width>
         <height>64</height>
        </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_MajEFK">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>195</x>
+        <y>30</y>
+        <width>201</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Maj EFK</string>
       </property>
      </widget>
     </widget>

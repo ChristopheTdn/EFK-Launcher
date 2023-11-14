@@ -160,3 +160,11 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # Ne modifie plsu la selection des Mods
         EFK.disk.configSave(self, 'Standard', "")
+
+    @pyqtSlot()
+    def on_pushButton_MajEFK_clicked(self) -> None:
+        """
+        Lance la mise a jour de EFK Launcher
+        """
+        # TODO: not implemented yet
+        EFK.core.launch_EFK_launcher_updater(self)

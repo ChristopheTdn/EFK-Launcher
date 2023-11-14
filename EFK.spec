@@ -5,7 +5,7 @@ a = Analysis(
     ['EFK.py'],
     pathex=[],
     binaries=[],
-    datas=[('EFK', 'EFK'), ('principale.py', '.'), ('ressources_rc.py', '.'), ('Ui_principale.py', '.')],
+    datas=[('EFK', 'EFK'), ('principale.py', '.'), ('ressources_rc.py', '.'), ('Ui_principale.py', '.'),('Ui_updater.py', '.'),('updater.py', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

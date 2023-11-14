@@ -11,6 +11,9 @@ from . import launchpz
 from . import disk
 import json
 import shutil
+import zipfile
+import shutil
+import time
 
 
 def init_application(self):
@@ -108,6 +111,33 @@ def writeLog(self,title, texte):
         cursor = self.textEdit_Log.textCursor()
         self.textEdit_Log.insertHtml(f'<strong>{title}</strong> : {texte}<br>')
         self.textEdit_Log.ensureCursorVisible()
+
+def launch_EFK_launcher_updater(self):
+    ''' EFK Launcher updater
+       - réalise une copie de l'executable 'goslaunchera3'' dans le repertoire 'tmp'
+       - lance avec le parametre '--updater'
+       - ferme l'application courante.'
+           '''
+    from sys import platform as _platform
+    if _platform == "linux" or _platform == "linux2": # environnement Linux
+        executable="EFKLauncher"
+    else : 
+       executable="EFK Launcher.exe" # environnement windows
+    # création repertoire tmp
+    if not os.path.exists('tmp'):
+        os.makedirs('tmp') 
+    #copie executable goslauncher
+    shutil.copyfile(executable, 'tmp/'+executable)
+    #Lance Goslauncher --updater
+    if _platform == "linux" or _platform == "linux2":
+        os.system(f'./tmp/{executable} --updater')
+    elif _platform == "win32":
+        # Windows
+        import subprocess
+        subprocess.Popen([f'tmp/{executable}','-updater'])
+    #quitte l'application en cours
+    sys.exit()
+
 
 ################################################################
 
