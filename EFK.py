@@ -9,4 +9,3 @@ app.installTranslator(TRANSLATOR)
 FORM = Fenetre_Principale()
 FORM.show()
 sys.exit(app.exec())
-

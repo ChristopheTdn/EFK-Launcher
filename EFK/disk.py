@@ -9,6 +9,7 @@ import json
 from PyQt6 import QtWidgets
 from PyQt6 import QtGui
 from pathlib import Path
+import shutil
 from . import disk
 from . import core
 
@@ -115,6 +116,20 @@ def install_MODManager_ADV(self: QtWidgets) -> None:
 
     with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w") as file:
         file.write(df)
+
+
+def install_EFKEnhanced(self: QtWidgets) -> None:
+    self.label_alert.setVisible(False)
+    self.label_SignAlert.setVisible(False)
+    filePath = shutil.copy('config/EFK/AdvancedEFK_default.txt', self.lineEdit_ProfilPZ.text() + "/mods/default.txt")
+    core.writeLog(self, "EFK Enhanced", f" Install Mods par defaut EFK Enhanced ({filePath})")
+
+
+def install_EFKStandard(self: QtWidgets) -> None:
+    self.label_alert.setVisible(False)
+    self.label_SignAlert.setVisible(False)
+    filePath = shutil.copy('config/EFK/StandardEFK_default.txt', self.lineEdit_ProfilPZ.text() + "/mods/default.txt")
+    core.writeLog(self, "EFK Standard", f" Install Mods par defaut EFK Standard ({filePath})")
 
 
 def verif_lien(self: QtWidgets, directory="", file="", icon=None) -> None:

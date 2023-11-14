@@ -16,7 +16,6 @@ class LaunchPz(QtCore.QObject):
         self.process.readyReadStandardOutput.connect(self.dataReady)
 
     def dataReady(self):
-        cursor = self.output.textCursor()
         # cursor.movePosition(cursor.End)
         data = str(self.process.readAllStandardOutput())
         self.output.insertHtml(self.parserdata(data))
@@ -37,11 +36,11 @@ class LaunchPz(QtCore.QObject):
                 .replace('LOG', "<strong>LOG</strong>")\
                 .replace('DEBUG', "<strong>DEBUG</strong>")
             if not self.Ui.checkBox_LOGWarn.isChecked() and "<strong>WARN</strong>" in info:
-                info =""
+                info = ""
             elif not self.Ui.checkBox_LOGDebug.isChecked() and "<strong>DEBUG</strong>" in info:
-                info =""
+                info = ""
             elif not self.Ui.checkBox_LOG.isChecked() and "<strong>LOG</strong>" in info:
-                info =""
+                info = ""
             elif info != "":
                 returnData += f"{info}"
         return returnData

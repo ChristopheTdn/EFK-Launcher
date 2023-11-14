@@ -241,9 +241,9 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>135</x>
-        <y>155</y>
-        <width>296</width>
+        <x>100</x>
+        <y>85</y>
+        <width>371</width>
         <height>61</height>
        </rect>
       </property>
@@ -608,9 +608,9 @@
    <widget class="QRadioButton" name="radioButton_France">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>25</y>
-      <width>106</width>
+      <x>320</x>
+      <y>15</y>
+      <width>56</width>
       <height>26</height>
      </rect>
     </property>
@@ -618,7 +618,7 @@
      <string>French</string>
     </property>
     <property name="text">
-     <string>Francais</string>
+     <string/>
     </property>
     <property name="icon">
      <iconset resource="ressources.qrc">
@@ -637,9 +637,9 @@
    <widget class="QRadioButton" name="radioButton_English">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>55</y>
-      <width>96</width>
+      <x>320</x>
+      <y>50</y>
+      <width>56</width>
       <height>26</height>
      </rect>
     </property>
@@ -647,7 +647,7 @@
      <string>English</string>
     </property>
     <property name="text">
-     <string>English</string>
+     <string/>
     </property>
     <property name="icon">
      <iconset resource="ressources.qrc">
@@ -871,10 +871,10 @@
    <widget class="QGroupBox" name="groupBox_EFKEnhanced">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>305</y>
-      <width>581</width>
-      <height>71</height>
+      <x>15</x>
+      <y>300</y>
+      <width>576</width>
+      <height>76</height>
      </rect>
     </property>
     <property name="title">
@@ -883,7 +883,7 @@
     <widget class="QRadioButton" name="radioButton_EFKStandard">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>115</x>
        <y>30</y>
        <width>216</width>
        <height>20</height>
@@ -896,8 +896,8 @@
     <widget class="QRadioButton" name="radioButton_EFKEnhanced">
      <property name="geometry">
       <rect>
-       <x>105</x>
-       <y>30</y>
+       <x>115</x>
+       <y>10</y>
        <width>216</width>
        <height>20</height>
       </rect>
@@ -912,9 +912,9 @@
     <widget class="QLabel" name="label_CPULogo">
      <property name="geometry">
       <rect>
-       <x>25</x>
-       <y>15</y>
-       <width>61</width>
+       <x>30</x>
+       <y>20</y>
+       <width>51</width>
        <height>51</height>
       </rect>
      </property>
@@ -922,7 +922,59 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="ressources.qrc">:/gfx/gfx/CPU.png</pixmap>
+      <pixmap resource="ressources.qrc">:/gfx/gfx/performance.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_EFKNoModif">
+     <property name="geometry">
+      <rect>
+       <x>115</x>
+       <y>50</y>
+       <width>216</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>No Modif (For Modders Only)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_alert">
+     <property name="geometry">
+      <rect>
+       <x>355</x>
+       <y>5</y>
+       <width>206</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>9</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;If you're not a Modder,&lt;br/&gt;Please make a choice EFK Enhanced&lt;br/&gt;or EFK Standard &lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Before&lt;/span&gt; Launch PZ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_SignAlert">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>15</y>
+       <width>21</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="ressources.qrc">:/gfx/gfx/accolade.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>

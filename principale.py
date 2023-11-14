@@ -128,15 +128,35 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
     @pyqtSlot()
     def on_radioButton_EFKEnhanced_clicked(self) -> None:
         """
-        Valide la langue Francaise et modifie l'interface a la volée
+        Determine la selections des Mods pour EFK Enhanced
         """
         # TODO: not implemented yet
-        EFK.disk.configSave(self, 'EFK_Enhanced', True)
-        
+        EFK.disk.install_EFKEnhanced(self)
+        EFK.disk.configSave(self, 'Performance', "Enhanced")
+
     @pyqtSlot()    
     def on_radioButton_EFKStandard_clicked(self) -> None:
         """
-        Valide la langue Francaise et modifie l'interface a la volée
+        Determine la selections des Mods pour EFK Standard
         """
         # TODO: not implemented yet
-        EFK.disk.configSave(self, 'EFK_Enhanced', False)
+        EFK.disk.install_EFKStandard(self)
+        EFK.disk.configSave(self, 'Performance', "Standard")
+        
+    @pyqtSlot()    
+    def on_radioButton_EFKNoModif_clicked(self) -> None:
+        """
+        Determine la selections des Mods pour EFK Standard
+        """
+        # TODO: not implemented yet
+        self.label_alert.setVisible(True)
+        self.label_SignAlert.setVisible(True)
+        EFK.disk.configSave(self, 'Performance', "")
+
+    @pyqtSlot()
+    def on_radioButton_EFKNoModif(self) -> None:
+        """
+        Valide la langue Francaise et modifie l'interface a la volée
+        """
+        # Ne modifie plsu la selection des Mods
+        EFK.disk.configSave(self, 'Standard', "")

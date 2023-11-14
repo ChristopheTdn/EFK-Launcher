@@ -28,10 +28,18 @@ def loadConfig(self) -> None:
     self.lineEdit_RepertoireSaveGame.setText(CONFIG["SaveGame"])
     self.checkBox_DebugMode.setChecked(CONFIG["DebugMode"])
 
-    if CONFIG["EFK_Enhanced"]:
+    self.label_alert.setVisible(False)
+    self.label_SignAlert.setVisible(False)
+    if CONFIG["Performance"] == "Enhanced":
         self.radioButton_EFKEnhanced.setChecked(True)
-    else:
+        disk.install_EFKEnhanced(self)
+    elif CONFIG["Performance"] =="Standard":
+        disk.install_EFKStandard(self)
         self.radioButton_EFKStandard.setChecked(True)
+    else :
+        self.label_alert.setVisible(True)
+        self.label_SignAlert.setVisible(True)
+        self.radioButton_EFKNoModif.setChecked(True)
 
     if CONFIG["Langue"] == "fr-FR":
         self.radioButton_France.setChecked(True)        
