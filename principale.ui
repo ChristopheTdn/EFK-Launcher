@@ -50,11 +50,16 @@
       <height>266</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="toolTip">
      <string/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -269,7 +274,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_deleteEFK">
+    <widget class="QWidget" name="tab_Options">
      <attribute name="title">
       <string>Options</string>
      </attribute>
@@ -292,7 +297,7 @@
        <property name="geometry">
         <rect>
          <x>15</x>
-         <y>140</y>
+         <y>135</y>
          <width>216</width>
          <height>51</height>
         </rect>
@@ -331,6 +336,41 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;MaJ EFK :&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Pour mettre a jour &lt;span style=&quot; font-weight:700;&quot;&gt;EFK Launcher&lt;/span&gt;,&lt;br/&gt;et les scripts de config EFK.&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
+      <widget class="QLabel" name="label_noConnexion">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>190</y>
+         <width>211</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/supprimer.png&quot; width=&quot;22&quot;/&gt;&lt;span style=&quot; font-size:12pt; vertical-align:super;&quot;&gt;Serveur MAJ non trouvé&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_UpdateAvailable">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>105</y>
+         <width>206</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise a jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::RichText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
      <widget class="QGroupBox" name="groupBox_UninstallEFK">
       <property name="geometry">
@@ -350,9 +390,9 @@
        </property>
        <property name="geometry">
         <rect>
-         <x>15</x>
-         <y>140</y>
-         <width>261</width>
+         <x>10</x>
+         <y>135</y>
+         <width>266</width>
          <height>51</height>
         </rect>
        </property>
@@ -392,7 +432,7 @@
         </font>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Pour desintaller EFK :&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;/&gt;1 - Quitter Project Zomboid&lt;br/&gt; 2 - Se Desabonner à la &lt;a href=&quot;https://steamcommunity.com/workshop/filedetails/?id=3048855836&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;collection Steam EFK&lt;br/&gt;&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://steamcommunity.com/workshop/filedetails/?id=3048855836&quot;&gt;&lt;span style=&quot; color:#0000ff;&quot;/&gt;&lt;/a&gt;3 - Cliquer sur &lt;span style=&quot; font-weight:700;&quot;&gt;Desinstaller EFK&lt;br/&gt;&lt;/span&gt;4 - Une fois le EFK Launcher Fermé&lt;br/&gt;Supprimer votre repertoire local du &lt;span style=&quot; font-weight:700;&quot;&gt;EFK Launcher&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Pour desintaller EFK :&lt;br/&gt;&lt;/span&gt;1 - Quitter Project Zomboid&lt;br/&gt;2 - Se Désabonner à la &lt;a href=&quot;https://steamcommunity.com/workshop/filedetails/?id=3048855836&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;collection Steam EFK&lt;br/&gt;&lt;/span&gt;&lt;/a&gt;3 - Cliquer sur &lt;span style=&quot; font-weight:700;&quot;&gt;Desinstaller EFK&lt;br/&gt;&lt;/span&gt;4 - Une fois le EFK Launcher Fermé&lt;br/&gt;Supprimer votre repertoire local du &lt;span style=&quot; font-weight:700;&quot;&gt;EFK Launcher&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </widget>
@@ -952,7 +992,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>EFK Performance</string>
+     <string>EFK Performances impact</string>
     </property>
     <widget class="QRadioButton" name="radioButton_EFKStandard">
      <property name="geometry">
@@ -1054,6 +1094,25 @@
       <bool>true</bool>
      </property>
     </widget>
+   </widget>
+   <widget class="QLabel" name="label_UpdateAvailable_2">
+    <property name="geometry">
+     <rect>
+      <x>165</x>
+      <y>375</y>
+      <width>146</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise a jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
   </widget>
  </widget>

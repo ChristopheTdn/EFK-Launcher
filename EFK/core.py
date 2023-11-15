@@ -1,19 +1,17 @@
-#! /usr/bin/python3
-#-*- coding: utf-8 -*-
 #
 # Module Interface CORE
+#
 
 from PyQt6 import QtWidgets
-from PyQt6 import QtGui,QtCore
+from PyQt6 import QtGui, QtCore
 import sys
 import os
 from . import launchpz
 from . import disk
+from . import reseau
+import requests
 import json
 import shutil
-import zipfile
-import shutil
-import time
 
 
 def init_application(self):
@@ -22,7 +20,26 @@ def init_application(self):
     disk.get_userPZDir(self)
     loadConfig(self)
     init_MODManager(self)
+    
+    # determine la version en ligne
+    self.label_noConnexion.setVisible(False)
+    self.label_UpdateAvailable.setVisible(False)
+    self.label_UpdateAvailable_2.setVisible(False)
+    self.pushButton_MajEFK.setEnabled(True)
+    versionOnline = ""
+    if reseau.is_website_online(self, "https://su66.fr/ftp/efklauncher/version.txt"):
+        url = "https://su66.fr/ftp/efklauncher/version.txt"
+        versionOnline = requests.get(url).text
+    else:
+        self.label_noConnexion.setVisible(True)
+        self.pushButton_MajEFK.setEnabled(False)
 
+    with open("config/EFKLauncher/version.txt") as fichier:
+        versionExe = fichier.readline().rstrip()
+
+    if versionOnline != "" and versionOnline != versionExe :
+        self.label_UpdateAvailable.setVisible(True)
+        self.label_UpdateAvailable_2.setVisible(True)
 
 def loadConfig(self) -> None:
     with open("config/EFKLauncher/config.json", "r") as fichier:
@@ -104,7 +121,7 @@ def changeLangue(self, langue):
 def init_MODManager(self):
     disk.get_MODManager(self)
 
-def writeLog(self,title, texte):
+def writeLog(self, title, texte):
 
     if title == "CLEAR":
         self.textEdit_Log.clear()

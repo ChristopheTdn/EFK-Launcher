@@ -1,12 +1,12 @@
 
 from PyQt6 import QtWidgets
 import sys
-import os,pathlib
+import os
+import pathlib
 import shutil
 import zipfile
 import time
 import requests
-
 
 def init_maj_process(self, url, dest, file):
     self.pushButton_ok.setEnabled(False)
@@ -99,13 +99,21 @@ def unzip(self, url, dest, file):
     zipf.extractall()
 
 
-def message(self, texte):
+def message(self, texte: str) -> None:
     self.label_feedback.setText(texte)
     QtWidgets.QApplication.processEvents()  # Maj affichage interface
     time.sleep(1)
     
-def is_website_online(self,url: str) -> bool:
-    
+def is_website_online(self, url: str) -> bool:
+    """ determine si le lien passé en URL
+    est joignable
+
+    Args:
+        url (str): URL du lien 
+
+    Returns:
+        bool: renvois True/False selon test
+    """
     try:
         response = requests.head(url)
         return response.status_code == 200

@@ -1,8 +1,8 @@
 {
-    "Langue": "en-GB",
+    "Langue": "fr-FR",
     "SaveGame": "",
     "Profil": "C:/Users/Chris/zomboid",
     "ExePZ": "",
-    "DebugMode": false,
+    "DebugMode": true,
     "Performance": ""
 }

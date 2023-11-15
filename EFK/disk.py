@@ -1,8 +1,7 @@
-#! /usr/bin/python3
-# -*- coding: utf-8 -*-
 #
 # Module Interface DISK
 # Gestion des acces disk et des liens
+#
 
 import os
 import json
