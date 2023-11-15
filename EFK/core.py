@@ -78,12 +78,14 @@ def setFlags(self) -> None:
     disk.verif_lien(self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ)
 
     disk.verif_lien(self, directory=self.lineEdit_ProfilPZ.text(), icon=self.label_IconStatus_ProfilPZ)
-    if disk.verif_lien(self,
+    if self.lineEdit_RepertoireSaveGame.text() != "" and \
+        disk.verif_lien(self,
                        directory=os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",self.lineEdit_RepertoireSaveGame.text()),
                        icon=self.label_IconStatus_RepertoireSaveGame):
         self.pushButton_WIPE.setEnabled(True)
         self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
     else :
+        self.label_IconStatus_RepertoireSaveGame.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
         self.pushButton_WIPE.setEnabled(False)
         self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
 
