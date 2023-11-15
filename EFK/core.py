@@ -155,6 +155,18 @@ def launch_EFK_launcher_updater(self):
     #quitte l'application en cours
     sys.exit()
 
+def uninstall_EFK_launcher(self) :
+    """Efface l'ensemble des script de EFK
+    """
+    liste =[
+        self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Easy.cfg",
+        self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK STD.cfg",
+        self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Hard.cfg"
+    ]
+    for fichier in liste:
+        disk.delFileTarget(self, fichier)
+    disk.effaceModManagerProfil(self)
+    sys.exit()
 
 ################################################################
 

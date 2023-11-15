@@ -168,3 +168,12 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.core.launch_EFK_launcher_updater(self)
+        
+    @pyqtSlot()
+    def on_pushButton_UninstallEFK_clicked(self) -> None:
+        """
+        Supprime les scripts et les configs de EFK
+        en vue d'une desinstallations 
+        """
+        # TODO: not implemented yet
+        EFK.core.uninstall_EFK_launcher(self)

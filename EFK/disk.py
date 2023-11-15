@@ -121,6 +121,19 @@ def install_MODManager_ADV(self: QtWidgets) -> None:
     with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w") as file:
         file.write(finaltext)
 
+def effaceModManagerProfil(self):
+    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r") as file:
+        df = file.readlines()
+        
+    finaltext = ""
+       
+    for ligne in df :
+        if "Escape From Knox Project ADV:" not in ligne and \
+            "Escape From Knox Project STD:" not in ligne :
+            finaltext += ligne
+
+    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w") as file:
+        file.write(finaltext)
 
 def install_EFKEnhanced(self: QtWidgets) -> None:
     self.label_alert.setVisible(False)
@@ -171,7 +184,17 @@ def configSave(self, key, valeur):
         json.dump(config, fichier, indent=4)
         fichier.truncate()
 
-
+def delFileTarget(self, fichier: str):
+    """efface le fichier passé en parametre 
+    Args:
+        fichier (str): chemin du fichier à effacer
+    """
+    if os.path.isfile(fichier):
+        lien = Path(fichier)
+        lien.unlink()
+    print (f'Efface {fichier}')
+                        
+                  
 def delFile(self: QtWidgets) -> None:
     """_summary_"""
 
