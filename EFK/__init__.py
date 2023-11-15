@@ -1,1 +1,1 @@
-from . import  core,disk
+from . import  core,disk,maj
