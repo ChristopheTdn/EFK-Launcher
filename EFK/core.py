@@ -100,6 +100,7 @@ def changeLangue(self, langue):
     self.retranslateUi(main_window)
 
 
+
 def init_MODManager(self):
     disk.get_MODManager(self)
 

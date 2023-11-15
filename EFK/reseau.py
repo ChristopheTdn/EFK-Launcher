@@ -5,10 +5,12 @@ import os,pathlib
 import shutil
 import zipfile
 import time
+import requests
 
 
 def init_maj_process(self, url, dest, file):
     self.pushButton_ok.setEnabled(False)
+
     while "Tout se deroule bien":
         #Creer le repertoire temporaire
         message(self, "Création du repertoire de destination")
@@ -101,3 +103,11 @@ def message(self, texte):
     self.label_feedback.setText(texte)
     QtWidgets.QApplication.processEvents()  # Maj affichage interface
     time.sleep(1)
+    
+def is_website_online(self,url: str) -> bool:
+    
+    try:
+        response = requests.head(url)
+        return response.status_code == 200
+    except requests.exceptions.RequestException:
+        return False

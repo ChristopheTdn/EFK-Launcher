@@ -1,3 +1,9 @@
+"""  EFK LAUNCHER 
+
+Un utilitaire 
+"""
+
+
 import sys
 from PyQt6 import QtWidgets, QtCore
 from principale import Fenetre_Principale
@@ -10,7 +16,7 @@ for arg in sys.argv:
     if arg.lower() == "-updater" or arg == "-u":
         updater = True
 
-if updater:
+if not updater:
     from updater import Mw_updater
     MAINFORM = Mw_updater()
     MAINFORM.show()
