@@ -1,7 +1,7 @@
 
 from PyQt6 import QtWidgets
 import sys
-import os
+import os,pathlib
 import shutil
 import zipfile
 import time
@@ -34,14 +34,15 @@ def init_maj_process(self, url, dest, file):
             message(self, "Decompression de l'archive")
             unzip(self, url, dest, file)
         except:
-            break
-
+            message(self, "Probleme de decompression du fichier Zip...")
+            time.sleep(1)
         #Efface le repertoire temporaire
         try:
             message(self, "Nettoyage fichier temporaire")
             shutil.rmtree("tmp", True)
         except:
-            break
+            message(self, "impossible d'effacer le repertoire temporaire")
+            time.sleep(1)
 
         #Relance le EFK Launcher nouveau
         message(self, "")
@@ -52,10 +53,14 @@ def init_maj_process(self, url, dest, file):
         elif _platform == "win32":
             # Windows
             import subprocess
-            subprocess.Popen("EFK Launcher.exe")
-
+            if getattr(sys, 'frozen', False):
+                application_path = os.path.dirname(sys.executable)
+            elif __file__:
+                application_path = os.path.dirname(__file__)
+            ExecNewLauncher = os.path.join(pathlib.Path(application_path).parent, "EFK Launcher.exe")
+            subprocess.Popen(ExecNewLauncher)
         sys.exit()
-        break
+
     self.pushButton_ok.setEnabled(True) 
 
 def telecharge_fichier(self, url, dest, file):

@@ -64,7 +64,7 @@
    <widget class="QLabel" name="label_titre">
     <property name="geometry">
      <rect>
-      <x>145</x>
+      <x>150</x>
       <y>10</y>
       <width>206</width>
       <height>36</height>
@@ -82,14 +82,19 @@
    <widget class="QPushButton" name="pushButton_ok">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>105</y>
-      <width>75</width>
-      <height>23</height>
+      <x>199</x>
+      <y>102</y>
+      <width>86</width>
+      <height>26</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>Commencer</string>
+     <string>Update</string>
     </property>
    </widget>
    <widget class="QProgressBar" name="progressBar">
@@ -119,6 +124,9 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

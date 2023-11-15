@@ -44,7 +44,7 @@
    <widget class="QTabWidget" name="tabWidget_FenetrePrincipale">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>5</x>
       <y>385</y>
       <width>581</width>
       <height>266</height>
@@ -54,7 +54,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -215,60 +215,6 @@
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_deleteEFK">
-     <attribute name="title">
-      <string>Supprimer EFK</string>
-     </attribute>
-     <widget class="QPushButton" name="pushButton_UninstallEFK">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>85</y>
-        <width>371</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bender</family>
-        <pointsize>22</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Supprimer EFK</string>
-      </property>
-      <property name="icon">
-       <iconset resource="ressources.qrc">
-        <normaloff>:/gfx/gfx/skull.png</normaloff>:/gfx/gfx/skull.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>64</width>
-        <height>64</height>
-       </size>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_MajEFK">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>195</x>
-        <y>30</y>
-        <width>201</width>
-        <height>36</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Maj EFK</string>
-      </property>
-     </widget>
-    </widget>
     <widget class="QWidget" name="tab_Log">
      <attribute name="title">
       <string>Log</string>
@@ -321,6 +267,134 @@
       <property name="text">
        <string>LOG</string>
       </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_deleteEFK">
+     <attribute name="title">
+      <string>Options</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_maj">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>5</y>
+        <width>241</width>
+        <height>216</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Mise a Jour EFK Launcher</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_MajEFK">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>140</y>
+         <width>216</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bender</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Maj EFK Launcher</string>
+       </property>
+       <property name="icon">
+        <iconset resource="ressources.qrc">
+         <normaloff>:/gfx/gfx/update.png</normaloff>:/gfx/gfx/update.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_MajEFKLauncherTexte">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>35</y>
+         <width>206</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;MaJ EFK :&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Pour mettre a jour &lt;span style=&quot; font-weight:700;&quot;&gt;EFK Launcher&lt;/span&gt;,&lt;br/&gt;et les scripts de config EFK.&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_UninstallEFK">
+      <property name="geometry">
+       <rect>
+        <x>265</x>
+        <y>5</y>
+        <width>296</width>
+        <height>216</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Désinstaller EFK</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_UninstallEFK">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>140</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bender</family>
+         <pointsize>18</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Desinstaller EFK</string>
+       </property>
+       <property name="icon">
+        <iconset resource="ressources.qrc">
+         <normaloff>:/gfx/gfx/skull.png</normaloff>:/gfx/gfx/skull.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_UninstallEFK">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>25</y>
+         <width>266</width>
+         <height>116</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Pour desintaller EFK :&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;/&gt;1 - Quitter Project Zomboid&lt;br/&gt; 2 - Se Desabonner à la &lt;a href=&quot;https://steamcommunity.com/workshop/filedetails/?id=3048855836&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;collection Steam EFK&lt;br/&gt;&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://steamcommunity.com/workshop/filedetails/?id=3048855836&quot;&gt;&lt;span style=&quot; color:#0000ff;&quot;/&gt;&lt;/a&gt;3 - Cliquer sur &lt;span style=&quot; font-weight:700;&quot;&gt;Desinstaller EFK&lt;br/&gt;&lt;/span&gt;4 - Une fois le EFK Launcher Fermé&lt;br/&gt;Supprimer votre repertoire local du &lt;span style=&quot; font-weight:700;&quot;&gt;EFK Launcher&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
      </widget>
     </widget>
    </widget>

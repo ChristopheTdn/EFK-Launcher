@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="gfx">
+    <file>gfx/update.png</file>
     <file>gfx/accolade.png</file>
     <file>gfx/performance.png</file>
     <file>gfx/skull.png</file>
