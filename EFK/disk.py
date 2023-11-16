@@ -96,21 +96,21 @@ def get_MODManager(self: QtWidgets) -> None:
 def install_MODManager_STD(self: QtWidgets) -> None:
     with open("config/modmanager/EFK_STD.txt", "r") as file:
         EFK_STD = file.read()
-    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r") as file:
+    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r", encoding='utf-8') as file:
         df = file.readlines()
     finaltext =""
     for ligne in df :
         if "Escape From Knox Project STD:" not in ligne :
             finaltext += ligne
     finaltext += EFK_STD+"\n"
-    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w") as file:
+    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w", encoding='utf-8') as file:
         file.write(finaltext)
 
 
 def install_MODManager_ADV(self: QtWidgets) -> None:
     with open("config/modmanager/EFK_ADV.txt", "r") as file:
         EFK_ADV = file.read()
-    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r") as file:
+    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r",encoding='utf-8') as file:
         df = file.readlines()
     finaltext = ""
     for ligne in df :
@@ -118,11 +118,11 @@ def install_MODManager_ADV(self: QtWidgets) -> None:
             finaltext += ligne
     finaltext += EFK_ADV+"\n"
 
-    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w") as file:
+    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w", encoding='utf-8') as file:
         file.write(finaltext)
 
 def effaceModManagerProfil(self):
-    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r") as file:
+    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r", encoding='utf-8') as file:
         df = file.readlines()
         
     finaltext = ""
@@ -132,7 +132,7 @@ def effaceModManagerProfil(self):
             "Escape From Knox Project STD:" not in ligne :
             finaltext += ligne
 
-    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w") as file:
+    with open(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w", encoding='utf-8') as file:
         file.write(finaltext)
 
 def install_EFKEnhanced(self: QtWidgets) -> None:

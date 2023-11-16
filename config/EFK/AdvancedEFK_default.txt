@@ -42,6 +42,7 @@ mods
 	mod = SZ_Camp_Deerhead,
 	mod = SZ_Checkpoint_1,
 	mod = SZ_Checkpoint_2,
+	mod = SZ_Checkpoint_3,
 	mod = SZ_Checkpoint_4,
 	mod = SZ_Checkpoint_5,
 	mod = SZ_Checkpoint_6,
@@ -103,7 +104,6 @@ mods
 	mod = wyweight,
 	mod = TrueCrouching,
 	mod = TrueCrawl,
-	mod = Advanced_Trajectorys_Realistic_Overhaul,
 	mod = itemGPS,
 	mod = BLTRandomZombies,
 	mod = MoreLootSettings,
@@ -125,7 +125,9 @@ mods
 	mod = ssr-quests-e3,
 	mod = ssr-examine,
 	mod = ssr-quests-e2,
-	mod = EFK_STD,
+	mod = ImprovedProjectileZ,
+	mod = CraftHelperContinued,
+	mod = EFK_STD_C43,
 	mod = EFK_ADV,
 }
 
