@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="gfx">
+    <file>gfx/chine.png</file>
     <file>gfx/update.png</file>
     <file>gfx/accolade.png</file>
     <file>gfx/performance.png</file>
@@ -21,6 +22,7 @@
     <file>gfx/valide.png</file>
   </qresource>
   <qresource prefix="translation">
+    <file>translations/zh-CN.qm</file>
     <file>translations/en-GB.qm</file>
     <file>translations/fr-FR.qm</file>
   </qresource>

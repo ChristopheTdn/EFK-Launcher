@@ -752,7 +752,7 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>50</y>
+      <y>45</y>
       <width>56</width>
       <height>26</height>
      </rect>
@@ -1112,6 +1112,32 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_Chine">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>70</y>
+      <width>56</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>English</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="ressources.qrc">
+      <normaloff>:/gfx/gfx/chine.png</normaloff>:/gfx/gfx/chine.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>36</height>
+     </size>
     </property>
    </widget>
   </widget>

@@ -82,6 +82,15 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         # TODO: not implemented yet
         EFK.core.changeLangue(self, 'en-GB')
         EFK.disk.configSave(self, 'Langue', 'en-GB')
+        
+    @pyqtSlot()
+    def on_radioButton_Chine_clicked(self) -> None:
+        """
+        Valide la langue Chinoise et modifie l'interface a la volée
+        """
+        # TODO: not implemented yet
+        EFK.core.changeLangue(self, 'zh-CN')
+        EFK.disk.configSave(self, 'Langue', 'zh-CN')
 
     @pyqtSlot()
     def on_commandLinkButton_Twitch_clicked(self):  
