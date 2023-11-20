@@ -180,7 +180,7 @@ def launch_EFK_launcher_updater(self):
 def uninstall_EFK_launcher(self) :
     """Efface l'ensemble des script de EFK
     """
-    liste =[
+    liste = [
         self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Easy.cfg",
         self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK STD.cfg",
         self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Hard.cfg"
