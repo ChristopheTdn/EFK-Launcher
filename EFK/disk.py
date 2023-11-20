@@ -18,7 +18,7 @@ def get_userPZDir(self: QtWidgets) -> None:
 
     self.lineEdit_ProfilPZ.setText(repertoire)
     if disk.verif_lien(self, directory=repertoire, icon=self.label_IconStatus_ProfilPZ):
-        disk.configSave(self, "Profil", repertoire)
+        disk.configSave( "Profil", repertoire)
 
 
 def get_saveGameDir(self: QtWidgets) -> None:
@@ -46,7 +46,7 @@ def get_saveGameDir(self: QtWidgets) -> None:
             ),
             icon=self.label_IconStatus_RepertoireSaveGame,
         ):
-            disk.configSave(self, "SaveGame", name)
+            disk.configSave( "SaveGame", name)
             self.pushButton_WIPE.setEnabled(True)
             self.label_IconStatus_WIPEMAP.setPixmap(
                 QtGui.QPixmap(":/gfx/gfx/valide.png")
@@ -71,7 +71,7 @@ def get_ExePZ(self: QtWidgets) -> None:
         if disk.verif_lien(self,
                         file=fichier[0],
                         icon=self.label_IconStatus_ExePZ):
-            disk.configSave(self, "ExePZ", fichier[0])
+            disk.configSave( "ExePZ", fichier[0])
 
 def get_MODManager(self: QtWidgets) -> None:
     """
@@ -167,7 +167,7 @@ def verif_lien(self: QtWidgets, directory="", file="", icon=None) -> None:
         else:
             icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
             return False
-    if file != "":
+    if file != "" and icon != None :
         if os.path.isfile(file):
             icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
             return True
@@ -176,7 +176,7 @@ def verif_lien(self: QtWidgets, directory="", file="", icon=None) -> None:
             return False
 
 
-def configSave(self, key, valeur):
+def configSave(key, valeur):
     with open("config/EFKLauncher/config.json", "r+") as fichier:
         config = json.load(fichier)
         config[key] = valeur

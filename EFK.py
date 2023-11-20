@@ -9,6 +9,7 @@ import sys
 from PyQt6 import QtWidgets, QtCore
 from principale import Fenetre_Principale
 import shutil
+import EFK
 
 app = QtWidgets.QApplication(sys.argv)
 
@@ -28,6 +29,8 @@ if updater:
 else:
     # Efface toute trace des operations d'Update
     shutil.rmtree("tmp", True)
+    # creation fichier config si rien n existe
+    EFK.core.create_config()
     # Installe Traduction
     TRANSLATOR = QtCore.QTranslator()
     TRANSLATOR.load(":/translation/translations/en-GB.qm")

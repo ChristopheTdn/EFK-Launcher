@@ -41,7 +41,31 @@ def init_application(self):
         self.label_UpdateAvailable.setVisible(True)
         self.label_UpdateAvailable_2.setVisible(True)
 
+def create_config():
+
+    if not os.path.isfile(r"config\EFKLauncher\config.json"):
+        config = {}
+        with open("config/EFKLauncher/config.json", "w") as fichier_config:
+            json.dump(config, fichier_config)
+
+    with open("config/EFKLauncher/config.json", "r") as fichier:
+        CONFIG = json.load(fichier)
+
+    if 'Langue' not in CONFIG:
+        disk.configSave("Langue", "en-GB")
+    if 'SaveGame' not in CONFIG:
+        disk.configSave("SaveGame", "")
+    if 'Profil' not in CONFIG:
+        disk.configSave("Profil", "")
+    if 'ExePZ' not in CONFIG:
+        disk.configSave("ExePZ", "")
+    if 'DebugMode' not in CONFIG:
+        disk.configSave("DebugMode", False)
+    if "Performance" not in CONFIG:
+        disk.configSave("Performance", "")
+
 def loadConfig(self) -> None:
+
     with open("config/EFKLauncher/config.json", "r") as fichier:
         CONFIG = json.load(fichier)
     self.lineEdit_ExePZ.setText(CONFIG["ExePZ"])
@@ -114,8 +138,6 @@ def changeLangue(self, langue):
     app.installTranslator(TRANSLATOR)
     main_window = QtWidgets.QMainWindow()
     self.retranslateUi(main_window)
-
-
 
 def init_MODManager(self):
     disk.get_MODManager(self)

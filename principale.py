@@ -72,7 +72,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.core.changeLangue(self, 'fr-FR')
-        EFK.disk.configSave(self, 'Langue', 'fr-FR')
+        EFK.disk.configSave( 'Langue', 'fr-FR')
 
     @pyqtSlot()
     def on_radioButton_English_clicked(self) -> None:
@@ -81,7 +81,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.core.changeLangue(self, 'en-GB')
-        EFK.disk.configSave(self, 'Langue', 'en-GB')
+        EFK.disk.configSave( 'Langue', 'en-GB')
         
     @pyqtSlot()
     def on_radioButton_Chine_clicked(self) -> None:
@@ -90,7 +90,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.core.changeLangue(self, 'zh-CN')
-        EFK.disk.configSave(self, 'Langue', 'zh-CN')
+        EFK.disk.configSave( 'Langue', 'zh-CN')
 
     @pyqtSlot()
     def on_commandLinkButton_Twitch_clicked(self):  
@@ -132,7 +132,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         @type bool
         """
         # TODO: not implemented yet
-        EFK.disk.configSave(self, 'DebugMode', checked)
+        EFK.disk.configSave( 'DebugMode', checked)
         
     @pyqtSlot()
     def on_radioButton_EFKEnhanced_clicked(self) -> None:
@@ -141,7 +141,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.disk.install_EFKEnhanced(self)
-        EFK.disk.configSave(self, 'Performance', "Enhanced")
+        EFK.disk.configSave( 'Performance', "Enhanced")
 
     @pyqtSlot()    
     def on_radioButton_EFKStandard_clicked(self) -> None:
@@ -150,7 +150,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.disk.install_EFKStandard(self)
-        EFK.disk.configSave(self, 'Performance', "Standard")
+        EFK.disk.configSave( 'Performance', "Standard")
         
     @pyqtSlot()    
     def on_radioButton_EFKNoModif_clicked(self) -> None:
@@ -160,7 +160,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         # TODO: not implemented yet
         self.label_alert.setVisible(True)
         self.label_SignAlert.setVisible(True)
-        EFK.disk.configSave(self, 'Performance', "")
+        EFK.disk.configSave( 'Performance', "")
 
     @pyqtSlot()
     def on_radioButton_EFKNoModif(self) -> None:
@@ -168,7 +168,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Valide la langue Francaise et modifie l'interface a la volée
         """
         # Ne modifie plsu la selection des Mods
-        EFK.disk.configSave(self, 'Standard', "")
+        EFK.disk.configSave( 'Standard', "")
 
     @pyqtSlot()
     def on_pushButton_MajEFK_clicked(self) -> None:

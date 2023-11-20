@@ -719,61 +719,6 @@
      <string>WIPE MAP</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_France">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>15</y>
-      <width>56</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>French</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/gfx/gfx/france.png</normaloff>:/gfx/gfx/france.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>32</width>
-      <height>32</height>
-     </size>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radioButton_English">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>45</y>
-      <width>56</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>English</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/gfx/gfx/royaumeunis.png</normaloff>:/gfx/gfx/royaumeunis.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>32</width>
-      <height>32</height>
-     </size>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_Titre_2">
     <property name="geometry">
      <rect>
@@ -1114,31 +1059,114 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_Chine">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>70</y>
-      <width>56</width>
-      <height>31</height>
+      <x>335</x>
+      <y>5</y>
+      <width>96</width>
+      <height>111</height>
      </rect>
     </property>
-    <property name="toolTip">
-     <string>English</string>
-    </property>
-    <property name="text">
+    <property name="title">
      <string/>
     </property>
-    <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/gfx/gfx/chine.png</normaloff>:/gfx/gfx/chine.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>32</width>
-      <height>36</height>
-     </size>
-    </property>
+    <widget class="QRadioButton" name="radioButton_France">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>56</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>French</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="ressources.qrc">
+       <normaloff>:/gfx/gfx/france.png</normaloff>:/gfx/gfx/france.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_English">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>45</y>
+       <width>56</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>French</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="ressources.qrc">
+       <normaloff>:/gfx/gfx/royaumeunis.png</normaloff>:/gfx/gfx/royaumeunis.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_Chine">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>75</y>
+       <width>56</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>French</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="ressources.qrc">
+       <normaloff>:/gfx/gfx/chine.png</normaloff>:/gfx/gfx/chine.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
