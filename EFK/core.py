@@ -40,6 +40,10 @@ def init_application(self):
     if versionOnline != "" and versionOnline != versionExe :
         self.label_UpdateAvailable.setVisible(True)
         self.label_UpdateAvailable_2.setVisible(True)
+        
+    # Affiche le numero de version
+    with open("config/EFKLauncher/version.txt", "r") as fichier:
+        self.label_version.setText('v '+fichier.read())
 
 def create_config():
 
@@ -66,6 +70,7 @@ def create_config():
 
 def loadConfig(self) -> None:
 
+    # Recupere les configs enregistrées
     with open("config/EFKLauncher/config.json", "r") as fichier:
         CONFIG = json.load(fichier)
     self.lineEdit_ExePZ.setText(CONFIG["ExePZ"])

@@ -12,11 +12,11 @@ def init_maj_process(self, url, dest, file):
     self.pushButton_ok.setEnabled(False)
 
     while "Tout se deroule bien":
-        #Creer le repertoire temporaire
+        # Creer le repertoire temporaire
         message(self, "Création du repertoire de destination")
         if not os.path.exists(dest):
             os.makedirs(dest)
-        #Telecharge l'archive
+        # Telecharge l'archive
 
         message(self, "Téléchargement de l'archive")
         telecharge_fichier(self, url, dest, file)
@@ -24,21 +24,21 @@ def init_maj_process(self, url, dest, file):
 #            message(self, "ERREUR Téléchargement...")
 #            break
 #
-        #Efface le "EFK Launcher" de base
+        # Efface le "EFK Launcher" de base
         try:
             os.remove("EFK Launcher.exe")
         except:
             message(self, "ERREUR : Quitter EFK Launcher et recommencer...")
             break
 
-        #Dezippe le EFK Launcher
+        # Dezippe le EFK Launcher
         try:
             message(self, "Decompression de l'archive")
             unzip(self, url, dest, file)
         except:
             message(self, "Probleme de decompression du fichier Zip...")
             time.sleep(1)
-        #Efface le repertoire temporaire
+        # Efface le repertoire temporaire
         try:
             message(self, "Nettoyage fichier temporaire")
             shutil.rmtree("tmp", True)
@@ -46,7 +46,7 @@ def init_maj_process(self, url, dest, file):
             message(self, "impossible d'effacer le repertoire temporaire")
             time.sleep(1)
 
-        #Relance le EFK Launcher nouveau
+        # Relance le EFK Launcher nouveau
         message(self, "")
         from sys import platform as _platform
         if _platform == "linux" or _platform == "linux2":

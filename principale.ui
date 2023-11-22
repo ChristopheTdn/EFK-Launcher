@@ -34,7 +34,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Escape From Knox County Configurator</string>
+   <string>Escape From Knox County Launcher</string>
   </property>
   <property name="windowIcon">
    <iconset resource="ressources.qrc">
@@ -436,6 +436,11 @@
        </property>
       </widget>
      </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>A Propos</string>
+     </attribute>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_UserDir">
@@ -1167,6 +1172,22 @@
       <bool>true</bool>
      </property>
     </widget>
+   </widget>
+   <widget class="QLabel" name="label_version">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>80</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>v 0.0.0000</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
    </widget>
   </widget>
  </widget>

@@ -144,6 +144,9 @@ class Ui_Fenetre_Principale(object):
         self.label_UninstallEFK.setFont(font)
         self.label_UninstallEFK.setObjectName("label_UninstallEFK")
         self.tabWidget_FenetrePrincipale.addTab(self.tab_Options, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.tabWidget_FenetrePrincipale.addTab(self.tab_2, "")
         self.groupBox_UserDir = QtWidgets.QGroupBox(parent=self.centralWidget)
         self.groupBox_UserDir.setGeometry(QtCore.QRect(15, 160, 576, 116))
         self.groupBox_UserDir.setObjectName("groupBox_UserDir")
@@ -384,6 +387,10 @@ class Ui_Fenetre_Principale(object):
         self.radioButton_Chine.setCheckable(True)
         self.radioButton_Chine.setChecked(True)
         self.radioButton_Chine.setObjectName("radioButton_Chine")
+        self.label_version = QtWidgets.QLabel(parent=self.centralWidget)
+        self.label_version.setGeometry(QtCore.QRect(215, 80, 91, 16))
+        self.label_version.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTrailing|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_version.setObjectName("label_version")
         Fenetre_Principale.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(Fenetre_Principale)
@@ -392,7 +399,7 @@ class Ui_Fenetre_Principale(object):
 
     def retranslateUi(self, Fenetre_Principale):
         _translate = QtCore.QCoreApplication.translate
-        Fenetre_Principale.setWindowTitle(_translate("Fenetre_Principale", "Escape From Knox County Configurator"))
+        Fenetre_Principale.setWindowTitle(_translate("Fenetre_Principale", "Escape From Knox County Launcher"))
         self.groupBox_ModList.setTitle(_translate("Fenetre_Principale", "MOD Manager"))
         self.label.setText(_translate("Fenetre_Principale", "<html><head/><body><p align=\"center\">Ajout Profil <span style=\" font-weight:700;\">STANDARD</span> et <span style=\" font-weight:700;\">ADVANCED</span> à <span style=\" font-weight:700; font-style:italic;\">Lua/saved_modlists.txt</span></p></body></html>"))
         self.groupBox_2.setTitle(_translate("Fenetre_Principale", "Préreglage Difficulté"))
@@ -413,6 +420,7 @@ class Ui_Fenetre_Principale(object):
         self.pushButton_UninstallEFK.setText(_translate("Fenetre_Principale", "Desinstaller EFK"))
         self.label_UninstallEFK.setText(_translate("Fenetre_Principale", "<html><head/><body><p><span style=\" font-weight:700; text-decoration: underline;\">Pour desintaller EFK :<br/></span>1 - Quitter Project Zomboid<br/>2 - Se Désabonner à la <a href=\"https://steamcommunity.com/workshop/filedetails/?id=3048855836\"><span style=\" text-decoration: underline; color:#0000ff;\">collection Steam EFK<br/></span></a>3 - Cliquer sur <span style=\" font-weight:700;\">Desinstaller EFK<br/></span>4 - Une fois le EFK Launcher Fermé<br/>Supprimer votre repertoire local du <span style=\" font-weight:700;\">EFK Launcher</span></p><p><span style=\" font-weight:700;\"><br/></span></p></body></html>"))
         self.tabWidget_FenetrePrincipale.setTabText(self.tabWidget_FenetrePrincipale.indexOf(self.tab_Options), _translate("Fenetre_Principale", "Options"))
+        self.tabWidget_FenetrePrincipale.setTabText(self.tabWidget_FenetrePrincipale.indexOf(self.tab_2), _translate("Fenetre_Principale", "A Propos"))
         self.groupBox_UserDir.setTitle(_translate("Fenetre_Principale", "Repertoires Utilisateur"))
         self.label_4.setText(_translate("Fenetre_Principale", "Profil PZ :"))
         self.label_5.setText(_translate("Fenetre_Principale", "Sauvegardes :"))
@@ -438,3 +446,4 @@ class Ui_Fenetre_Principale(object):
         self.radioButton_France.setToolTip(_translate("Fenetre_Principale", "French"))
         self.radioButton_English.setToolTip(_translate("Fenetre_Principale", "French"))
         self.radioButton_Chine.setToolTip(_translate("Fenetre_Principale", "French"))
+        self.label_version.setText(_translate("Fenetre_Principale", "v 0.0.0000"))
