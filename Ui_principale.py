@@ -209,8 +209,8 @@ class Ui_Fenetre_Principale(object):
         self.label_19.setText("<html><head/><body><p><span style=\" font-size:9pt;\">written with</span><span style=\" font-size:9pt; font-weight:700;\"> Python 3.11 + PyQt6</span></p></body></html>")
         self.label_19.setObjectName("label_19")
         self.label_20 = QtWidgets.QLabel(parent=self.groupBox_3)
-        self.label_20.setGeometry(QtCore.QRect(60, 15, 176, 51))
-        self.label_20.setText("<html><head/><body><p><span style=\" font-size:9pt; font-weight:700;\">EFK Launcher </span><span style=\" font-size:9pt;\">allow you to install<br/>or uninstall the </span><span style=\" font-size:9pt; font-weight:700;\">project Zomboid<br/>Mod : Escape from Knox County</span></p></body></html>")
+        self.label_20.setGeometry(QtCore.QRect(50, 10, 201, 51))
+        self.label_20.setText("<html><head/><body><p><span style=\" font-size:9pt; font-weight:700;\">EFK Launcher </span><span style=\" font-size:9pt;\">allow you to install<br/>or uninstall the </span><span style=\" font-size:9pt; font-weight:700;\">mod</span><span style=\" font-size:9pt;\"> for </span><span style=\" font-size:9pt; font-weight:700;\">Project<br/>Zomboid  : Escape from Knox County</span></p></body></html>")
         self.label_20.setObjectName("label_20")
         self.label_21 = QtWidgets.QLabel(parent=self.groupBox_3)
         self.label_21.setGeometry(QtCore.QRect(10, 110, 46, 26))
@@ -484,7 +484,7 @@ class Ui_Fenetre_Principale(object):
         Fenetre_Principale.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(Fenetre_Principale)
-        self.tabWidget_FenetrePrincipale.setCurrentIndex(3)
+        self.tabWidget_FenetrePrincipale.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(Fenetre_Principale)
 
     def retranslateUi(self, Fenetre_Principale):
