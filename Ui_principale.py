@@ -25,7 +25,7 @@ class Ui_Fenetre_Principale(object):
         self.centralWidget = QtWidgets.QWidget(parent=Fenetre_Principale)
         self.centralWidget.setObjectName("centralWidget")
         self.tabWidget_FenetrePrincipale = QtWidgets.QTabWidget(parent=self.centralWidget)
-        self.tabWidget_FenetrePrincipale.setGeometry(QtCore.QRect(5, 375, 576, 266))
+        self.tabWidget_FenetrePrincipale.setGeometry(QtCore.QRect(5, 375, 576, 256))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.tabWidget_FenetrePrincipale.setFont(font)
