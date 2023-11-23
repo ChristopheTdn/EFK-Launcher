@@ -59,7 +59,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -571,19 +571,6 @@
        <string>Source Code :</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_14">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>180</y>
-        <width>46</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#0055ff;&quot;&gt;Github&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
@@ -595,19 +582,6 @@
       </property>
       <property name="text">
        <string>Project : </string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_16">
-      <property name="geometry">
-       <rect>
-        <x>95</x>
-        <y>160</y>
-        <width>46</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#0055ff;&quot;&gt;Discord&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QGroupBox" name="groupBox_3">
@@ -644,8 +618,8 @@
       <widget class="QLabel" name="label_18">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>70</y>
+         <x>5</x>
+         <y>60</y>
          <width>61</width>
          <height>41</height>
         </rect>
@@ -664,7 +638,7 @@
        <property name="geometry">
         <rect>
          <x>60</x>
-         <y>75</y>
+         <y>65</y>
          <width>186</width>
          <height>36</height>
         </rect>
@@ -710,14 +684,46 @@
         <rect>
          <x>60</x>
          <y>105</y>
-         <width>141</width>
+         <width>126</width>
          <height>36</height>
         </rect>
        </property>
        <property name="text">
-        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;2023 Licence GNU AGPLv3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2023 EFK Launcher&lt;br/&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Licence GNU AGPLv3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
+     </widget>
+     <widget class="QLabel" name="label_AboutGithub">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>180</y>
+        <width>46</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/ChristopheTdn/EFK-Launcher&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#0000ff;&quot;&gt;Github&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_AboutDiscord">
+      <property name="geometry">
+       <rect>
+        <x>95</x>
+        <y>155</y>
+        <width>76</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://discord.com/invite/rbd36ERXyu&quot;&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline; color:#0000ff; vertical-align:top;&quot;&gt;Discord&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
      </widget>
     </widget>
    </widget>
