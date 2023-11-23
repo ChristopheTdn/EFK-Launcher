@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="gfx">
+    <file>gfx/agplv3.png</file>
+    <file>gfx/info.png</file>
+    <file>gfx/pyqt.png</file>
     <file>gfx/chine.png</file>
     <file>gfx/update.png</file>
     <file>gfx/accolade.png</file>
