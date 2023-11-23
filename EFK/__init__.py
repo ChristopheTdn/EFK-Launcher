@@ -1,1 +1,1 @@
-from . import  core, disk, reseau
+from . import  core, disk, reseau, sounds

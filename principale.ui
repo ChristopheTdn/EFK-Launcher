@@ -1174,6 +1174,9 @@
     </widget>
    </widget>
    <widget class="QLabel" name="label_version">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>215</x>
@@ -1182,8 +1185,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string notr="true"/>
+    </property>
     <property name="text">
-     <string>v 0.0.0000</string>
+     <string notr="true">v 0.0.0000</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

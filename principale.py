@@ -37,15 +37,19 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         l'exe PZ
         """
         # TODO: not implemented yet     
+        EFK.sounds.play(self)
         EFK.disk.get_ExePZ(self)
-    
+
+        
     @pyqtSlot()
     def on_pushButton_RunPZ_clicked(self):
         """
         Lance l'executable PZ dans un Process.
         """
         # TODO: not implemented yet
+        EFK.sounds.play(self)
         EFK.core.runPz(self)
+
         
     @pyqtSlot()
     def on_pushButton_SetRepertoireSaveGame_clicked(self):  
@@ -54,6 +58,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         le repertoire de sauvegarde
         """
         # TODO: not implemented yet     
+        EFK.sounds.play(self)
         EFK.disk.get_saveGameDir(self)
 
 
@@ -63,7 +68,9 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Lance le WIPE MAP
         """
         # TODO: not implemented yet     
+        EFK.sounds.play(self)
         EFK.disk.delFile(self)
+
 
     @pyqtSlot()
     def on_radioButton_France_clicked(self) -> None:
@@ -71,17 +78,21 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Valide la langue Francaise et modifie l'interface a la volée
         """
         # TODO: not implemented yet
+        EFK.sounds.play(self)
         EFK.core.changeLangue(self, 'fr-FR')
-        EFK.disk.configSave( 'Langue', 'fr-FR')
+        EFK.disk.configSave('Langue', 'fr-FR')
 
+        
     @pyqtSlot()
     def on_radioButton_English_clicked(self) -> None:
         """
         Valide la langue Francaise et modifie l'interface a la volée
         """
         # TODO: not implemented yet
+        EFK.sounds.play(self)
         EFK.core.changeLangue(self, 'en-GB')
-        EFK.disk.configSave( 'Langue', 'en-GB')
+        EFK.disk.configSave('Langue', 'en-GB')
+
         
     @pyqtSlot()
     def on_radioButton_Chine_clicked(self) -> None:
@@ -89,8 +100,10 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Valide la langue Chinoise et modifie l'interface a la volée
         """
         # TODO: not implemented yet
+        EFK.sounds.play(self)
         EFK.core.changeLangue(self, 'zh-CN')
         EFK.disk.configSave( 'Langue', 'zh-CN')
+
 
     @pyqtSlot()
     def on_commandLinkButton_Twitch_clicked(self):  
@@ -98,6 +111,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Ouvre le lien internet TWITCH TANCRED TERROR
         """
         # TODO: not implemented yet     
+        EFK.sounds.play(self)
         webbrowser.open("https://www.twitch.tv/tancredterror")
     
     @pyqtSlot()
@@ -106,22 +120,26 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Ouvre le lien internet YOUTUBE TANCRED TERROR
         """
         # TODO: not implemented yet     
+        EFK.sounds.play(self)
         webbrowser.open("https://www.youtube.com/@TancredTerror")
-    
+        
     @pyqtSlot()
     def on_commandLinkButton_Discord_clicked(self):  
         """
         Ouvre le lien internet DISCORD TANCRED TERROR
         """
         # TODO: not implemented yet     
+        EFK.sounds.play(self)
         webbrowser.open("https://discord.gg/rbd36ERXyu")
+
         
     @pyqtSlot()
     def on_commandLinkButton_STEAM_clicked(self):  
         """
         Ouvre le lien internet TWITCH TANCRED TERROR
         """
-        # TODO: not implemented yet     
+        # TODO: not implemented yet    
+        EFK.sounds.play(self)
         webbrowser.open("https://steamcommunity.com/workshop/filedetails/?id=3048855836")
         
     def on_checkBox_DebugMode_toggled(self, checked):
@@ -132,7 +150,8 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         @type bool
         """
         # TODO: not implemented yet
-        EFK.disk.configSave( 'DebugMode', checked)
+        EFK.sounds.play(self)
+        EFK.disk.configSave('DebugMode', checked)
         
     @pyqtSlot()
     def on_radioButton_EFKEnhanced_clicked(self) -> None:
@@ -140,15 +159,17 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Determine la selections des Mods pour EFK Enhanced
         """
         # TODO: not implemented yet
+        EFK.sounds.play(self)
         EFK.disk.install_EFKEnhanced(self)
         EFK.disk.configSave( 'Performance', "Enhanced")
-
+        
     @pyqtSlot()    
     def on_radioButton_EFKStandard_clicked(self) -> None:
         """
         Determine la selections des Mods pour EFK Standard
         """
         # TODO: not implemented yet
+        EFK.sounds.play(self)
         EFK.disk.install_EFKStandard(self)
         EFK.disk.configSave( 'Performance', "Standard")
         
@@ -158,25 +179,31 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Determine la selections des Mods pour EFK Standard
         """
         # TODO: not implemented yet
+        EFK.sounds.play(self)
         self.label_alert.setVisible(True)
         self.label_SignAlert.setVisible(True)
-        EFK.disk.configSave( 'Performance', "")
+        EFK.disk.configSave('Performance', "")
 
+        
     @pyqtSlot()
     def on_radioButton_EFKNoModif(self) -> None:
         """
         Valide la langue Francaise et modifie l'interface a la volée
         """
         # Ne modifie plsu la selection des Mods
+        EFK.sounds.play(self)
         EFK.disk.configSave( 'Standard', "")
 
+        
     @pyqtSlot()
     def on_pushButton_MajEFK_clicked(self) -> None:
         """
         Lance la mise a jour de EFK Launcher
         """
         # TODO: not implemented yet
+        EFK.sounds.play(self)
         EFK.core.launch_EFK_launcher_updater(self)
+
         
     @pyqtSlot()
     def on_pushButton_UninstallEFK_clicked(self) -> None:
@@ -185,4 +212,5 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         en vue d'une desinstallations 
         """
         # TODO: not implemented yet
+        EFK.sounds.play(self)
         EFK.core.uninstall_EFK_launcher(self)

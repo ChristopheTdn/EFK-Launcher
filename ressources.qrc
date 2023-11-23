@@ -21,6 +21,9 @@
     <file>gfx/supprimer.png</file>
     <file>gfx/valide.png</file>
   </qresource>
+  <qresource prefix="sounds">
+    <file>sounds/clic.mp3</file>
+  </qresource>
   <qresource prefix="translation">
     <file>translations/zh-CN.qm</file>
     <file>translations/en-GB.qm</file>
