@@ -36,7 +36,7 @@
     <message>
         <location filename="../principale.ui" line="225"/>
         <source>Log</source>
-        <translation>Journal</translation>
+        <translation>Log</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="435"/>
