@@ -47,7 +47,7 @@
       <x>5</x>
       <y>375</y>
       <width>576</width>
-      <height>266</height>
+      <height>256</height>
      </rect>
     </property>
     <property name="font">
@@ -59,7 +59,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -1329,8 +1329,8 @@
    <widget class="QLabel" name="label_UpdateAvailable_2">
     <property name="geometry">
      <rect>
-      <x>165</x>
-      <y>360</y>
+      <x>120</x>
+      <y>365</y>
       <width>146</width>
       <height>21</height>
      </rect>
