@@ -7,7 +7,7 @@ class LaunchPz(QtCore.QObject):
         self.commande = exePZ
         self.Ui = Ui
         self.process = None
-        self.argument = ""
+        self.argument = []
         self.initClass()
 
     def initClass(self):
@@ -32,10 +32,11 @@ class LaunchPz(QtCore.QObject):
                 .replace("b'", "")\
                 .replace('\\r', "")\
                 .replace("'", "")\
+                .replace('ERROR', "<strong>ERROR</strong>")\
                 .replace('WARN', "<strong>WARN</strong>")\
                 .replace('LOG', "<strong>LOG</strong>")\
                 .replace('DEBUG', "<strong>DEBUG</strong>")
-            if not self.Ui.checkBox_LOGWarn.isChecked() and "<strong>WARN</strong>" in info:
+            if not self.Ui.checkBox_LOGWarn.isChecked() and ("<strong>WARN</strong>" in info or "<strong>ERROR</strong>" in info):
                 info = ""
             elif not self.Ui.checkBox_LOGDebug.isChecked() and "<strong>DEBUG</strong>" in info:
                 info = ""
@@ -46,10 +47,11 @@ class LaunchPz(QtCore.QObject):
         return returnData
     
     def parseArguments(self):
-        arguments = []
+        
         if self.Ui.checkBox_DebugMode.isChecked():
-            arguments.append("-debug")
-        return arguments
+            self.argument.append("-debug")
+        
     
     def start(self):
-        self.process.start(self.commande, self.parseArguments())
+        self.parseArguments()
+        self.process.start(self.commande, self.argument)

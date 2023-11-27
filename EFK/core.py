@@ -47,7 +47,7 @@ def init_application(self):
 
 def create_config():
 
-    if not os.path.isfile(r"config\EFKLauncher\config.json"):
+    if not os.path.isfile("config/EFKLauncher/config.json"):
         config = {}
         with open("config/EFKLauncher/config.json", "w") as fichier_config:
             json.dump(config, fichier_config)
