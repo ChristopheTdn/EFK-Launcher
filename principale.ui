@@ -1482,6 +1482,19 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
+   <widget class="QCheckBox" name="checkBox_unlock">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>685</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Déverrouille Bouton</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>

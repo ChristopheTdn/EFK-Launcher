@@ -6,7 +6,7 @@ et lancer le MOD EFK par TancredTerror sur Project Zomboid
 """
 
 import sys
-from PyQt6 import QtWidgets, QtCore
+from PySide6 import QtWidgets, QtCore
 from principale import Fenetre_Principale
 import shutil
 import EFK

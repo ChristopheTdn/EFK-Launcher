@@ -44,39 +44,44 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;卸载EFK :&lt;br/&gt;&lt;/span&gt;1 - 退出Project Zomboid&lt;br/&gt;2 - 取消订阅 &lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;collection Steam EFK&lt;br/&gt;&lt;/span&gt;3 - 点击 &lt;span style=&quot; font-weight:700;&quot;&gt;卸载EFK 按钮&lt;br/&gt;&lt;/span&gt;4 - 当EFK启动器关闭&lt;br/&gt;删除你的&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;EFK Launcher文件夹&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="924"/>
+        <location filename="../principale.ui" line="1158"/>
         <source>La collection de mods EFKC</source>
         <translation>EFKC模组合集</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="927"/>
+        <location filename="../principale.ui" line="1161"/>
         <source>Abonnements à la collection STEAM ESCAPE FROM KNOX COUNTY</source>
         <translation>ESCAPE FROM KNOX COUNTY Steam 合集</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1007"/>
+        <location filename="../principale.ui" line="1241"/>
         <source>EFK Standard (Low CPU Power)</source>
         <translation>EFK普通 (低CPU占用)</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1020"/>
+        <location filename="../principale.ui" line="1254"/>
         <source>EFK Enhanced (High CPU Power)</source>
         <translation>EFK进阶 (高CPU占用)</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1055"/>
+        <location filename="../principale.ui" line="1292"/>
         <source>No Modif (For Modders Only)</source>
         <translation>不修改(模组作者使用)</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1075"/>
+        <location filename="../principale.ui" line="1312"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;If you&apos;re not a Modder,&lt;br/&gt;Please make a choice EFK Enhanced&lt;br/&gt;or EFK Standard &lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Before&lt;/span&gt; Launch PZ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;重要 :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;如果&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;你不是模组作者&lt;/span&gt;,&lt;br/&gt;选择 EFK进阶&lt;br/&gt;或者 EFK普通 在&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt; 启动pz前&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="451"/>
+        <location filename="../principale.ui" line="740"/>
         <source>Repertoires Utilisateur</source>
         <translation>用户目录</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="37"/>
+        <source>Escape From Knox County Launcher</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../principale.ui" line="109"/>
@@ -125,7 +130,7 @@
     </message>
     <message>
         <location filename="../principale.ui" line="365"/>
-        <location filename="../principale.ui" line="1108"/>
+        <location filename="../principale.ui" line="1345"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise a jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;新的更新可用&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -140,83 +145,110 @@
         <translation>卸载 EFK</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="625"/>
+        <location filename="../principale.ui" line="442"/>
+        <source>A Propos</source>
+        <translation>關於我們</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="493"/>
+        <source>Idea : </source>
+        <translation>想法 : </translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="506"/>
+        <source>Code :</source>
+        <translation>程式師 :</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="519"/>
+        <source>Traduction :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="571"/>
+        <source>Source Code :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="584"/>
+        <source>Project : </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="914"/>
         <source>Exe PZ :</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="732"/>
+        <location filename="../principale.ui" line="1376"/>
+        <location filename="../principale.ui" line="1408"/>
+        <location filename="../principale.ui" line="1440"/>
         <source>French</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="761"/>
-        <source>English</source>
-        <translation></translation>
+        <location filename="../principale.ui" line="1495"/>
+        <source>Déverrouille Bouton</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="794"/>
+        <location filename="../principale.ui" line="1028"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;Entre 2 raids&lt;br/&gt;- personnage dans la base&lt;br/&gt;- Quitter PZ ou au Menu principal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;重要 :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;在两所探索间&lt;br/&gt;- 玩家呆在基地&lt;br/&gt;-退到主菜单或桌面&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="813"/>
+        <location filename="../principale.ui" line="1047"/>
         <source>Chaine Twitch de Tancred terror</source>
         <translation>Twitch channel TancredTerror</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="839"/>
+        <location filename="../principale.ui" line="1073"/>
         <source>Chaine YOUTUBE de Tancred terror</source>
         <translation>YouTube channel TancredTerror</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="871"/>
+        <location filename="../principale.ui" line="1105"/>
         <source>DISCORD de Tancred terror</source>
         <translation>DISCORD server</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="959"/>
+        <location filename="../principale.ui" line="1193"/>
         <source>RUN PZ</source>
         <translation>启动 PZ</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="982"/>
+        <location filename="../principale.ui" line="1216"/>
         <source>Mode DEBUG</source>
         <translation>Debug 模式</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="995"/>
+        <location filename="../principale.ui" line="1229"/>
         <source>EFK Performances impact</source>
         <translation>EFK 性能选项</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="542"/>
+        <location filename="../principale.ui" line="831"/>
         <source>Profil PZ :</source>
         <translation>PZ 预设 :</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="37"/>
-        <source>Escape From Knox County Configurator</source>
-        <translation>Escape From Knox County Configurator</translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="558"/>
+        <location filename="../principale.ui" line="847"/>
         <source>Sauvegardes :</source>
         <translation>存档 :</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="662"/>
+        <location filename="../principale.ui" line="951"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="574"/>
-        <location filename="../principale.ui" line="641"/>
+        <location filename="../principale.ui" line="863"/>
+        <location filename="../principale.ui" line="930"/>
         <source>choisir</source>
         <translation>选择</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="719"/>
+        <location filename="../principale.ui" line="1008"/>
         <source>WIPE MAP</source>
         <translation>刷新地图</translation>
     </message>

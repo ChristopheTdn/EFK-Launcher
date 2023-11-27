@@ -2,8 +2,8 @@
 # Module Interface CORE
 #
 
-from PyQt6 import QtWidgets
-from PyQt6 import QtGui, QtCore
+from PySide6 import QtWidgets
+from PySide6 import QtGui, QtCore
 import sys
 import os
 from . import launchpz

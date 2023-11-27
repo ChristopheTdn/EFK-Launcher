@@ -4,10 +4,10 @@
 Module implementing Fenetre_Principale.
 """
 
-from PyQt6.QtCore import pyqtSlot, QTranslator
-from PyQt6.QtWidgets import QMainWindow
-from PyQt6 import QtGui
-from Ui_principale import Ui_Fenetre_Principale
+from PySide6.QtCore import Slot, QTranslator
+from PySide6.QtWidgets import QMainWindow
+from PySide6 import QtGui
+from principale_ui import Ui_Fenetre_Principale
 import EFK
 import webbrowser
 import ressources_rc
@@ -30,7 +30,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         self.setupUi(self)
         EFK.core.init_application(self)
     
-    @pyqtSlot()
+    @Slot()
     def on_pushButton_SetExePZ_clicked(self):  
         """
         Evenement appelé lors du clique sur le bouton pour choisir
@@ -41,7 +41,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.get_ExePZ(self)
 
         
-    @pyqtSlot()
+    @Slot()
     def on_pushButton_RunPZ_clicked(self):
         """
         Lance l'executable PZ dans un Process.
@@ -51,7 +51,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.core.runPz(self)
 
         
-    @pyqtSlot()
+    @Slot()
     def on_pushButton_SetRepertoireSaveGame_clicked(self):  
         """
         Evenement appelé lors du clique sur le bouton pour choisir
@@ -62,7 +62,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.get_saveGameDir(self)
 
 
-    @pyqtSlot()
+    @Slot()
     def on_pushButton_WIPE_clicked(self) -> None:
         """
         Lance le WIPE MAP
@@ -72,7 +72,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.delFile(self)
 
 
-    @pyqtSlot()
+    @Slot()
     def on_radioButton_France_clicked(self) -> None:
         """
         Valide la langue Francaise et modifie l'interface a la volée
@@ -83,7 +83,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.configSave('Langue', 'fr-FR')
 
         
-    @pyqtSlot()
+    @Slot()
     def on_radioButton_English_clicked(self) -> None:
         """
         Valide la langue Francaise et modifie l'interface a la volée
@@ -94,7 +94,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.configSave('Langue', 'en-GB')
 
         
-    @pyqtSlot()
+    @Slot()
     def on_radioButton_Chine_clicked(self) -> None:
         """
         Valide la langue Chinoise et modifie l'interface a la volée
@@ -105,7 +105,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.configSave( 'Langue', 'zh-CN')
 
 
-    @pyqtSlot()
+    @Slot()
     def on_commandLinkButton_Twitch_clicked(self):  
         """
         Ouvre le lien internet TWITCH TANCRED TERROR
@@ -114,7 +114,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.sounds.play(self)
         webbrowser.open("https://www.twitch.tv/tancredterror")
     
-    @pyqtSlot()
+    @Slot()
     def on_commandLinkButton_Youtube_clicked(self):  
         """
         Ouvre le lien internet YOUTUBE TANCRED TERROR
@@ -123,7 +123,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.sounds.play(self)
         webbrowser.open("https://www.youtube.com/@TancredTerror")
         
-    @pyqtSlot()
+    @Slot()
     def on_commandLinkButton_Discord_clicked(self):  
         """
         Ouvre le lien internet DISCORD TANCRED TERROR
@@ -133,16 +133,17 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         webbrowser.open("https://discord.gg/rbd36ERXyu")
 
         
-    @pyqtSlot()
+    @Slot()
     def on_commandLinkButton_STEAM_clicked(self):  
         """
         Ouvre le lien internet TWITCH TANCRED TERROR
         """
-        # TODO: not implemented yet    
+        # TODO: not implemented yet
         EFK.sounds.play(self)
         webbrowser.open("https://steamcommunity.com/workshop/filedetails/?id=3048855836")
         
-    def on_checkBox_DebugMode_toggled(self, checked):
+    @Slot()
+    def on_checkBox_DebugMode_stateChanged(self):
         """
         Slot documentation goes here.
 
@@ -151,9 +152,9 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.sounds.play(self)
-        EFK.disk.configSave('DebugMode', checked)
+        EFK.disk.configSave('DebugMode', self.checkBox_DebugMode.isChecked())
         
-    @pyqtSlot()
+    @Slot()
     def on_radioButton_EFKEnhanced_clicked(self) -> None:
         """
         Determine la selections des Mods pour EFK Enhanced
@@ -163,7 +164,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.install_EFKEnhanced(self)
         EFK.disk.configSave( 'Performance', "Enhanced")
         
-    @pyqtSlot()    
+    @Slot()    
     def on_radioButton_EFKStandard_clicked(self) -> None:
         """
         Determine la selections des Mods pour EFK Standard
@@ -173,7 +174,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.install_EFKStandard(self)
         EFK.disk.configSave( 'Performance', "Standard")
         
-    @pyqtSlot()    
+    @Slot()    
     def on_radioButton_EFKNoModif_clicked(self) -> None:
         """
         Determine la selections des Mods pour EFK Standard
@@ -185,7 +186,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.configSave('Performance', "")
 
         
-    @pyqtSlot()
+    @Slot()
     def on_radioButton_EFKNoModif(self) -> None:
         """
         Valide la langue Francaise et modifie l'interface a la volée
@@ -195,7 +196,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.configSave( 'Standard', "")
 
         
-    @pyqtSlot()
+    @Slot()
     def on_pushButton_MajEFK_clicked(self) -> None:
         """
         Lance la mise a jour de EFK Launcher
@@ -205,7 +206,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.core.launch_EFK_launcher_updater(self)
 
         
-    @pyqtSlot()
+    @Slot()
     def on_pushButton_UninstallEFK_clicked(self) -> None:
         """
         Supprime les scripts et les configs de EFK

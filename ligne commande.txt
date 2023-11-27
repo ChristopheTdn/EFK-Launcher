@@ -2,4 +2,5 @@ UPDATE Traduction :
 lupdate -no-obsolete principale.ui -ts "translations/fr-FR.ts" "translations/en-GB.ts" "translations/zh-CN.ts"   
 
 BUILD PyInstaller : (Penser a copier le repertoire Config dans le repertoire destination du fichier EXE)
-pyinstaller "EFK.spec" ; Robocopy.exe "./config" "./dist/config" /E /MIR /Z /DCOPY:T  /TIMFIX /R:0 /W:0 /XF "config.json"
+pyinstaller "EFK.spec" --distpath "EFKLauncher" ; Robocopy.exe "./config" "./EFKLauncher/config" /E /MIR /Z /DCOPY:T  /TIMFIX /R:0 /W:0 /XF "config.json" ; cd "EFKLauncher" ; WinRAR a EFKlauncher.zip  "EFK Launcher.exe" "./config"
+

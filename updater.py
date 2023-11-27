@@ -4,9 +4,9 @@
 Module implementing Mw_updater.
 """
 
-from PyQt6.QtCore import pyqtSlot
-from PyQt6 import QtWidgets
-from Ui_updater import Ui_MainWindow
+from PySide6.QtCore import Slot
+from PySide6 import QtWidgets
+from updater_ui import Ui_MainWindow
 import EFK
 
 
@@ -29,7 +29,7 @@ class Mw_updater(QtWidgets.QMainWindow, Ui_MainWindow):
             EFK.reseau.message(self, "ECHEC : le serveur ne repond pas.")
             self.pushButton_ok.setEnabled(False)
 
-    @pyqtSlot()
+    @Slot()
     def on_pushButton_ok_clicked(self):
         """
         Valide le debut de la procedure d'update
