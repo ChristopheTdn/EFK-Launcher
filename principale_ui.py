@@ -308,7 +308,7 @@ class Ui_Fenetre_Principale(object):
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(5, 10, 91, 91))
         self.label_2.setText(u"")
-        self.label_2.setPixmap(QPixmap(u"gfx/EFK.png"))
+        self.label_2.setPixmap(QPixmap(u":/gfx/gfx/EFK.png"))
         self.label_2.setScaledContents(True)
         self.label_Danger = QLabel(self.centralWidget)
         self.label_Danger.setObjectName(u"label_Danger")

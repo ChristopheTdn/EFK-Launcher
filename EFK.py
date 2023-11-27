@@ -2,7 +2,6 @@
 
 Un utilitaire pour permettre de configurer facilement
 et lancer le MOD EFK par TancredTerror sur Project Zomboid
-
 """
 
 import sys

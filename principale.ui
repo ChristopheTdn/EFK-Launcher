@@ -964,7 +964,7 @@
      <string notr="true"/>
     </property>
     <property name="pixmap">
-     <pixmap>gfx/EFK.png</pixmap>
+     <pixmap resource="ressources.qrc">:/gfx/gfx/EFK.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
