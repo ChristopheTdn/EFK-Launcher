@@ -25,6 +25,8 @@ def get_saveGameDir(self: QtWidgets) -> None:
     """
     Determine Le dossier de sauvegarde de PZ
     """
+
+
     repertoire = QtWidgets.QFileDialog.getExistingDirectory(
         parent=self,
         caption="Select directory",
@@ -59,11 +61,15 @@ def get_ExePZ(self: QtWidgets) -> None:
     """
     Determine L executable PZ 
     """
+    pzexe = ''
+    if core.sysInfo() == "Linux" :
+        pzexe = 'ProjectZomboid64'
+    elif core.sysInfo() == "windows" :
+        pzexe = 'ProjectZomboid64.bat'
     fichier = QtWidgets.QFileDialog.getOpenFileName(
         parent=self,
         caption="trouve l'executable PZ",
-        directory="c:",
-        filter = "ProjectZomboid64.bat",
+        filter = pzexe,
         options=QtWidgets.QFileDialog.Option.DontUseNativeDialog,
         )
     if fichier[0] != "":
