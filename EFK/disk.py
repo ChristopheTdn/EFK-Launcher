@@ -14,7 +14,7 @@ from . import core
 
 
 def get_userPZDir(self: QtWidgets) -> None:
-    repertoire = str((Path.home()).joinpath("zomboid")).replace("\\", "/")
+    repertoire = str((Path.home()).joinpath("Zomboid")).replace("\\", "/")
 
     self.lineEdit_ProfilPZ.setText(repertoire)
     if disk.verif_lien(self, directory=repertoire, icon=self.label_IconStatus_ProfilPZ):
