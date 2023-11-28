@@ -3,10 +3,6 @@
 /EFK_env
 /__pycache__
 config/EFKLauncher/config.json
-EFK/__pycache__
+/EFK/__pycache__
 EFK Launcher.exe
-EFK/__init__.py
-EFK/__pycache__/__init__.cpython-311.pyc
-EFK/__pycache__/core.cpython-311.pyc
-EFK/__pycache__/disk.cpython-311.pyc
-EFK/__pycache__/launchpz.cpython-311.pyc
+/EFKLauncher
