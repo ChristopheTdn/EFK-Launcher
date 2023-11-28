@@ -12,7 +12,6 @@ import shutil
 from . import disk
 from . import core
 
-
 def get_userPZDir(self: QtWidgets) -> None:
     repertoire = str((Path.home()).joinpath("Zomboid")).replace("\\", "/")
 
@@ -26,11 +25,10 @@ def get_saveGameDir(self: QtWidgets) -> None:
     Determine Le dossier de sauvegarde de PZ
     """
 
-
     repertoire = QtWidgets.QFileDialog.getExistingDirectory(
         parent=self,
         caption="Select directory",
-        directory=self.lineEdit_ProfilPZ.text() + "/Saves/Sandbox",
+        dir=self.lineEdit_ProfilPZ.text() + "/Saves/Sandbox",
         options=QtWidgets.QFileDialog.Option.DontUseNativeDialog,
     )
     name = os.path.basename(repertoire)
