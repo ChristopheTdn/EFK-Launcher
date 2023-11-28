@@ -27,9 +27,13 @@ def init_application(self):
     self.label_UpdateAvailable_2.setVisible(False)
     self.pushButton_MajEFK.setEnabled(True)
     versionOnline = ""
-    if reseau.is_website_online(self, "https://su66.fr/ftp/efklauncher/version.txt"):
-        url = "https://su66.fr/ftp/efklauncher/version.txt"
-        versionOnline = requests.get(url).text
+    if sysInfo() == "linux" :
+        version_url =  "https://su66.fr/ftp/efklauncher/nux/version.txt"
+    else :
+        version_url =  "https://su66.fr/ftp/efklauncher/version.txt"
+    
+    if reseau.is_website_online(self, version_url):
+        versionOnline = requests.get(version_url).text.replace('\n',"")
     else:
         self.label_noConnexion.setVisible(True)
         self.pushButton_MajEFK.setEnabled(False)

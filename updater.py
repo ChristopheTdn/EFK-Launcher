@@ -25,9 +25,14 @@ class Mw_updater(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
         # Si le site n est pas consultable, bloque la possibilité d'Update
-        if not EFK.reseau.is_website_online(self, "https://su66.fr/ftp/efklauncher/EFKLauncher.zip"):
-            EFK.reseau.message(self, "ECHEC : server is offline.")
-            self.pushButton_ok.setEnabled(False)
+        if EFK.core.sysInfo()=="linux":
+            if not EFK.reseau.is_website_online(self, "https://su66.fr/ftp/efklauncher/nux/EFKLauncher.zip"):
+                EFK.reseau.message(self, "ECHEC : server is offline.")
+                self.pushButton_ok.setEnabled(False)
+        else : 
+            if not EFK.reseau.is_website_online(self, "https://su66.fr/ftp/efklauncher/EFKLauncher.zip"):
+                EFK.reseau.message(self, "ECHEC : server is offline.")
+                self.pushButton_ok.setEnabled(False)
 
     @Slot()
     def on_pushButton_ok_clicked(self):
