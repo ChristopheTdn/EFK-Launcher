@@ -12,7 +12,7 @@ from . import reseau
 import requests
 import json
 import shutil
-
+import subprocess
 
 def init_application(self):
     # Définition Constantes
@@ -172,7 +172,7 @@ def launch_EFK_launcher_updater(self):
            '''
     platform = sysInfo()
     if platform == "linux" or platform == "linux2": # environnement Linux
-        executable="EFKLauncher"
+        executable="EFK Launcher"
     else : 
        executable="EFK Launcher.exe" # environnement windows
     # création repertoire tmp
@@ -182,10 +182,10 @@ def launch_EFK_launcher_updater(self):
     shutil.copyfile(executable, 'tmp/'+executable)
     #Lance EFKLauncher --updater
     if platform == "linux":
-        os.system(f'./tmp/{executable} --updater')
+        os.system(f'chmod +x "./tmp/{executable}"')
+        subprocess.Popen(f'"./tmp/{executable}" -updater',stdout=subprocess.PIPE,shell=True)
     elif platform == "win32":
         # Windows
-        import subprocess
         subprocess.Popen([f'tmp/{executable}','-updater'])
     #quitte l'application en cours
     sys.exit()
