@@ -6,8 +6,9 @@ import shutil
 import zipfile
 import time
 import requests
+import subprocess
 
-def init_maj_process(self, url, dest, file):
+def init_maj_process_win(self, url, dest, file):
     self.pushButton_ok.setEnabled(False)
 
     while "Tout se deroule bien":
@@ -19,10 +20,7 @@ def init_maj_process(self, url, dest, file):
 
         message(self, "Téléchargement de l'archive")
         telecharge_fichier(self, url, dest, file)
-#        except:
-#            message(self, "ERREUR Téléchargement...")
-#            break
-#
+
         # Efface le "EFK Launcher" de base
         try:
             os.remove("EFK Launcher.exe")
@@ -63,6 +61,51 @@ def init_maj_process(self, url, dest, file):
         sys.exit()
 
     self.pushButton_ok.setEnabled(True) 
+
+def init_maj_process_nux(self, url, dest, file):
+    self.pushButton_ok.setEnabled(False)
+
+    while "Tout se deroule bien":
+        # Creer le repertoire temporaire
+        message(self, "Création du repertoire de destination")
+        if not os.path.exists(dest):
+            os.makedirs(dest)
+        # Telecharge l'archive
+
+        message(self, "Téléchargement de l'archive")
+        telecharge_fichier(self, url, dest, file)
+
+        # Efface le "EFK Launcher" de base
+        try:
+            os.remove("./EFK Launcher")
+        except:
+            message(self, "ERREUR : effacement impossible...")
+            break
+
+        # Dezippe le EFK Launcher
+        try:
+            message(self, "Decompression de l'archive")
+            unzip(self, url, dest, file)
+        except:
+            message(self, "Probleme de decompression du fichier Zip...")
+            time.sleep(1)
+        # Efface le repertoire temporaire
+        try:
+            message(self, "Nettoyage fichier temporaire")
+            shutil.rmtree("tmp", True)
+        except:
+            message(self, "impossible d'effacer le repertoire temporaire")
+            time.sleep(1)
+
+        # Relance le EFK Launcher nouveau
+        message(self, "")
+        os.system(f'chmod +x "EFK Launcher"')
+        subprocess.Popen(f'"./EFK Launcher" -go',shell=True)
+        sys.exit()
+        
+    self.pushButton_ok.setEnabled(True) 
+
+
 
 def telecharge_fichier(self, url, dest, file):
     import urllib.request

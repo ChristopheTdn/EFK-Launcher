@@ -34,5 +34,8 @@ class Mw_updater(QtWidgets.QMainWindow, Ui_MainWindow):
         """
         Valide le debut de la procedure d'update
         """
-        EFK.reseau.init_maj_process(self, "http://www.su66.fr/ftp/efklauncher/EFKLauncher.zip", "tmp", "EFKLauncher.zip")
+        if EFK.core.sysInfo()=="linux":
+            EFK.reseau.init_maj_process_nux(self, "http://www.su66.fr/ftp/efklauncher/nux/EFKLauncher.zip", "tmp", "EFKLauncher.zip")
+        else :
+            EFK.reseau.init_maj_process_win(self, "http://www.su66.fr/ftp/efklauncher/EFKLauncher.zip", "tmp", "EFKLauncher.zip")
 

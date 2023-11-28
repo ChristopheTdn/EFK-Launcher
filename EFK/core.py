@@ -183,7 +183,7 @@ def launch_EFK_launcher_updater(self):
     #Lance EFKLauncher --updater
     if platform == "linux":
         os.system(f'chmod +x "./tmp/{executable}"')
-        subprocess.Popen(f'"./tmp/{executable}" -updater',stdout=subprocess.PIPE,shell=True)
+        subprocess.Popen(f'"./tmp/{executable}" -updater',shell=True)
     elif platform == "win32":
         # Windows
         subprocess.Popen([f'tmp/{executable}','-updater'])
