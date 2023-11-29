@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
         self.label.setScaledContents(True)
         self.label_titre = QLabel(self.centralWidget)
         self.label_titre.setObjectName(u"label_titre")
-        self.label_titre.setGeometry(QRect(150, 10, 206, 36))
+        self.label_titre.setGeometry(QRect(140, 10, 221, 36))
         font = QFont()
         font.setPointSize(16)
         self.label_titre.setFont(font)
