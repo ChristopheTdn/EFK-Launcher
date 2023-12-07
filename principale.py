@@ -143,7 +143,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         webbrowser.open("https://steamcommunity.com/workshop/filedetails/?id=3048855836")
         
     @Slot()
-    def on_checkBox_DebugMode_stateChanged(self):
+    def on_checkBox_unlock_stateChanged(self):
         """
         Slot documentation goes here.
 
@@ -152,7 +152,21 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.sounds.play(self)
+        buttonState = self.checkBox_unlock.isChecked()
+        self.pushButton_WIPE.setEnabled(buttonState)
+        
+     
+    @Slot()
+    def on_checkBox_DebugMode_stateChanged(self):
+        """
+        Slot documentation goes here.
+
+        @param checked DESCRIPTION
+        @type bool
+        """
+        EFK.sounds.play(self)
         EFK.disk.configSave('DebugMode', self.checkBox_DebugMode.isChecked())
+     
         
     @Slot()
     def on_radioButton_EFKEnhanced_clicked(self) -> None:
@@ -164,18 +178,8 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.install_EFKEnhanced(self)
         EFK.disk.configSave( 'Performance', "Enhanced")
         
-    @Slot()    
-    def on_radioButton_EFKStandard_clicked(self) -> None:
-        """
-        Determine la selections des Mods pour EFK Standard
-        """
-        # TODO: not implemented yet
-        EFK.sounds.play(self)
-        EFK.disk.install_EFKStandard(self)
-        EFK.disk.configSave( 'Performance', "Standard")
-        
-    @Slot()    
-    def on_radioButton_EFKNoModif_clicked(self) -> None:
+    @Slot()
+    def on_radioButton_EFKNoModif_clicked(self):
         """
         Determine la selections des Mods pour EFK Standard
         """
@@ -184,6 +188,17 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         self.label_alert.setVisible(True)
         self.label_SignAlert.setVisible(True)
         EFK.disk.configSave('Performance', "")
+
+    @Slot()
+    def on_radioButton_EFKStandard_clicked(self) -> None:
+        """
+        Determine la selections des Mods pour EFK Standard
+        """
+        # TODO: not implemented yet
+        EFK.sounds.play(self)
+        EFK.disk.install_EFKStandard(self)
+        EFK.disk.configSave( 'Performance', "Standard")
+
 
         
     @Slot()

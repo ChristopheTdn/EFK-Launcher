@@ -59,7 +59,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -304,7 +304,7 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>15</pointsize>
+         <pointsize>11</pointsize>
         </font>
        </property>
        <property name="text">
@@ -639,9 +639,9 @@
       <widget class="QLabel" name="label_20">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>50</x>
          <y>10</y>
-         <width>221</width>
+         <width>211</width>
          <height>51</height>
         </rect>
        </property>
@@ -924,13 +924,13 @@
     <property name="geometry">
      <rect>
       <x>105</x>
-      <y>10</y>
+      <y>0</y>
       <width>241</width>
       <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -1130,7 +1130,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Ubuntu</family>
+      <family>Segoe UI</family>
       <pointsize>13</pointsize>
       <italic>true</italic>
       <bold>false</bold>
@@ -1468,14 +1468,18 @@
    <widget class="QCheckBox" name="checkBox_unlock">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>65</x>
       <y>685</y>
-      <width>161</width>
+      <width>211</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Déverrouille Bouton</string>
+     <string>Securité Bouton Wipe Map</string>
+    </property>
+    <property name="icon">
+     <iconset resource="ressources.qrc">
+      <normaloff>:/gfx/gfx/danger.png</normaloff>:/gfx/gfx/danger.png</iconset>
     </property>
    </widget>
   </widget>

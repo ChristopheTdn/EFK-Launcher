@@ -26,12 +26,13 @@ def init_application(self):
     self.label_UpdateAvailable.setVisible(False)
     self.label_UpdateAvailable_2.setVisible(False)
     self.pushButton_MajEFK.setEnabled(True)
+    #self.checkBox_unlock.setEnabled(False)
     versionOnline = ""
     if sysInfo() == "linux" :
         version_url =  "https://su66.fr/ftp/efklauncher/nux/version.txt"
     else :
         version_url =  "https://su66.fr/ftp/efklauncher/version.txt"
-    
+
     if reseau.is_website_online(self, version_url):
         versionOnline = requests.get(version_url).text.replace('\n',"")
     else:
@@ -116,10 +117,13 @@ def setFlags(self) -> None:
                        directory=os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",self.lineEdit_RepertoireSaveGame.text()),
                        icon=self.label_IconStatus_RepertoireSaveGame):
         self.pushButton_WIPE.setEnabled(True)
+        self.checkBox_unlock.setEnabled(True)
         self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
     else :
         self.label_IconStatus_RepertoireSaveGame.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
         self.pushButton_WIPE.setEnabled(False)
+        self.checkBox_unlock.setEnabled(False)
+        self.checkBox_unlock.setChecked(False)
         self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
 
     # MOD Manager
