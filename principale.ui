@@ -1475,7 +1475,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Securité Bouton Wipe Map</string>
+     <string>Active Bouton Wipe Map</string>
     </property>
     <property name="icon">
      <iconset resource="ressources.qrc">

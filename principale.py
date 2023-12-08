@@ -153,6 +153,8 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         # TODO: not implemented yet
         EFK.sounds.play(self)
         buttonState = self.checkBox_unlock.isChecked()
+        self.label_Titre_2.setVisible(buttonState)
+        self.label_Danger.setVisible(buttonState)
         self.pushButton_WIPE.setEnabled(buttonState)
         
      

@@ -16,6 +16,7 @@ import subprocess
 
 def init_application(self):
     # Définition Constantes
+
     # Determine repertoire Utilisateur
     disk.get_userPZDir(self)
     loadConfig(self)
@@ -26,7 +27,7 @@ def init_application(self):
     self.label_UpdateAvailable.setVisible(False)
     self.label_UpdateAvailable_2.setVisible(False)
     self.pushButton_MajEFK.setEnabled(True)
-    #self.checkBox_unlock.setEnabled(False)
+
     versionOnline = ""
     if sysInfo() == "linux" :
         version_url =  "https://su66.fr/ftp/efklauncher/nux/version.txt"
@@ -109,6 +110,14 @@ def setFlags(self) -> None:
     Verifie l'ensemble des liens pour en determiner la validité
     et modifier les icones correspondant sur l interface
     """
+    # etat initial Bouton 
+    self.checkBox_unlock.setEnabled(False)
+    self.pushButton_WIPE.setEnabled(False)
+    self.pushButton_WIPE.setChecked(True)
+    self.label_Titre_2.setVisible(False)
+    self.label_Danger.setVisible(False)
+    
+    
     disk.verif_lien(self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ)
 
     disk.verif_lien(self, directory=self.lineEdit_ProfilPZ.text(), icon=self.label_IconStatus_ProfilPZ)
@@ -116,9 +125,10 @@ def setFlags(self) -> None:
         disk.verif_lien(self,
                        directory=os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",self.lineEdit_RepertoireSaveGame.text()),
                        icon=self.label_IconStatus_RepertoireSaveGame):
-        self.pushButton_WIPE.setEnabled(True)
         self.checkBox_unlock.setEnabled(True)
+        self.checkBox_unlock.setChecked(False)
         self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
+        
     else :
         self.label_IconStatus_RepertoireSaveGame.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
         self.pushButton_WIPE.setEnabled(False)
