@@ -549,6 +549,6 @@ class Ui_Fenetre_Principale(object):
 #if QT_CONFIG(tooltip)
         self.radioButton_Chine.setToolTip(QCoreApplication.translate("Fenetre_Principale", u"French", None))
 #endif // QT_CONFIG(tooltip)
-        self.checkBox_unlock.setText(QCoreApplication.translate("Fenetre_Principale", u"Securit\u00e9 Bouton Wipe Map", None))
+        self.checkBox_unlock.setText(QCoreApplication.translate("Fenetre_Principale", u"Active Bouton Wipe Map", None))
     # retranslateUi
 
