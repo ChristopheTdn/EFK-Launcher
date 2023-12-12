@@ -27,7 +27,7 @@ Have a look to this tutorial Video
 Visualiser la video explicative de configuration et installation du mod :
 [https://su66.fr/ftp/efk_zik.mp4](https://su66.fr/ftp/efk_zik.mp4 "https://su66.fr/ftp/efk_zik.mp4")
 
-Alternative link for the video / Lien alternatif pour la video :  soon...
+Alternative link for the video / Lien alternatif pour la video :  [Launcher description and Escape From Knox County Installation (youtube.com)](https://www.youtube.com/watch?v=47QxdnCzbc4)
 
 ### Where can i find Executable PZ / Comment trouver l'executable de Project Zomboid ? :
 
