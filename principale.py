@@ -70,6 +70,8 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         # TODO: not implemented yet     
         EFK.sounds.play(self)
         EFK.disk.delFile(self)
+        self.checkBox_unlock.setChecked(False)
+        
 
 
     @Slot()

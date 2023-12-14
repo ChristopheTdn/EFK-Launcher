@@ -86,7 +86,7 @@
     <message>
         <location filename="../principale.ui" line="109"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Ajout Profil &lt;span style=&quot; font-weight:700;&quot;&gt;STANDARD&lt;/span&gt; et &lt;span style=&quot; font-weight:700;&quot;&gt;ADVANCED&lt;/span&gt; à &lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;添加预设 &lt;span style=&quot; font-weight:700;&quot;&gt;SRANDARD&lt;/span&gt; et &lt;span style=&quot; font-weight:700;&quot;&gt;ADVANCED&lt;/span&gt; 至 &lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;添加预设 &lt;span style=&quot; font-weight:700;&quot;&gt;SRANDARD&lt;/span&gt; 和 &lt;span style=&quot; font-weight:700;&quot;&gt;ADVANCED&lt;/span&gt; 至 &lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="247"/>
@@ -147,17 +147,17 @@
     <message>
         <location filename="../principale.ui" line="438"/>
         <source>A Propos</source>
-        <translation>關於我們</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../principale.ui" line="482"/>
         <source>Idea : </source>
-        <translation>想法 : </translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../principale.ui" line="495"/>
         <source>Code :</source>
-        <translation>程式師 :</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../principale.ui" line="508"/>
@@ -182,7 +182,7 @@
     <message>
         <location filename="../principale.ui" line="933"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {22p?} {700;?}</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../principale.ui" line="1359"/>
@@ -194,12 +194,12 @@
     <message>
         <location filename="../principale.ui" line="1478"/>
         <source>Active Bouton Wipe Map</source>
-        <translation>Activate Bouton Wipe Map</translation>
+        <translation>Unlock Bouton Wipe Map</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="1010"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;Entre 2 raids&lt;br/&gt;- personnage dans la base&lt;br/&gt;- Quitter PZ ou au Menu principal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;重要 :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;在两所探索间&lt;br/&gt;- 玩家呆在基地&lt;br/&gt;-退到主菜单或桌面&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;重要 :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;在两次探索间&lt;br/&gt;- 玩家呆在基地&lt;br/&gt;- 退到主菜单或桌面&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="1029"/>

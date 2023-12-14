@@ -111,9 +111,9 @@ def setFlags(self) -> None:
     et modifier les icones correspondant sur l interface
     """
     # etat initial Bouton 
+    self.checkBox_unlock.setChecked(False)
     self.checkBox_unlock.setEnabled(False)
     self.pushButton_WIPE.setEnabled(False)
-    self.pushButton_WIPE.setChecked(True)
     self.label_Titre_2.setVisible(False)
     self.label_Danger.setVisible(False)
     
@@ -132,8 +132,8 @@ def setFlags(self) -> None:
     else :
         self.label_IconStatus_RepertoireSaveGame.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
         self.pushButton_WIPE.setEnabled(False)
-        self.checkBox_unlock.setEnabled(False)
         self.checkBox_unlock.setChecked(False)
+        self.checkBox_unlock.setEnabled(False)
         self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
 
     # MOD Manager
@@ -150,6 +150,7 @@ def setFlags(self) -> None:
     disk.verif_lien(self, file=self.lineEdit_ProfilPZ.text()+"/Sandbox Presets/EFK Hard.cfg", icon=self.label_IconStatus_difficultHARD)
 
 def runPz(self) -> None:
+    
     self.process = launchpz.LaunchPz(self,
                                      self.lineEdit_ExePZ.text())
     self.process.start()

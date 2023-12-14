@@ -194,7 +194,7 @@
     <message>
         <location filename="../principale.ui" line="1478"/>
         <source>Active Bouton Wipe Map</source>
-        <translation>Active le Bouton Wipe Map</translation>
+        <translation>Autorise Bouton Wipe Map</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="1010"/>
