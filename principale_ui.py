@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'principale.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.1
+## Created by: Qt User Interface Compiler version 6.6.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -318,7 +318,7 @@ class Ui_Fenetre_Principale(object):
         self.label_Titre_2.setGeometry(QRect(375, 630, 196, 71))
         font6 = QFont()
         font6.setFamilies([u"Segoe UI"])
-        font6.setPointSize(9)
+        font6.setPointSize(8)
         font6.setBold(False)
         self.label_Titre_2.setFont(font6)
         self.commandLinkButton_Twitch = QCommandLinkButton(self.centralWidget)
@@ -404,7 +404,11 @@ class Ui_Fenetre_Principale(object):
         self.label_alert = QLabel(self.groupBox_EFKEnhanced)
         self.label_alert.setObjectName(u"label_alert")
         self.label_alert.setGeometry(QRect(350, 10, 206, 71))
-        self.label_alert.setFont(font6)
+        font9 = QFont()
+        font9.setFamilies([u"Segoe UI"])
+        font9.setPointSize(9)
+        font9.setBold(False)
+        self.label_alert.setFont(font9)
         self.label_SignAlert = QLabel(self.groupBox_EFKEnhanced)
         self.label_SignAlert.setObjectName(u"label_SignAlert")
         self.label_SignAlert.setGeometry(QRect(325, 25, 21, 51))
@@ -511,7 +515,7 @@ class Ui_Fenetre_Principale(object):
         self.pushButton_SetRepertoireSaveGame.setText(QCoreApplication.translate("Fenetre_Principale", u"choisir", None))
         self.label_6.setText(QCoreApplication.translate("Fenetre_Principale", u"Exe PZ :", None))
         self.pushButton_SetExePZ.setText(QCoreApplication.translate("Fenetre_Principale", u"choisir", None))
-        self.label_Titre.setText(QCoreApplication.translate("Fenetre_Principale", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:22pt; font-weight:700;\">ESCAPE FROM<br/>KNOX COUNTY</span></p></body></html>", None))
+        self.label_Titre.setText(QCoreApplication.translate("Fenetre_Principale", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:20pt; font-weight:700;\">ESCAPE FROM<br/>KNOX COUNTY</span></p></body></html>", None))
         self.pushButton_WIPE.setText(QCoreApplication.translate("Fenetre_Principale", u"WIPE MAP", None))
         self.label_Titre_2.setText(QCoreApplication.translate("Fenetre_Principale", u"<html><head/><body><p><span style=\" font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;\">IMPORTANT :</span><span style=\" font-weight:700; text-decoration: underline;\"><br/></span><span style=\" font-weight:700;\">- </span>Entre 2 raids<br/>- personnage dans la base<br/>- Quitter PZ ou au Menu principal</p></body></html>", None))
 #if QT_CONFIG(tooltip)

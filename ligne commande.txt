@@ -2,7 +2,7 @@ UPDATE Traduction :
 pyside6-lupdate -no-obsolete principale.ui -ts "translations/fr-FR.ts" "translations/en-GB.ts" "translations/zh-CN.ts" 
 
 WINDOWS 11 :
-pyinstaller "EFK.spec" --distpath "EFKLauncher" ; Robocopy.exe "./config" "./EFKLauncher/config" /E /MIR /Z /DCOPY:T  /TIMFIX /R:0 /W:0 /XF "config.json" ; cd "EFKLauncher" ; WinRAR a EFKlauncher.zip  "EFK Launcher.exe" "./config"
+pyinstaller "EFK.spec" --distpath "EFKLauncher" ; Robocopy.exe "./config" "./EFKLauncher/config" /E /MIR /Z /DCOPY:T  /TIMFIX /R:0 /W:0 /XF "config.json" ; cd "EFKLauncher" ; WinRAR a EFKLauncher.zip  "EFK Launcher.exe" "./config"
 LINUX :
-pyinstaller "EFK.spec" --distpath "EFKLauncher" ; rsync -r config/ EFKLauncher/config/ --exclude 'config.json' ; rsync EFKLauncher/config/EFKLauncher/version.txt  EFKLauncher/ ; cd EFKLauncher ; zip -r EFKlauncher.zip  "EFK Launcher" "./config" ;rm -rf  "EFK Launcher" config/
+pyinstaller "EFK.spec" --distpath "EFKLauncher" ; rsync -r config/ EFKLauncher/config/ --exclude 'config.json' ; rsync EFKLauncher/config/EFKLauncher/version.txt  EFKLauncher/ ; cd EFKLauncher ; zip -r EFKLauncher.zip  "EFK Launcher" "./config" ;rm -rf  "EFK Launcher" config/
 
