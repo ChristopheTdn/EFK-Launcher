@@ -22,6 +22,7 @@ def init_application(self):
     loadConfig(self)
     init_MODManager(self)
     
+    
     # determine la version en ligne
     self.label_noConnexion.setVisible(False)
     self.label_UpdateAvailable.setVisible(False)
@@ -79,7 +80,12 @@ def loadConfig(self) -> None:
     # Recupere les configs enregistrées
     with open("config/EFKLauncher/config.json", "r") as fichier:
         CONFIG = json.load(fichier)
-    self.lineEdit_ExePZ.setText(CONFIG["ExePZ"])
+    
+    if sysInfo() == "linux" :
+        self.lineEdit_ExePZ.setText('steam')
+    else :
+        self.lineEdit_ExePZ.setText(LocateSteam_windows())
+
     self.lineEdit_RepertoireSaveGame.setText(CONFIG["SaveGame"])
     self.checkBox_DebugMode.setChecked(CONFIG["DebugMode"])
 
@@ -221,6 +227,13 @@ def uninstall_EFK_launcher(self) :
         disk.delFileTarget(self, fichier)
     disk.effaceModManagerProfil(self)
     sys.exit()
+    
+def LocateSteam_windows() :
+    import winreg
+    key = winreg.OpenKey( winreg.HKEY_CURRENT_USER, r'Software\Valve\Steam',0, winreg.KEY_READ)
+    (LienSteam,typevaleur) = winreg.QueryValueEx(key,'SteamExe')
+    winreg.CloseKey(key)
+    return LienSteam
 
 ################################################################
 

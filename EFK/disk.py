@@ -57,16 +57,16 @@ def get_saveGameDir(self: QtWidgets) -> None:
 
 def get_ExePZ(self: QtWidgets) -> None:
     """
-    Determine L executable PZ 
+    Determine L executable STEAM pour lancer PZ 
     """
     pzexe = ''
     if core.sysInfo() == "Linux" :
-        pzexe = 'ProjectZomboid64'
+        pzexe = 'steam'
     elif core.sysInfo() == "windows" :
-        pzexe = 'ProjectZomboid64.bat'
+        pzexe = 'steam.exe'
     fichier = QtWidgets.QFileDialog.getOpenFileName(
         parent=self,
-        caption="trouve l'executable PZ",
+        caption="trouve l'executable Steam",
         filter = pzexe,
         options=QtWidgets.QFileDialog.Option.DontUseNativeDialog,
         )
@@ -243,7 +243,7 @@ def delFile(self: QtWidgets) -> None:
                     core.writeLog(
                         self,
                         "Delfile",
-                        f"ERROR > Fail to delete {file}. You need to star again the WIPE MAP on main Menu or Quit PZ.",
+                        f"ERROR > Fail to delete {file}. You need to start again the WIPE MAP on main Menu or Quit PZ.",
                     )
                     self.tabWidget_FenetrePrincipale.setCurrentIndex(1)
     else:

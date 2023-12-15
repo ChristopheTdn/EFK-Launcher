@@ -5,11 +5,9 @@ class LaunchPz(QtCore.QObject):
     def __init__(self, Ui, exePZ):
         super(LaunchPz, self).__init__()
         self.commande = exePZ
-        #running via steam
-        self.commande = "steam"
         self.Ui = Ui
         self.process = None
-        self.argument = ['steam://run/108600//-debug/']
+        self.argument = []
         self.initClass()
 
     def initClass(self):
@@ -51,7 +49,9 @@ class LaunchPz(QtCore.QObject):
     def parseArguments(self):
         
         if self.Ui.checkBox_DebugMode.isChecked():
-            self.argument.append("/-debug/")
+            self.argument.append("steam://run/108600//-debug/")
+        else: 
+            self.argument.append("steam://run/108600/")
         
     
     def start(self):
