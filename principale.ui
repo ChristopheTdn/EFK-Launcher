@@ -44,8 +44,8 @@
    <widget class="QTabWidget" name="tabWidget_FenetrePrincipale">
     <property name="geometry">
      <rect>
-      <x>5</x>
-      <y>375</y>
+      <x>10</x>
+      <y>370</y>
       <width>576</width>
       <height>256</height>
      </rect>
@@ -900,7 +900,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Exe PZ :</string>
+      <string>Exe Steam :</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1337,10 +1337,10 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>5</y>
-      <width>81</width>
-      <height>96</height>
+      <x>310</x>
+      <y>10</y>
+      <width>131</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="title">
@@ -1349,8 +1349,8 @@
     <widget class="QRadioButton" name="radioButton_France">
      <property name="geometry">
       <rect>
-       <x>15</x>
-       <y>5</y>
+       <x>10</x>
+       <y>10</y>
        <width>56</width>
        <height>26</height>
       </rect>
@@ -1381,8 +1381,8 @@
     <widget class="QRadioButton" name="radioButton_English">
      <property name="geometry">
       <rect>
-       <x>15</x>
-       <y>35</y>
+       <x>10</x>
+       <y>40</y>
        <width>56</width>
        <height>26</height>
       </rect>
@@ -1413,8 +1413,8 @@
     <widget class="QRadioButton" name="radioButton_Chine">
      <property name="geometry">
       <rect>
-       <x>15</x>
-       <y>65</y>
+       <x>70</x>
+       <y>10</y>
        <width>56</width>
        <height>26</height>
       </rect>
@@ -1439,7 +1439,7 @@
       <bool>true</bool>
      </property>
      <property name="checked">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
     </widget>
    </widget>

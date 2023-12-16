@@ -44,6 +44,16 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Pour desintaller EFK :&lt;br/&gt;&lt;/span&gt;1 - Quitter Project Zomboid&lt;br/&gt;2 - Se Désabonner à la collection Steam EFK&lt;br/&gt;&lt;/span&gt;3 - Cliquer sur &lt;span style=&quot; font-weight:700;&quot;&gt;Desinstaller EFK&lt;br/&gt;&lt;/span&gt;4 - Une fois le EFK Launcher Fermé&lt;br/&gt;Supprimer votre repertoire local du &lt;span style=&quot; font-weight:700;&quot;&gt;EFK Launcher&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+        <location filename="../principale.ui" line="903"/>
+        <source>Exe Steam :</source>
+        <translation>Exe Steam :</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="933"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
         <location filename="../principale.ui" line="1141"/>
         <source>La collection de mods EFKC</source>
         <translation>La collection de mods EFKC</translation>
@@ -173,16 +183,6 @@
         <location filename="../principale.ui" line="573"/>
         <source>Project : </source>
         <translation></translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="903"/>
-        <source>Exe PZ :</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="933"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {22p?} {700;?}</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="1359"/>

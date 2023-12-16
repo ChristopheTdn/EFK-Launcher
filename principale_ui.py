@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'principale.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.0
+## Created by: Qt User Interface Compiler version 6.6.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -421,10 +421,10 @@ class Ui_Fenetre_Principale(object):
         self.label_UpdateAvailable_2.setAlignment(Qt.AlignCenter)
         self.groupBox = QGroupBox(self.centralWidget)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setGeometry(QRect(350, 5, 81, 96))
+        self.groupBox.setGeometry(QRect(310, 10, 131, 71))
         self.radioButton_France = QRadioButton(self.groupBox)
         self.radioButton_France.setObjectName(u"radioButton_France")
-        self.radioButton_France.setGeometry(QRect(15, 5, 56, 26))
+        self.radioButton_France.setGeometry(QRect(10, 10, 56, 26))
         self.radioButton_France.setText(u"")
         icon8 = QIcon()
         icon8.addFile(u":/gfx/gfx/france.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -434,7 +434,7 @@ class Ui_Fenetre_Principale(object):
         self.radioButton_France.setChecked(False)
         self.radioButton_English = QRadioButton(self.groupBox)
         self.radioButton_English.setObjectName(u"radioButton_English")
-        self.radioButton_English.setGeometry(QRect(15, 35, 56, 26))
+        self.radioButton_English.setGeometry(QRect(10, 40, 56, 26))
         self.radioButton_English.setText(u"")
         icon9 = QIcon()
         icon9.addFile(u":/gfx/gfx/royaumeunis.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -444,14 +444,14 @@ class Ui_Fenetre_Principale(object):
         self.radioButton_English.setChecked(False)
         self.radioButton_Chine = QRadioButton(self.groupBox)
         self.radioButton_Chine.setObjectName(u"radioButton_Chine")
-        self.radioButton_Chine.setGeometry(QRect(15, 65, 56, 26))
+        self.radioButton_Chine.setGeometry(QRect(70, 10, 56, 26))
         self.radioButton_Chine.setText(u"")
         icon10 = QIcon()
         icon10.addFile(u":/gfx/gfx/chine.png", QSize(), QIcon.Normal, QIcon.Off)
         self.radioButton_Chine.setIcon(icon10)
         self.radioButton_Chine.setIconSize(QSize(32, 32))
         self.radioButton_Chine.setCheckable(True)
-        self.radioButton_Chine.setChecked(True)
+        self.radioButton_Chine.setChecked(False)
         self.label_version = QLabel(self.centralWidget)
         self.label_version.setObjectName(u"label_version")
         self.label_version.setEnabled(True)
@@ -513,7 +513,7 @@ class Ui_Fenetre_Principale(object):
         self.label_4.setText(QCoreApplication.translate("Fenetre_Principale", u"Profil PZ :", None))
         self.label_5.setText(QCoreApplication.translate("Fenetre_Principale", u"Sauvegardes :", None))
         self.pushButton_SetRepertoireSaveGame.setText(QCoreApplication.translate("Fenetre_Principale", u"choisir", None))
-        self.label_6.setText(QCoreApplication.translate("Fenetre_Principale", u"Exe PZ :", None))
+        self.label_6.setText(QCoreApplication.translate("Fenetre_Principale", u"Exe Steam :", None))
         self.pushButton_SetExePZ.setText(QCoreApplication.translate("Fenetre_Principale", u"choisir", None))
         self.label_Titre.setText(QCoreApplication.translate("Fenetre_Principale", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:20pt; font-weight:700;\">ESCAPE FROM<br/>KNOX COUNTY</span></p></body></html>", None))
         self.pushButton_WIPE.setText(QCoreApplication.translate("Fenetre_Principale", u"WIPE MAP", None))
