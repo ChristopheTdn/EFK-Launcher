@@ -416,7 +416,7 @@ class Ui_Fenetre_Principale(object):
         self.label_SignAlert.setScaledContents(True)
         self.label_UpdateAvailable_2 = QLabel(self.centralWidget)
         self.label_UpdateAvailable_2.setObjectName(u"label_UpdateAvailable_2")
-        self.label_UpdateAvailable_2.setGeometry(QRect(120, 365, 146, 21))
+        self.label_UpdateAvailable_2.setGeometry(QRect(120, 365, 166, 21))
         self.label_UpdateAvailable_2.setTextFormat(Qt.RichText)
         self.label_UpdateAvailable_2.setAlignment(Qt.AlignCenter)
         self.groupBox = QGroupBox(self.centralWidget)
