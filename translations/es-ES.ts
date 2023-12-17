@@ -182,7 +182,7 @@
     <message>
         <location filename="../principale.ui" line="573"/>
         <source>Project : </source>
-        <translation>Disocrd EFK :</translation>
+        <translation>Discord EFK : </translation>
     </message>
     <message>
         <location filename="../principale.ui" line="1359"/>

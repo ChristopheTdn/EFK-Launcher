@@ -20,6 +20,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QCommandLinkButton, QGro
     QRadioButton, QSizePolicy, QTabWidget, QTextEdit,
     QWidget)
 import ressources_rc
+import ressources_rc
 
 class Ui_Fenetre_Principale(object):
     def setupUi(self, Fenetre_Principale):
@@ -39,7 +40,7 @@ class Ui_Fenetre_Principale(object):
         self.centralWidget.setObjectName(u"centralWidget")
         self.tabWidget_FenetrePrincipale = QTabWidget(self.centralWidget)
         self.tabWidget_FenetrePrincipale.setObjectName(u"tabWidget_FenetrePrincipale")
-        self.tabWidget_FenetrePrincipale.setGeometry(QRect(5, 375, 576, 256))
+        self.tabWidget_FenetrePrincipale.setGeometry(QRect(10, 370, 576, 256))
         self.tabWidget_FenetrePrincipale.setFont(font)
         self.tab = QWidget()
         self.tab.setObjectName(u"tab")
@@ -452,6 +453,13 @@ class Ui_Fenetre_Principale(object):
         self.radioButton_Chine.setIconSize(QSize(32, 32))
         self.radioButton_Chine.setCheckable(True)
         self.radioButton_Chine.setChecked(False)
+        self.radioButton_Espagne = QRadioButton(self.groupBox)
+        self.radioButton_Espagne.setObjectName(u"radioButton_Espagne")
+        self.radioButton_Espagne.setGeometry(QRect(70, 40, 51, 23))
+        icon11 = QIcon()
+        icon11.addFile(u":/gfx/gfx/espagne.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.radioButton_Espagne.setIcon(icon11)
+        self.radioButton_Espagne.setIconSize(QSize(32, 32))
         self.label_version = QLabel(self.centralWidget)
         self.label_version.setObjectName(u"label_version")
         self.label_version.setEnabled(True)
@@ -464,9 +472,9 @@ class Ui_Fenetre_Principale(object):
         self.checkBox_unlock = QCheckBox(self.centralWidget)
         self.checkBox_unlock.setObjectName(u"checkBox_unlock")
         self.checkBox_unlock.setGeometry(QRect(65, 685, 211, 20))
-        icon11 = QIcon()
-        icon11.addFile(u":/gfx/gfx/danger.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.checkBox_unlock.setIcon(icon11)
+        icon12 = QIcon()
+        icon12.addFile(u":/gfx/gfx/danger.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.checkBox_unlock.setIcon(icon12)
         Fenetre_Principale.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(Fenetre_Principale)
@@ -551,8 +559,12 @@ class Ui_Fenetre_Principale(object):
         self.radioButton_English.setToolTip(QCoreApplication.translate("Fenetre_Principale", u"French", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(tooltip)
-        self.radioButton_Chine.setToolTip(QCoreApplication.translate("Fenetre_Principale", u"French", None))
+        self.radioButton_Chine.setToolTip(QCoreApplication.translate("Fenetre_Principale", u"Chinese", None))
 #endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.radioButton_Espagne.setToolTip(QCoreApplication.translate("Fenetre_Principale", u"Spanish", None))
+#endif // QT_CONFIG(tooltip)
+        self.radioButton_Espagne.setText("")
         self.checkBox_unlock.setText(QCoreApplication.translate("Fenetre_Principale", u"Active Bouton Wipe Map", None))
     # retranslateUi
 

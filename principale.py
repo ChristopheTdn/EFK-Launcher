@@ -95,6 +95,15 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.core.changeLangue(self, 'en-GB')
         EFK.disk.configSave('Langue', 'en-GB')
 
+    @Slot()
+    def on_radioButton_Espagne_clicked(self) -> None:
+        """
+        Valide la langue Francaise et modifie l'interface a la volée
+        """
+        # TODO: not implemented yet
+        EFK.sounds.play(self)
+        EFK.core.changeLangue(self, 'es-ES')
+        EFK.disk.configSave('Langue', 'en-ES')
         
     @Slot()
     def on_radioButton_Chine_clicked(self) -> None:

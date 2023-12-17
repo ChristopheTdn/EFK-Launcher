@@ -1420,7 +1420,7 @@
       </rect>
      </property>
      <property name="toolTip">
-      <string>French</string>
+      <string>Chinese</string>
      </property>
      <property name="text">
       <string notr="true"/>
@@ -1447,9 +1447,12 @@
       <rect>
        <x>70</x>
        <y>40</y>
-       <width>111</width>
+       <width>51</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="toolTip">
+      <string>Spanish</string>
      </property>
      <property name="text">
       <string/>
@@ -1509,6 +1512,7 @@
  </widget>
  <resources>
   <include location="ressources.qrc"/>
+  <include location="../../../.designer/backup/ressources.qrc"/>
  </resources>
  <connections/>
 </ui>
