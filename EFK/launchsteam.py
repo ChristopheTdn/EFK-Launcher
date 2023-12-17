@@ -1,13 +1,13 @@
 from PySide6 import QtCore
 
 
-class LaunchPz(QtCore.QObject):
-    def __init__(self, Ui, exePZ):
-        super(LaunchPz, self).__init__()
-        self.commande = exePZ
+class LaunchSteam(QtCore.QObject):
+    def __init__(self, Ui, executable, argument=[]):
+        super(LaunchSteam, self).__init__()
+        self.commande = executable
         self.Ui = Ui
+        self.argument = argument
         self.process = None
-        self.argument = []
         self.initClass()
 
     def initClass(self):
@@ -47,7 +47,6 @@ class LaunchPz(QtCore.QObject):
         return returnData
     
     def parseArguments(self):
-        
         if self.Ui.checkBox_DebugMode.isChecked():
             self.argument.append("steam://run/108600//-debug/")
         else: 
@@ -55,5 +54,6 @@ class LaunchPz(QtCore.QObject):
         
     
     def start(self):
-        self.parseArguments()
+        if self.argument is not [] :
+            self.parseArguments()
         self.process.start(self.commande, self.argument)

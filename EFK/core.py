@@ -6,7 +6,7 @@ from PySide6 import QtWidgets
 from PySide6 import QtGui, QtCore
 import sys
 import os
-from . import launchpz
+from . import launchsteam
 from . import disk
 from . import reseau
 import requests
@@ -165,8 +165,15 @@ def setFlags(self) -> None:
 
 def runPz(self) -> None:
     
-    self.process = launchpz.LaunchPz(self,
+    self.process = launchsteam.LaunchSteam(self,
                                      self.lineEdit_ExePZ.text())
+    self.process.start()
+
+def openEFKCollection(self):
+    self.process = launchsteam.LaunchSteam(self,
+                                     self.lineEdit_ExePZ.text(),
+                                     argument = ["steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=3048855836"]
+                                     )
     self.process.start()
 
 def changeLangue(self, langue):

@@ -151,7 +151,8 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.sounds.play(self)
-        webbrowser.open("https://steamcommunity.com/workshop/filedetails/?id=3048855836")
+        #steam steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=3048855836
+        EFK.core.openEFKCollection(self)
         
     @Slot()
     def on_checkBox_unlock_stateChanged(self):
