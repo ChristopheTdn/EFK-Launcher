@@ -1442,6 +1442,29 @@
       <bool>false</bool>
      </property>
     </widget>
+    <widget class="QRadioButton" name="radioButton_Espagne">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="ressources.qrc">
+       <normaloff>:/gfx/gfx/espagne.png</normaloff>:/gfx/gfx/espagne.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="label_version">
     <property name="enabled">

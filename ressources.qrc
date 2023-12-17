@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="gfx">
+    <file>gfx/espagne.png</file>
     <file>gfx/pyside.png</file>
     <file>gfx/agplv3.png</file>
     <file>gfx/info.png</file>

@@ -123,8 +123,10 @@ def setFlags(self) -> None:
     self.label_Titre_2.setVisible(False)
     self.label_Danger.setVisible(False)
     
-    
-    disk.verif_lien(self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ)
+    if sysInfo() == "linux" :
+        self.label_IconStatus_ExePZ.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
+    else :
+        disk.verif_lien(self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ)
 
     disk.verif_lien(self, directory=self.lineEdit_ProfilPZ.text(), icon=self.label_IconStatus_ProfilPZ)
     if self.lineEdit_RepertoireSaveGame.text() != "" and \
