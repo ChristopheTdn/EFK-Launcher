@@ -59,7 +59,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -539,19 +539,19 @@
        <rect>
         <x>115</x>
         <y>140</y>
-        <width>186</width>
-        <height>16</height>
+        <width>176</width>
+        <height>36</height>
        </rect>
       </property>
       <property name="text">
-       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;MrGToF &lt;/span&gt;(fr,en)&lt;span style=&quot; font-weight:700;&quot;&gt;, screamff &lt;/span&gt;(cn)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;MrGToF &lt;/span&gt;(fr,en)&lt;span style=&quot; font-weight:700;&quot;&gt;, screamff &lt;/span&gt;(cn)&lt;br/&gt;&lt;a name=&quot;message-username-1185756075388063835&quot;/&gt;&lt;span style=&quot; font-family:'inherit'; font-size:large; font-weight:700; color:#000000;&quot;&gt;E&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#000000;&quot;&gt;lPacsWTF &lt;/span&gt;(es)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>180</y>
+        <y>200</y>
         <width>91</width>
         <height>16</height>
        </rect>
@@ -564,7 +564,7 @@
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>160</y>
+        <y>180</y>
         <width>91</width>
         <height>16</height>
        </rect>
@@ -685,8 +685,8 @@
      <widget class="QLabel" name="label_AboutGithub">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>180</y>
+        <x>145</x>
+        <y>200</y>
         <width>46</width>
         <height>16</height>
        </rect>
@@ -701,8 +701,8 @@
      <widget class="QLabel" name="label_AboutDiscord">
       <property name="geometry">
        <rect>
-        <x>95</x>
-        <y>155</y>
+        <x>120</x>
+        <y>175</y>
         <width>76</width>
         <height>26</height>
        </rect>
@@ -1131,7 +1131,7 @@
     <property name="font">
      <font>
       <family>Segoe UI</family>
-      <pointsize>13</pointsize>
+      <pointsize>11</pointsize>
       <italic>true</italic>
       <bold>false</bold>
       <kerning>false</kerning>
@@ -1214,9 +1214,9 @@
     <widget class="QRadioButton" name="radioButton_EFKStandard">
      <property name="geometry">
       <rect>
-       <x>115</x>
+       <x>65</x>
        <y>40</y>
-       <width>216</width>
+       <width>281</width>
        <height>20</height>
       </rect>
      </property>
@@ -1227,9 +1227,9 @@
     <widget class="QRadioButton" name="radioButton_EFKEnhanced">
      <property name="geometry">
       <rect>
-       <x>115</x>
+       <x>65</x>
        <y>20</y>
-       <width>216</width>
+       <width>281</width>
        <height>20</height>
       </rect>
      </property>
@@ -1243,7 +1243,7 @@
     <widget class="QLabel" name="label_CPULogo">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>10</x>
        <y>20</y>
        <width>51</width>
        <height>51</height>
@@ -1265,9 +1265,9 @@
     <widget class="QRadioButton" name="radioButton_EFKNoModif">
      <property name="geometry">
       <rect>
-       <x>115</x>
+       <x>65</x>
        <y>60</y>
-       <width>216</width>
+       <width>281</width>
        <height>20</height>
       </rect>
      </property>
@@ -1278,9 +1278,9 @@
     <widget class="QLabel" name="label_alert">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>375</x>
        <y>10</y>
-       <width>206</width>
+       <width>196</width>
        <height>71</height>
       </rect>
      </property>
@@ -1298,8 +1298,8 @@
     <widget class="QLabel" name="label_SignAlert">
      <property name="geometry">
       <rect>
-       <x>325</x>
-       <y>25</y>
+       <x>350</x>
+       <y>20</y>
        <width>21</width>
        <height>51</height>
       </rect>
@@ -1512,7 +1512,6 @@
  </widget>
  <resources>
   <include location="ressources.qrc"/>
-  <include location="../../../.designer/backup/ressources.qrc"/>
  </resources>
  <connections/>
 </ui>

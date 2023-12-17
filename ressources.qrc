@@ -30,6 +30,7 @@
     <file>sounds/clic.mp3</file>
   </qresource>
   <qresource prefix="translation">
+    <file>translations/es-ES.qm</file>
     <file>translations/zh-CN.qm</file>
     <file>translations/en-GB.qm</file>
     <file>translations/fr-FR.qm</file>

@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'principale.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.1
+## Created by: Qt User Interface Compiler version 6.6.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -19,7 +19,6 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QCommandLinkButton, QGro
     QLabel, QLineEdit, QMainWindow, QPushButton,
     QRadioButton, QSizePolicy, QTabWidget, QTextEdit,
     QWidget)
-import ressources_rc
 import ressources_rc
 
 class Ui_Fenetre_Principale(object):
@@ -182,14 +181,14 @@ class Ui_Fenetre_Principale(object):
         self.label_11.setText(u"<html><head/><body><p><span style=\" font-weight:700;\">MrGToF</span></p></body></html>")
         self.label_12 = QLabel(self.tab_2)
         self.label_12.setObjectName(u"label_12")
-        self.label_12.setGeometry(QRect(115, 140, 186, 16))
-        self.label_12.setText(u"<html><head/><body><p><span style=\" font-weight:700;\">MrGToF </span>(fr,en)<span style=\" font-weight:700;\">, screamff </span>(cn)</p></body></html>")
+        self.label_12.setGeometry(QRect(115, 140, 176, 36))
+        self.label_12.setText(u"<html><head/><body><p><span style=\" font-weight:700;\">MrGToF </span>(fr,en)<span style=\" font-weight:700;\">, screamff </span>(cn)<br/><a name=\"message-username-1185756075388063835\"/><span style=\" font-family:'inherit'; font-size:large; font-weight:700; color:#000000;\">E</span><span style=\" font-weight:700; color:#000000;\">lPacsWTF </span>(es)</p></body></html>")
         self.label_13 = QLabel(self.tab_2)
         self.label_13.setObjectName(u"label_13")
-        self.label_13.setGeometry(QRect(40, 180, 91, 16))
+        self.label_13.setGeometry(QRect(40, 200, 91, 16))
         self.label_15 = QLabel(self.tab_2)
         self.label_15.setObjectName(u"label_15")
-        self.label_15.setGeometry(QRect(40, 160, 91, 16))
+        self.label_15.setGeometry(QRect(40, 180, 91, 16))
         self.groupBox_3 = QGroupBox(self.tab_2)
         self.groupBox_3.setObjectName(u"groupBox_3")
         self.groupBox_3.setGeometry(QRect(295, 75, 271, 146))
@@ -225,12 +224,12 @@ class Ui_Fenetre_Principale(object):
         self.label_22.setText(u"<html><head/><body><p>2023 EFK Launcher<br/><span style=\" font-size:9pt;\">Licence GNU AGPLv3</span></p></body></html>")
         self.label_AboutGithub = QLabel(self.tab_2)
         self.label_AboutGithub.setObjectName(u"label_AboutGithub")
-        self.label_AboutGithub.setGeometry(QRect(130, 180, 46, 16))
+        self.label_AboutGithub.setGeometry(QRect(145, 200, 46, 16))
         self.label_AboutGithub.setText(u"<html><head/><body><p><a href=\"https://github.com/ChristopheTdn/EFK-Launcher\"><span style=\" font-weight:700; text-decoration: underline; color:#0000ff;\">Github</span></a></p></body></html>")
         self.label_AboutGithub.setOpenExternalLinks(True)
         self.label_AboutDiscord = QLabel(self.tab_2)
         self.label_AboutDiscord.setObjectName(u"label_AboutDiscord")
-        self.label_AboutDiscord.setGeometry(QRect(95, 155, 76, 26))
+        self.label_AboutDiscord.setGeometry(QRect(135, 175, 76, 26))
         self.label_AboutDiscord.setText(u"<html><head/><body><p><a href=\"https://discord.com/invite/rbd36ERXyu\"><span style=\" font-weight:700; text-decoration: underline; color:#0000ff; vertical-align:top;\">Discord</span></a></p></body></html>")
         self.label_AboutDiscord.setOpenExternalLinks(True)
         self.tabWidget_FenetrePrincipale.addTab(self.tab_2, "")
@@ -362,7 +361,7 @@ class Ui_Fenetre_Principale(object):
         self.commandLinkButton_STEAM.setGeometry(QRect(15, 105, 581, 51))
         font8 = QFont()
         font8.setFamilies([u"Segoe UI"])
-        font8.setPointSize(13)
+        font8.setPointSize(11)
         font8.setBold(False)
         font8.setItalic(True)
         font8.setKerning(False)
@@ -388,10 +387,10 @@ class Ui_Fenetre_Principale(object):
         self.groupBox_EFKEnhanced.setGeometry(QRect(15, 275, 576, 86))
         self.radioButton_EFKStandard = QRadioButton(self.groupBox_EFKEnhanced)
         self.radioButton_EFKStandard.setObjectName(u"radioButton_EFKStandard")
-        self.radioButton_EFKStandard.setGeometry(QRect(115, 40, 216, 20))
+        self.radioButton_EFKStandard.setGeometry(QRect(90, 40, 256, 20))
         self.radioButton_EFKEnhanced = QRadioButton(self.groupBox_EFKEnhanced)
         self.radioButton_EFKEnhanced.setObjectName(u"radioButton_EFKEnhanced")
-        self.radioButton_EFKEnhanced.setGeometry(QRect(115, 20, 216, 20))
+        self.radioButton_EFKEnhanced.setGeometry(QRect(90, 20, 261, 20))
         self.radioButton_EFKEnhanced.setChecked(True)
         self.label_CPULogo = QLabel(self.groupBox_EFKEnhanced)
         self.label_CPULogo.setObjectName(u"label_CPULogo")
@@ -401,10 +400,10 @@ class Ui_Fenetre_Principale(object):
         self.label_CPULogo.setScaledContents(True)
         self.radioButton_EFKNoModif = QRadioButton(self.groupBox_EFKEnhanced)
         self.radioButton_EFKNoModif.setObjectName(u"radioButton_EFKNoModif")
-        self.radioButton_EFKNoModif.setGeometry(QRect(115, 60, 216, 20))
+        self.radioButton_EFKNoModif.setGeometry(QRect(90, 60, 261, 20))
         self.label_alert = QLabel(self.groupBox_EFKEnhanced)
         self.label_alert.setObjectName(u"label_alert")
-        self.label_alert.setGeometry(QRect(350, 10, 206, 71))
+        self.label_alert.setGeometry(QRect(375, 10, 196, 71))
         font9 = QFont()
         font9.setFamilies([u"Segoe UI"])
         font9.setPointSize(9)
@@ -412,7 +411,7 @@ class Ui_Fenetre_Principale(object):
         self.label_alert.setFont(font9)
         self.label_SignAlert = QLabel(self.groupBox_EFKEnhanced)
         self.label_SignAlert.setObjectName(u"label_SignAlert")
-        self.label_SignAlert.setGeometry(QRect(325, 25, 21, 51))
+        self.label_SignAlert.setGeometry(QRect(350, 20, 21, 51))
         self.label_SignAlert.setPixmap(QPixmap(u":/gfx/gfx/accolade.png"))
         self.label_SignAlert.setScaledContents(True)
         self.label_UpdateAvailable_2 = QLabel(self.centralWidget)
@@ -479,7 +478,7 @@ class Ui_Fenetre_Principale(object):
 
         self.retranslateUi(Fenetre_Principale)
 
-        self.tabWidget_FenetrePrincipale.setCurrentIndex(2)
+        self.tabWidget_FenetrePrincipale.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(Fenetre_Principale)
