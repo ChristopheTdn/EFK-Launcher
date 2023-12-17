@@ -103,7 +103,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         # TODO: not implemented yet
         EFK.sounds.play(self)
         EFK.core.changeLangue(self, 'es-ES')
-        EFK.disk.configSave('Langue', 'en-ES')
+        EFK.disk.configSave('Langue', 'es-ES')
         
     @Slot()
     def on_radioButton_Chine_clicked(self) -> None:

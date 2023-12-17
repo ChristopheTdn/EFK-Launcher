@@ -104,10 +104,16 @@ def loadConfig(self) -> None:
 
     if CONFIG["Langue"] == "fr-FR":
         self.radioButton_France.setChecked(True)        
-    elif CONFIG["Langue"] == "en-GB":
+    elif CONFIG["Langue"] == "es-ES":
+        self.radioButton_Espagne.setChecked(True)
+    elif CONFIG["Langue"] == "zh-CN":
+        self.radioButton_Chine.setChecked(True)
+    else :
+        CONFIG["Langue"] == "en-GB"
         self.radioButton_English.setChecked(True)
+        
     changeLangue(self, CONFIG["Langue"])
-
+    
     setFlags(self)
 
 

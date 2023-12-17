@@ -955,8 +955,8 @@
    <widget class="QLabel" name="label_Danger">
     <property name="geometry">
      <rect>
-      <x>315</x>
-      <y>635</y>
+      <x>295</x>
+      <y>640</y>
       <width>51</width>
       <height>46</height>
      </rect>
@@ -993,9 +993,9 @@
    <widget class="QLabel" name="label_Titre_2">
     <property name="geometry">
      <rect>
-      <x>375</x>
+      <x>360</x>
       <y>630</y>
-      <width>196</width>
+      <width>226</width>
       <height>71</height>
      </rect>
     </property>
@@ -1388,7 +1388,7 @@
       </rect>
      </property>
      <property name="toolTip">
-      <string>French</string>
+      <string>English</string>
      </property>
      <property name="text">
       <string notr="true"/>
