@@ -217,7 +217,7 @@ def launch_EFK_launcher_updater(self):
     if platform == "linux":
         os.system(f'chmod +x "./tmp/{executable}"')
         subprocess.Popen(f'"./tmp/{executable}" -updater',shell=True)
-    elif platform == "win32":
+    else :
         # Windows
         subprocess.Popen([f'tmp/{executable}','-updater'])
     #quitte l'application en cours
