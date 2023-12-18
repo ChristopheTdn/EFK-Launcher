@@ -36,7 +36,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Evenement appelé lors du clique sur le bouton pour choisir
         l'exe PZ
         """
-        # TODO: not implemented yet     
+        # TODO: not implemented yet
         EFK.sounds.play(self)
         EFK.disk.get_ExePZ(self)
 
@@ -84,7 +84,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.core.changeLangue(self, 'fr-FR')
         EFK.disk.configSave('Langue', 'fr-FR')
 
-        
+
     @Slot()
     def on_radioButton_English_clicked(self) -> None:
         """
@@ -104,7 +104,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.sounds.play(self)
         EFK.core.changeLangue(self, 'es-ES')
         EFK.disk.configSave('Langue', 'es-ES')
-        
+
     @Slot()
     def on_radioButton_Chine_clicked(self) -> None:
         """
@@ -113,8 +113,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         # TODO: not implemented yet
         EFK.sounds.play(self)
         EFK.core.changeLangue(self, 'zh-CN')
-        EFK.disk.configSave( 'Langue', 'zh-CN')
-
+        EFK.disk.configSave('Langue', 'zh-CN')
 
     @Slot()
     def on_commandLinkButton_Twitch_clicked(self):  

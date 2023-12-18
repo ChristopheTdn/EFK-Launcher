@@ -1,0 +1,19 @@
+v1.01 :
+ - initial release
+
+v1.50 : Introduce a bug in update systeme
+ - Multiples Corrections de Bug interface
+ - Ajout prise en charge Linux
+ - Ajout systeme de sécurité pour eviter d'appuyer par erreur sur le WIPE MAP Bouton
+ - Correction traduction EN, CN
+ - Ajout tab A propos
+ - migration de PYQT vers Pyside6
+
+V 1.61 :
+    - [FIX] fix Upgrade process 
+    - [ADD] Spanish Language support (Thx @ElPacsWTF )
+    - [ADD] API Steam to launch PZ :
+        no more need to locate PZ executable..... The launcher must find the Steam exe  file....
+    - [CHANGE] some change in interface for Linux version.
+V 1.62 : 2023/12/18
+    - [CHANGE] EFK Mod Pack Link in the interface point directly in Steam workshop Interface
