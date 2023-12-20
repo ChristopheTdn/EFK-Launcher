@@ -186,13 +186,26 @@
     </message>
     <message>
         <location filename="../principale.ui" line="1359"/>
-        <location filename="../principale.ui" line="1391"/>
-        <location filename="../principale.ui" line="1423"/>
         <source>French</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1478"/>
+        <location filename="../principale.ui" line="1391"/>
+        <source>English</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="1423"/>
+        <source>Chinese</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="1455"/>
+        <source>Spanish</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="1504"/>
         <source>Active Bouton Wipe Map</source>
         <translation>Desbloquear el Boton Reinicar Mapas</translation>
     </message>
