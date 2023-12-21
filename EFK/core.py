@@ -11,12 +11,11 @@ import requests
 import json
 import shutil
 import subprocess
-import EFK.launchsteam as launchsteam
 import EFK.disk as disk
 import EFK.reseau as reseau
 import EFK.core as core
+import EFK.launchsteam as launchsteam
 import threading
-import asyncio
 
 def init_application(self):
     # Définition Constantes
@@ -249,52 +248,73 @@ def uninstall_EFK_launcher(self) :
         disk.delFileTarget(self, fichier)
     disk.effaceModManagerProfil(self)
     sys.exit()
-    
-def LocateSteam_windows() :
+
+def LocateSteam_windows():
     import winreg
-    key = winreg.OpenKey( winreg.HKEY_CURRENT_USER, r'Software\Valve\Steam',0, winreg.KEY_READ)
-    (LienSteam,typevaleur) = winreg.QueryValueEx(key,'SteamExe')
+    key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r'Software\Valve\Steam',0, winreg.KEY_READ)
+    (LienSteam, typevaleur) = winreg.QueryValueEx(key,'SteamExe')
     winreg.CloseKey(key)
     return LienSteam
 
 
-def scanLog(self) :
+def scanLog(self):
     logDir = os.path.join(self.lineEdit_ProfilPZ.text(),
                                 "Logs")
     logSourcePath = os.path.join(logDir,
-                                 core.findLogFile(self,logDir))
+                                 core.findLogFile(self,
+                                                  logDir))
+    logfile = open(logSourcePath, "r")
+    loglines = follow(logfile)
+    # iterate over the generator
+    for line in loglines:
+        print(line)
         
-    for l in core.follow(self,logSourcePath):
-        print("LINE: {}".format(l))
         
-def follow(self, file):
-    current = open(file, "r")
-    curino = None
-    while True:
-        while True:
-            line = current.readline()
-            if not line:
-                break
-            yield line
+    # for info in core.follow(self, logSourcePath):
+    #     info = info.replace("\\n", "<br>")\
+    #         .replace("b'", "")\
+    #         .replace('\\r', "")\
+    #         .replace("'", "")\
+    #         .replace('ERROR', "<strong>ERROR</strong>")\
+    #         .replace('WARN', "<strong>WARN</strong>")\
+    #         .replace('LOG', "<strong>LOG</strong>")\
+    #         .replace('DEBUG', "<strong>DEBUG</strong>")
+    #     if not self.checkBox_LOGWarn.isChecked() and ("<strong>WARN</strong>" in info or "<strong>ERROR</strong>" in info):
+    #         info = ""
+    #     elif not self.checkBox_LOGDebug.isChecked() and "<strong>DEBUG</strong>" in info:
+    #         info = ""
+    #     elif not self.checkBox_LOG.isChecked() and "<strong>LOG</strong>" in info:
+    #         info = ""
 
-        try:
-            if os.stat(file).st_ino != curino:
-                new = open(file, "r")
-                current.close()
-                current = new
-                curino = os.fstat(current.fileno()).st_ino
-                continue
-        except IOError:
-            pass
-        time.sleep(1)
+            
         
+
+
+def follow(thefile):
+    '''generator function that yields new lines in a file
+    '''
+    # seek the end of the file
+    thefile.seek(0, os.SEEK_END)
+    
+    # start infinite loop
+    while True:
+        # read last line of file
+        line = thefile.readline()
+        # sleep if file hasn't been updated
+        if not line:
+            time.sleep(0.1)
+            continue
+
+        yield line
+
 def findLogFile(self, logdir) -> str:
-    time.sleep(20)
+    time.sleep(15)
     liste = os.listdir(logdir)
-    for fichier in liste : 
+    for fichier in liste: 
         if "DebugLog.txt" in fichier:
             return fichier
     return ""
+
 ################################################################
 
 if __name__ == "__main__":
