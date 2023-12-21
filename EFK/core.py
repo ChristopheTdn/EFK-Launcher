@@ -6,13 +6,17 @@ from PySide6 import QtWidgets
 from PySide6 import QtGui, QtCore
 import sys
 import os
-from . import launchsteam
-from . import disk
-from . import reseau
+import time
 import requests
 import json
 import shutil
 import subprocess
+import EFK.launchsteam as launchsteam
+import EFK.disk as disk
+import EFK.reseau as reseau
+import EFK.core as core
+import threading
+import asyncio
 
 def init_application(self):
     # Définition Constantes
@@ -168,6 +172,9 @@ def runPz(self) -> None:
     self.process = launchsteam.LaunchSteam(self,
                                      self.lineEdit_ExePZ.text())
     self.process.start()
+    self.logprocess = threading.Thread(target=scanLog,args=(self,))
+    self.logprocess.start()
+
 
 def openEFKCollection(self):
     self.process = launchsteam.LaunchSteam(self,
@@ -200,9 +207,9 @@ def sysInfo() :
     if _platform == "linux" or _platform == "linux2": # environnement Linux
         return 'linux'
     elif _platform == "win32":
-        return "windows"
+        return "win32"
     else :
-        return "unknow system"
+        return "unknown system"
 
 def launch_EFK_launcher_updater(self):
     ''' EFK Launcher updater
@@ -211,7 +218,7 @@ def launch_EFK_launcher_updater(self):
        - ferme l'application courante.'
            '''
     platform = sysInfo()
-    if platform == "linux" or platform == "linux2": # environnement Linux
+    if platform == "linux": # environnement Linux
         executable="EFK Launcher"
     else : 
        executable="EFK Launcher.exe" # environnement windows
@@ -250,6 +257,44 @@ def LocateSteam_windows() :
     winreg.CloseKey(key)
     return LienSteam
 
+
+def scanLog(self) :
+    logDir = os.path.join(self.lineEdit_ProfilPZ.text(),
+                                "Logs")
+    logSourcePath = os.path.join(logDir,
+                                 core.findLogFile(self,logDir))
+        
+    for l in core.follow(self,logSourcePath):
+        print("LINE: {}".format(l))
+        
+def follow(self, file):
+    current = open(file, "r")
+    curino = None
+    while True:
+        while True:
+            line = current.readline()
+            if not line:
+                break
+            yield line
+
+        try:
+            if os.stat(file).st_ino != curino:
+                new = open(file, "r")
+                current.close()
+                current = new
+                curino = os.fstat(current.fileno()).st_ino
+                continue
+        except IOError:
+            pass
+        time.sleep(1)
+        
+def findLogFile(self, logdir) -> str:
+    time.sleep(20)
+    liste = os.listdir(logdir)
+    for fichier in liste : 
+        if "DebugLog.txt" in fichier:
+            return fichier
+    return ""
 ################################################################
 
 if __name__ == "__main__":
