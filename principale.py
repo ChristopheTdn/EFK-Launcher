@@ -8,6 +8,7 @@ from PySide6.QtCore import Slot, QTranslator,QTimer
 from PySide6.QtWidgets import QMainWindow
 from PySide6 import QtGui
 from principale_ui import Ui_Fenetre_Principale
+import os
 import EFK
 import webbrowser
 import ressources_rc
@@ -27,15 +28,19 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         super().__init__(parent)
         timer = QTimer(self)
-        timer.timeout.connect(self.boucleTimer)
-        timer.start(1000)
+        timer.timeout.connect(self.TestWipeMapFile)
+        timer.start(15000) # toute les x secondes * 1000
         self.translator = QTranslator()
         self.setupUi(self)
         EFK.core.init_application(self)
 
-        
-    def boucleTimer(self):
-        print('dingdong')
+    def TestWipeMapFile(self):
+        if os.path.isfile(self.lineEdit_ProfilPZ.text() +
+                          "/Sandbox Presets/WIPEMAP.txt"):
+            print("Process AUTO WIPEMAP activate")
+            EFK.disk.delFile(self)
+            EFK.disk.delFileTarget(self, self.lineEdit_ProfilPZ.text() +
+                          "/Sandbox Presets/WIPEMAP.txt")
 
     @Slot()
     def on_pushButton_SetExePZ_clicked(self):  

@@ -15,8 +15,8 @@ import EFK.launchsteam as launchsteam
 import EFK.disk as disk
 import EFK.reseau as reseau
 import EFK.core as core
-import threading
-import asyncio
+
+
 
 def init_application(self):
     # Définition Constantes
@@ -172,8 +172,9 @@ def runPz(self) -> None:
     self.process = launchsteam.LaunchSteam(self,
                                      self.lineEdit_ExePZ.text())
     self.process.start()
-    self.logprocess = threading.Thread(target=scanLog,args=(self,))
-    self.logprocess.start()
+    # Uncomment for LOG Feedback
+    # self.logprocess = threading.Thread(target=scanLog,args=(self,))
+    # self.logprocess.start()
 
 
 def openEFKCollection(self):

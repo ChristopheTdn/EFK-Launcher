@@ -196,11 +196,11 @@ def delFileTarget(self, fichier: str):
     if os.path.isfile(fichier):
         lien = Path(fichier)
         lien.unlink()
-    print (f'Efface {fichier}')
-                        
-                  
+    print(f'Efface {fichier}')
+
 def delFile(self: QtWidgets) -> None:
-    """_summary_"""
+    """Efface une liste de fichier dans un repertoire hormis ceux
+        present dans la liste du fichiers.txt """
 
     core.writeLog(self, "CLEAR", "")
     core.writeLog(self, "DelFile", " Process WIPE MAP Start...")
@@ -231,8 +231,6 @@ def delFile(self: QtWidgets) -> None:
                         lien = Path(fichier)
                         lien.unlink()
                         log += f'<strong>Delfile</strong> : {file} deleted<br>'
-                        
-                        
                     else:
                         core.writeLog(
                                 self,
