@@ -4,7 +4,7 @@
 Module implementing Fenetre_Principale.
 """
 
-from PySide6.QtCore import Slot, QTranslator
+from PySide6.QtCore import Slot, QTranslator,QTimer
 from PySide6.QtWidgets import QMainWindow
 from PySide6 import QtGui
 from principale_ui import Ui_Fenetre_Principale
@@ -26,10 +26,17 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         @type QWidget (optional)
         """
         super().__init__(parent)
+        timer = QTimer(self)
+        timer.timeout.connect(self.boucleTimer)
+        timer.start(1000)
         self.translator = QTranslator()
         self.setupUi(self)
         EFK.core.init_application(self)
-    
+
+        
+    def boucleTimer(self):
+        print('dingdong')
+
     @Slot()
     def on_pushButton_SetExePZ_clicked(self):  
         """
