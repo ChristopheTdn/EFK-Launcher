@@ -38,7 +38,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="ressources.qrc">
-    <normaloff>:/gfx/gfx/tt.jpeg</normaloff>:/gfx/gfx/tt.jpeg</iconset>
+    <normaloff>:/gfx/gfx/EFK.png</normaloff>:/gfx/gfx/EFK.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTabWidget" name="tabWidget_FenetrePrincipale">
@@ -513,7 +513,7 @@
        <rect>
         <x>85</x>
         <y>100</y>
-        <width>91</width>
+        <width>181</width>
         <height>16</height>
        </rect>
       </property>
@@ -526,7 +526,7 @@
        <rect>
         <x>85</x>
         <y>120</y>
-        <width>56</width>
+        <width>101</width>
         <height>16</height>
        </rect>
       </property>
