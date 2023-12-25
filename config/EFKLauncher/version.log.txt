@@ -18,13 +18,14 @@ V 1.61 :
 V 1.62 : 2023/12/18
     - [CHANGE] EFK Mod Pack Link in the interface point directly in Steam workshop Interface
 
-v 1.65 : 2023/12/25
+v 1.66 : 2023/12/25
     - [FIX] Unlock system WIPEMAP enable/disable
     - [FIX] Selection steam.exe or steam (linux environnement)
     - [ADD] System AUTO for the WIPEMAP if a file WIPEMAP.txt is find in Zomboid\Sandbox Presets
     - [ADD] some commentary in code
     - [CHANGE] Icon EFK Launcher
     - [CHANGE] update some translation (es, en, fr)
+
 
 
 
