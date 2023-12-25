@@ -34,6 +34,7 @@ def get_saveGameDir(self: QtWidgets) -> None:
     name = os.path.basename(repertoire)
     self.lineEdit_RepertoireSaveGame.setText(name)
     self.pushButton_WIPE.setEnabled(False)
+    self.checkBox_unlock.setEnabled(False)
     self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
     self.label_IconStatus_RepertoireSaveGame.setPixmap(
         QtGui.QPixmap(":/gfx/gfx/supprimer.png")
@@ -47,7 +48,7 @@ def get_saveGameDir(self: QtWidgets) -> None:
             icon=self.label_IconStatus_RepertoireSaveGame,
         ):
             disk.configSave( "SaveGame", name)
-            self.pushButton_WIPE.setEnabled(True)
+            self.checkBox_unlock.setEnabled(True)
             self.label_IconStatus_WIPEMAP.setPixmap(
                 QtGui.QPixmap(":/gfx/gfx/valide.png")
             )
@@ -59,15 +60,15 @@ def get_ExeSteam(self: QtWidgets) -> None:
     """
     Determine L executable STEAM pour lancer PZ 
     """
-    pzexe = ''
+    exeSteam = ''
     if core.sysInfo() == "Linux" :
-        pzexe = 'steam'
-    elif core.sysInfo() == "windows" :
-        pzexe = 'steam.exe'
+        exeSteam = 'steam'
+    elif core.sysInfo() == "win32" :
+        exeSteam = 'steam.exe'
     fichier = QtWidgets.QFileDialog.getOpenFileName(
         parent=self,
         caption="trouve l'executable Steam",
-        filter = pzexe,
+        filter=exeSteam,
         options=QtWidgets.QFileDialog.Option.DontUseNativeDialog,
         )
     if fichier[0] != "":
@@ -75,7 +76,7 @@ def get_ExeSteam(self: QtWidgets) -> None:
         if disk.verif_lien(self,
                         file=fichier[0],
                         icon=self.label_IconStatus_ExePZ):
-            disk.configSave( "ExePZ", fichier[0])
+            disk.configSave("ExePZ", fichier[0])
 
 def get_MODManager(self: QtWidgets) -> None:
     """
