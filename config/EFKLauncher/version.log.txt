@@ -2,12 +2,12 @@ v1.01 :
  - initial release
 
 v1.50 : Introduce a bug in update systeme
- - Multiples Corrections de Bug interface
- - Ajout prise en charge Linux
- - Ajout systeme de sécurité pour eviter d'appuyer par erreur sur le WIPE MAP Bouton
- - Correction traduction EN, CN
- - Ajout tab A propos
- - migration de PYQT vers Pyside6
+    - Multiples Corrections de Bug interface
+    - Ajout prise en charge Linux
+    - Ajout systeme de sécurité pour eviter d'appuyer par erreur sur le WIPE MAP Bouton
+    - Correction traduction EN, CN
+    - Ajout tab A propos
+    - migration de PYQT vers Pyside6
 
 V 1.61 :
     - [FIX] fix Upgrade process 
@@ -17,3 +17,14 @@ V 1.61 :
     - [CHANGE] some change in interface for Linux version.
 V 1.62 : 2023/12/18
     - [CHANGE] EFK Mod Pack Link in the interface point directly in Steam workshop Interface
+
+v 1.65 : 2023/12/25
+    - [FIX] Unlock system WIPEMAP enable/disable
+    - [FIX] Selection steam.exe or steam (linux environnement)
+    - [ADD] System AUTO for the WIPEMAP if a file WIPEMAP.txt is find in Zomboid\Sandbox Presets
+    - [ADD] some commentary in code
+    - [CHANGE] Icon EFK Launcher
+    - [CHANGE] update some translation (es, en, fr)
+
+
+
