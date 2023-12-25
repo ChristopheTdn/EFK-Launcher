@@ -1,6 +1,13 @@
-# -*- coding: utf-8 -*-
-
 """
+  _____ _____ _  __  _                           _               
+ | ____|  ___| |/ / | |    __ _ _   _ _ __   ___| |__   ___ _ __ 
+ |  _| | |_  | ' /  | |   / _` | | | | '_ \ / __| '_ \ / _ \ '__|
+ | |___|  _| | . \  | |__| (_| | |_| | | | | (__| | | |  __/ |   
+ |_____|_|   |_|\_\_|_____\__,_|\__,_|_| |_|\___|_| |_|\___|_|   
+ |  \/  | ___   __| |_   _| | ___                                
+ | |\/| |/ _ \ / _` | | | | |/ _ \                               
+ | |  | | (_) | (_| | |_| | |  __/                               
+ |_|  |_|\___/ \__,_|\__,_|_|\___|
 Module implementing Fenetre_Principale.
 """
 
@@ -34,7 +41,10 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         self.setupUi(self)
         EFK.core.init_application(self)
 
-    def TestWipeMapFile(self):
+    def TestWipeMapFile(self) -> None:
+        """Test presence WIPEMAP.txt 
+           Pour automatiser WIPEMAP
+        """
         if os.path.isfile(self.lineEdit_ProfilPZ.text() +
                           "/Sandbox Presets/WIPEMAP.txt"):
             print("Process AUTO WIPEMAP activate")
@@ -43,14 +53,14 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
                           "/Sandbox Presets/WIPEMAP.txt")
 
     @Slot()
-    def on_pushButton_SetExePZ_clicked(self):  
+    def on_pushButton_SetExePZ_clicked(self):
         """
-        Evenement appelé lors du clique sur le bouton pour choisir
-        l'exe PZ
+        QT Evenement :
+        Evenement appelé lors du clique sur le bouton pour Localiser
+        l'éxécutable Steam
         """
-        # TODO: not implemented yet
         EFK.sounds.play(self)
-        EFK.disk.get_ExePZ(self)
+        EFK.disk.get_ExeSteam(self)
 
         
     @Slot()
@@ -58,7 +68,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         Lance l'executable PZ dans un Process.
         """
-        # TODO: not implemented yet
         EFK.sounds.play(self)
         EFK.core.runPz(self)
 
@@ -162,7 +171,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         # TODO: not implemented yet
         EFK.sounds.play(self)
-        #steam steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=3048855836
+        # steam steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=3048855836
         EFK.core.openEFKCollection(self)
         
     @Slot()
@@ -179,8 +188,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         self.label_Titre_2.setVisible(buttonState)
         self.label_Danger.setVisible(buttonState)
         self.pushButton_WIPE.setEnabled(buttonState)
-        
-     
+
     @Slot()
     def on_checkBox_DebugMode_stateChanged(self):
         """

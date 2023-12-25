@@ -55,7 +55,7 @@ def get_saveGameDir(self: QtWidgets) -> None:
                 QtGui.QPixmap(":/gfx/gfx/valide.png")
             )
 
-def get_ExePZ(self: QtWidgets) -> None:
+def get_ExeSteam(self: QtWidgets) -> None:
     """
     Determine L executable STEAM pour lancer PZ 
     """

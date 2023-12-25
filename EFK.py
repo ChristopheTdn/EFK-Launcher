@@ -1,7 +1,20 @@
-"""  EFK LAUNCHER 
+"""
+███████╗███████╗██╗  ██╗    ██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗     
+██╔════╝██╔════╝██║ ██╔╝    ██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██║  ██║██╔════╝██╔══██╗    
+█████╗  █████╗  █████╔╝     ██║     ███████║██║   ██║██╔██╗ ██║██║     ███████║█████╗  ██████╔╝    
+██╔══╝  ██╔══╝  ██╔═██╗     ██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══██║██╔══╝  ██╔══██╗    
+███████╗██║     ██║  ██╗    ███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗██║  ██║███████╗██║  ██║    
+╚══════╝╚═╝     ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 
 Un utilitaire pour permettre de configurer facilement
 et lancer le MOD EFK par TancredTerror sur Project Zomboid
+
+source : https://github.com/ChristopheTdn/EFK-Launcher
+Idea : Tancred Terror
+code : MrGToF
+Traduction : MrGToF (fr,en), Screamff (cn)
+             ElPacsWTF (es)
+Discord : https://discord.com/invite/rbd36ERXyu
 """
 
 import sys
