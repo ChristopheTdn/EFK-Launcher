@@ -215,14 +215,13 @@ def delFile(self: QtWidgets) -> None:
             "DelFile", f" ERROR > fichiers.txt missing in EFK Launcher config dir."
         )
         self.tabWidget_FenetrePrincipale.setCurrentIndex(1)
-
+    log = ""
     if self.lineEdit_RepertoireSaveGame.text() != "":
         repertoire = os.path.join(
             self.lineEdit_ProfilPZ.text() + "/Saves/Sandbox/",
             self.lineEdit_RepertoireSaveGame.text(),
         )
         files = os.listdir(repertoire)
-        log = ""
         # pour chaque fichier, test si les fichiers sont dans la liste de fichier à conserver sinon, efface
         for file in files:
             if file not in listeProtect and file[0] != ".":
@@ -247,7 +246,9 @@ def delFile(self: QtWidgets) -> None:
                     self.tabWidget_FenetrePrincipale.setCurrentIndex(1)
     else:
         core.writeLog(
-            "DelFile", f" ERROR > Save Dir is not validate for WIPE MAP process."
+            self,
+            "DelFile",
+            f" ERROR > Save Dir is not validate for WIPE MAP process."
         )
     core.writeLog(self, "Delfile", log)
     core.writeLog(self, "DelFile", " Process WIPE MAP ending...")
