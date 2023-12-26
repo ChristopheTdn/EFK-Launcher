@@ -25,6 +25,7 @@ v 1.66 : 2023/12/25
     - [ADD] some commentary in code
     - [CHANGE] Icon EFK Launcher
     - [CHANGE] update some translation (es, en, fr)
+    - [CHANGE] Use Nuika compiler for EFK Launcher.exe
 
 
 

@@ -6,5 +6,8 @@ config/EFKLauncher/config.json
 /EFK/__pycache__
 EFK Launcher.exe
 /EFKLauncher
+/EFK.build
+/EFK.dist
+/EFK.onefile-build
 EFK Launcher
 .vscode/settings.json
