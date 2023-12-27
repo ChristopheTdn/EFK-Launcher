@@ -232,17 +232,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.install_EFKStandard(self)
         EFK.disk.configSave( 'Performance', "Standard")
 
-
-        
-    @Slot()
-    def on_radioButton_EFKNoModif(self) -> None:
-        """
-        Valide la langue Francaise et modifie l'interface a la volée
-        """
-        # Ne modifie plsu la selection des Mods
-        EFK.sounds.play(self)
-        EFK.disk.configSave( 'Standard', "")
-
         
     @Slot()
     def on_pushButton_MajEFK_clicked(self) -> None:
