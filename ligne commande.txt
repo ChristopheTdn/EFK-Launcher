@@ -7,4 +7,4 @@ LINUX :
 pyinstaller "EFK.spec" --distpath "EFKLauncher" ; rsync -r config/ EFKLauncher/config/ --exclude 'config.json' ; rsync EFKLauncher/config/EFKLauncher/version.txt  EFKLauncher/ ; cd EFKLauncher ; zip -r EFKLauncher.zip  "EFK Launcher" "./config" ;rm -rf  "EFK Launcher" config/
 
 nuitka :
- python -m nuitka EFK.py --onefile  --enable-plugin=pyside6 --output-filename="EFK Launcher.exe" --include-module=EFK --disable-console
+ python -m nuitka EFK.py --onefile  --windows-icon-from-ico="EFK Launcher.ico" --enable-plugin=pyside6 --output-filename="EFK Launcher.exe" --include-module=EFK --disable-console
