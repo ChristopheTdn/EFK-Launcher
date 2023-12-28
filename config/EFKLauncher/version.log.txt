@@ -28,6 +28,10 @@ v 1.66 : 2023/12/26
     - [CHANGE] update some translation (es, en, fr)
     - [CHANGE] Use Nuika compiler for EFK Launcher.exe
 
+v1.67 : 2023/12/28
+    - [FIX] new compil method with Pyinstaller (Windows Env)
+    
+
 
 
 
