@@ -1,8 +1,8 @@
 from PySide6.QtCore import QUrl
-from PySide6.QtMultimedia import QMediaPlayer,QAudioOutput
+from PySide6.QtMultimedia import QMediaPlayer, QAudioOutput
 import ressources_rc
 
-def play(self, son="qrc:/sounds/sounds/clic.mp3", volume=0.2):
+def play(self, son="qrc:/sounds/sounds/clic.mp3", volume=0.4):
     self.player = QMediaPlayer()
     self.audio = QAudioOutput()
     self.player.setAudioOutput(self.audio)
