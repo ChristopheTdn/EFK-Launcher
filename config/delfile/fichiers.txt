@@ -27,6 +27,7 @@ WorldDictionaryLog.lua
 WorldDictionaryReadable.lua
 z_outfits.bin
 zpop_virtual.bin
+vehicles.db
 
 chunkdata_52_4.bin
 
@@ -559,10 +560,4 @@ map_1583_139.bin
 map_1583_140.bin
 map_1583_141.bin
 map_1583_142.bin
-
-
-
-
-
-
 
