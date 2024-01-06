@@ -107,12 +107,12 @@ def loadConfig(self) -> None:
         self.radioButton_Espagne.setChecked(True)
     elif CONFIG["Langue"] == "zh-CN":
         self.radioButton_Chine.setChecked(True)
-    else :
+    elif CONFIG["Langue"] == "ko-KR":
+        self.radioButton_Korean.setChecked(True)
+    else:
         CONFIG["Langue"] == "en-GB"
         self.radioButton_English.setChecked(True)
-        
     changeLangue(self, CONFIG["Langue"])
-    
     setFlags(self)
 
 
@@ -127,7 +127,7 @@ def setFlags(self) -> None:
     self.pushButton_WIPE.setEnabled(False)
     self.label_Titre_2.setVisible(False)
     self.label_Danger.setVisible(False)
-    
+
     if sysInfo() == "linux" :
         self.label_IconStatus_ExePZ.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
     else :
