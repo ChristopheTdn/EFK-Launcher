@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="gfx">
+    <file>gfx/korean.png</file>
     <file>gfx/espagne.png</file>
     <file>gfx/pyside.png</file>
     <file>gfx/agplv3.png</file>
@@ -30,6 +31,7 @@
     <file>sounds/clic.mp3</file>
   </qresource>
   <qresource prefix="translation">
+    <file>translations/ko-KR.qm</file>
     <file>translations/es-ES.qm</file>
     <file>translations/zh-CN.qm</file>
     <file>translations/en-GB.qm</file>

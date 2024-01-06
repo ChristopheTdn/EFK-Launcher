@@ -138,6 +138,17 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.configSave("Langue", "zh-CN")
 
     @Slot()
+    def on_radioButton_Korean_clicked(self) -> None:
+        """
+        QT Evenement :
+        Valide la langue Sud Coreen et modifie l'interface a la volée
+        """
+        # TODO: not implemented yet
+        EFK.sounds.play(self)
+        EFK.core.changeLangue(self, "ko-KR")
+        EFK.disk.configSave("Langue", "ko-KR")
+    
+    @Slot()
     def on_commandLinkButton_Twitch_clicked(self):
         """
         QT Evenement :
