@@ -56,7 +56,7 @@
     <message>
         <location filename="../principale.ui" line="1141"/>
         <source>La collection de mods EFKC</source>
-        <translation>EFKC Mods Collections</translation>
+        <translation>EFKC 모드 모음집</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="1144"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../principale.ui" line="1295"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;If you&apos;re not a Modder,&lt;br/&gt;Please make a choice EFK Enhanced&lt;br/&gt;or EFK Standard &lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Before&lt;/span&gt; Launch PZ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;주의 :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;만약 &lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;모더가 아닐 경우&lt;/span&gt;,&lt;br/&gt;좀보이드를 &lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;실행하기 전&lt;/span&gt; EFK 기본 또는 &lt;br/&gt; EFK 고급 중 하나를 선택하세요&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;주의 :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;만약 &lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;모더가 아닐 경우&lt;/span&gt;,&lt;br/&gt;좀보이드를 &lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;실행하기 전&lt;/span&gt; EFK 기본&lt;br/&gt; 또는 EFK 고급 중 하나를 선택하세요&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="729"/>
@@ -91,12 +91,12 @@
     <message>
         <location filename="../principale.ui" line="37"/>
         <source>Escape From Knox County Launcher</source>
-        <translation></translation>
+        <translation>Escape From Knox County 런처</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="109"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Ajout Profil &lt;span style=&quot; font-weight:700;&quot;&gt;STANDARD&lt;/span&gt; et &lt;span style=&quot; font-weight:700;&quot;&gt;ADVANCED&lt;/span&gt; à &lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt;Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Lua/saved_modlists.txt에 &lt;span style=&quot; font-weight:700;&quot;&gt;기본&lt;/span&gt; 또는 &lt;span style=&quot; font-weight:700;&quot;&gt;고급&lt;/span&gt; to &lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt; 프리셋을 저장하세요Lua/saved_modlists.txt&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Lua/saved_modlists.txt에 &lt;span style=&quot; font-weight:700;&quot;&gt;기본 / 고급&lt;/span&gt;&lt;span style=&quot; font-weight:700; font-style:italic;&quot;&gt; 프리셋 저장 권장&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="247"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../principale.ui" line="260"/>
         <source>DEBUG</source>
-        <translation></translation>
+        <translation>디버그</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="273"/>
@@ -162,12 +162,12 @@
     <message>
         <location filename="../principale.ui" line="482"/>
         <source>Idea : </source>
-        <translation>Idea : </translation>
+        <translation>제공 : </translation>
     </message>
     <message>
         <location filename="../principale.ui" line="495"/>
         <source>Code :</source>
-        <translation>Coder :</translation>
+        <translation>코더 :</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="508"/>
@@ -177,12 +177,12 @@
     <message>
         <location filename="../principale.ui" line="560"/>
         <source>Source Code :</source>
-        <translation></translation>
+        <translation>소스코드 :</translation>
     </message>
     <message>
         <location filename="../principale.ui" line="573"/>
         <source>Project : </source>
-        <translation></translation>
+        <translation>프로젝트 : </translation>
     </message>
     <message>
         <location filename="../principale.ui" line="1359"/>
