@@ -66,25 +66,29 @@
      <rect>
       <x>140</x>
       <y>10</y>
-      <width>221</width>
+      <width>241</width>
       <height>36</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>16</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
      <string>EFK Launcher Updater</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton_ok">
     <property name="geometry">
      <rect>
-      <x>199</x>
-      <y>102</y>
-      <width>86</width>
+      <x>180</x>
+      <y>105</y>
+      <width>156</width>
       <height>26</height>
      </rect>
     </property>
@@ -102,7 +106,7 @@
      <rect>
       <x>135</x>
       <y>50</y>
-      <width>231</width>
+      <width>251</width>
       <height>16</height>
      </rect>
     </property>
@@ -116,9 +120,9 @@
    <widget class="QLabel" name="label_feedback">
     <property name="geometry">
      <rect>
-      <x>135</x>
+      <x>130</x>
       <y>70</y>
-      <width>226</width>
+      <width>256</width>
       <height>31</height>
      </rect>
     </property>

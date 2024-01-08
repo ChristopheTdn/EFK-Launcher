@@ -20,10 +20,17 @@ Discord : https://discord.com/invite/rbd36ERXyu
 import sys
 from PySide6 import QtWidgets, QtCore
 from principale import Fenetre_Principale
+from updater import Mw_updater
 import shutil
+import json
 import EFK
 
+
 app = QtWidgets.QApplication(sys.argv)
+# Installe Traduction
+TRANSLATOR = QtCore.QTranslator(app)
+TRANSLATOR.load(":/translation/translations/en-GB.qm")
+app.installTranslator(TRANSLATOR)
 
 # Determine si le Launcher est lancé avec l arguments
 # -updater ou -u
@@ -31,23 +38,26 @@ updater = False
 for arg in sys.argv:
     if arg.lower() == "-updater" or arg == "-u":
         updater = True
+        
+# creation fichier config si rien n existe
+EFK.core.create_config()
 
-if updater:
+if updater :
     # Dirige le Launcher vers l interface de mise a jour
-    from updater import Mw_updater
-    MAINFORM = Mw_updater()
-    MAINFORM.show()
+    UPDATER_APPS = Mw_updater()
+    # affiche le formulaire
+    UPDATER_APPS.show()
+    # affiche l'Updater dans la langue du config
+    with open("config/EFKLauncher/config.json", "r") as fichier:
+        CONFIG = json.load(fichier)
+    EFK.core.changeLangue(UPDATER_APPS, CONFIG["Langue"])
     sys.exit(app.exec())
+
 else:
     # Efface toute trace des operations d'Update
     shutil.rmtree("tmp", True)
-    # creation fichier config si rien n existe
-    EFK.core.create_config()
-    # Installe Traduction
-    TRANSLATOR = QtCore.QTranslator()
-    TRANSLATOR.load(":/translation/translations/en-GB.qm")
     # Creation de l application
-    app.installTranslator(TRANSLATOR)
     FORM = Fenetre_Principale()
+    # affiche le formulaire
     FORM.show()
     sys.exit(app.exec())

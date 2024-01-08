@@ -35,6 +35,8 @@ v1.68 : 2024/01/06
     - [ADD] Korean translation (thx t3qquq)
 v1.69 : 
     - [CHANGE] Typo revision in Korean Translation
+v1.70 :
+    - [ADD] EFK Updater Interface Translation
     
 
 

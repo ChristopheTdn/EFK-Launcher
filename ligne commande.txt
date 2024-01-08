@@ -1,5 +1,5 @@
 UPDATE Traduction :
-pyside6-lupdate -no-obsolete principale.ui -ts "translations/fr-FR.ts" "translations/en-GB.ts" "translations/zh-CN.ts" "translations/es-ES.ts" "translations/ko-KR.ts"
+pyside6-lupdate -no-obsolete -verbose principale.ui updater.ui updater.py EFK/reseau.py  -ts "translations/fr-FR.ts" "translations/en-GB.ts" "translations/zh-CN.ts" "translations/es-ES.ts" "translations/ko-KR.ts"
 
 WINDOWS 11 :
 pyinstaller "EFK.spec" --distpath "EFKLauncher" ; Robocopy.exe "./config" "./EFKLauncher/config" /E /MIR /Z /DCOPY:T  /TIMFIX /R:0 /W:0 /XF "config.json" ; cd "EFKLauncher" ; WinRAR a EFKLauncher.zip  "EFK Launcher.exe" "./config"

@@ -205,7 +205,12 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1504"/>
+        <location filename="../principale.ui" line="1481"/>
+        <source>Korean</source>
+        <translation>Korean</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="1530"/>
         <source>Active Bouton Wipe Map</source>
         <translation>Autorise Bouton Wipe Map</translation>
     </message>
@@ -264,6 +269,61 @@
         <location filename="../principale.ui" line="990"/>
         <source>WIPE MAP</source>
         <translation>WIPE MAP</translation>
+    </message>
+</context>
+<context>
+    <name>MainWindow</name>
+    <message>
+        <location filename="../updater.ui" line="38"/>
+        <location filename="../updater.ui" line="80"/>
+        <source>EFK Launcher Updater</source>
+        <translation>EFK Launcher Updater</translation>
+    </message>
+    <message>
+        <location filename="../updater.ui" line="101"/>
+        <source>Update</source>
+        <translation>Mise à jour</translation>
+    </message>
+    <message>
+        <location filename="../updater.py" line="38"/>
+        <location filename="../updater.py" line="42"/>
+        <source>ECHEC : server is offline.</source>
+        <translation>ECHEC : impossible de joindre le serveur.</translation>
+    </message>
+    <message>
+        <location filename="../EFK/reseau.py" line="18"/>
+        <source>Creation repertoire destination</source>
+        <translation>Création du répertoire de destination</translation>
+    </message>
+    <message>
+        <location filename="../EFK/reseau.py" line="23"/>
+        <source>Telechargement archive</source>
+        <translation>Téléchargement du fichier ZIP</translation>
+    </message>
+    <message>
+        <location filename="../EFK/reseau.py" line="30"/>
+        <source>ERREUR : Quitter EFK Launcher et recommencer...</source>
+        <translation>ERREUR : Quitter EFK Launcher et recommencer...</translation>
+    </message>
+    <message>
+        <location filename="../EFK/reseau.py" line="35"/>
+        <source>Decompression de l&apos;archive</source>
+        <translation>Décompresse l archive ZIP</translation>
+    </message>
+    <message>
+        <location filename="../EFK/reseau.py" line="38"/>
+        <source>Probleme de decompression du fichier Zip...</source>
+        <translation>ERREUR : Problème de décompression du fichier Zip...</translation>
+    </message>
+    <message>
+        <location filename="../EFK/reseau.py" line="42"/>
+        <source>Nettoyage fichier temporaire</source>
+        <translation>Suppression fichiers temporaires</translation>
+    </message>
+    <message>
+        <location filename="../EFK/reseau.py" line="45"/>
+        <source>impossible d&apos;effacer le repertoire temporaire</source>
+        <translation>ERREUR : Impossible de supprimer le dossier temporaire</translation>
     </message>
 </context>
 </TS>

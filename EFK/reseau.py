@@ -1,3 +1,4 @@
+from PySide6.QtCore import QCoreApplication
 from PySide6 import QtWidgets
 import sys
 import os
@@ -7,40 +8,41 @@ import zipfile
 import time
 import requests
 import subprocess
+import ressources_rc
+
 
 def init_maj_process_win(self, url, dest, file):
     self.pushButton_ok.setEnabled(False)
-
     while "Tout se deroule bien":
         # Creer le repertoire temporaire
-        message(self, "Création du repertoire de destination")
+        message(self, QCoreApplication.translate("MainWindow", "Creation repertoire destination",None))
         if not os.path.exists(dest):
             os.makedirs(dest)
         # Telecharge l'archive
 
-        message(self, "Téléchargement de l'archive")
+        message(self, QCoreApplication.translate("MainWindow", "Telechargement archive",None))
         telecharge_fichier(self, url, dest, file)
 
         # Efface le "EFK Launcher" de base
         try:
             os.remove("EFK Launcher.exe")
         except:
-            message(self, "ERREUR : Quitter EFK Launcher et recommencer...")
+            message(self, QCoreApplication.translate("MainWindow", "ERREUR : Quitter EFK Launcher et recommencer...",None))
             break
 
         # Dezippe le EFK Launcher
         try:
-            message(self, "Decompression de l'archive")
+            message(self, QCoreApplication.translate("MainWindow", "Decompression de l'archive",None))
             unzip(self, url, dest, file)
         except:
-            message(self, "Probleme de decompression du fichier Zip...")
+            message(self, QCoreApplication.translate("MainWindow", "Probleme de decompression du fichier Zip...",None))
             time.sleep(1)
         # Efface le repertoire temporaire
         try:
-            message(self, "Nettoyage fichier temporaire")
+            message(self, QCoreApplication.translate("MainWindow", "Nettoyage fichier temporaire",None))
             shutil.rmtree("tmp", True)
         except:
-            message(self, "impossible d'effacer le repertoire temporaire")
+            message(self, QCoreApplication.translate("MainWindow", "impossible d'effacer le repertoire temporaire",None))
             time.sleep(1)
 
         # Relance le EFK Launcher nouveau
