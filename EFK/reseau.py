@@ -15,34 +15,34 @@ def init_maj_process_win(self, url, dest, file):
     self.pushButton_ok.setEnabled(False)
     while "Tout se deroule bien":
         # Creer le repertoire temporaire
-        message(self, QCoreApplication.translate("MainWindow", "Creation repertoire destination",None))
+        message(self, QCoreApplication.translate("Updater_MainWindow", "Create_Temp_Directory", None))
         if not os.path.exists(dest):
             os.makedirs(dest)
+            
         # Telecharge l'archive
-
-        message(self, QCoreApplication.translate("MainWindow", "Telechargement archive",None))
+        message(self, QCoreApplication.translate("Updater_MainWindow", "Download_Archive", None))
         telecharge_fichier(self, url, dest, file)
 
         # Efface le "EFK Launcher" de base
         try:
             os.remove("EFK Launcher.exe")
         except:
-            message(self, QCoreApplication.translate("MainWindow", "ERREUR : Quitter EFK Launcher et recommencer...",None))
+            message(self, QCoreApplication.translate("Updater_MainWindow", "ERROR_Quit_LaunchAgain", None))
             break
 
         # Dezippe le EFK Launcher
         try:
-            message(self, QCoreApplication.translate("MainWindow", "Decompression de l'archive",None))
+            message(self, QCoreApplication.translate("Updater_MainWindow", "Unzip_Archive", None))
             unzip(self, url, dest, file)
         except:
-            message(self, QCoreApplication.translate("MainWindow", "Probleme de decompression du fichier Zip...",None))
+            message(self, QCoreApplication.translate("Updater_MainWindow", "ERROR_Unzip_Archive", None))
             time.sleep(1)
         # Efface le repertoire temporaire
         try:
-            message(self, QCoreApplication.translate("MainWindow", "Nettoyage fichier temporaire",None))
+            message(self, QCoreApplication.translate("Updater_MainWindow", "Clean_Temp_Files", None))
             shutil.rmtree("tmp", True)
         except:
-            message(self, QCoreApplication.translate("MainWindow", "impossible d'effacer le repertoire temporaire",None))
+            message(self, QCoreApplication.translate("Updater_MainWindow", "ERROR_Clean_Files", None))
             time.sleep(1)
 
         # Relance le EFK Launcher nouveau
@@ -69,34 +69,34 @@ def init_maj_process_nux(self, url, dest, file):
 
     while "Tout se deroule bien":
         # Creer le repertoire temporaire
-        message(self, "Création du repertoire de destination")
+        message(self, QCoreApplication.translate("Updater_MainWindow", "Create_Temp_Directory", None))
         if not os.path.exists(dest):
             os.makedirs(dest)
         # Telecharge l'archive
 
-        message(self, "Téléchargement de l'archive")
+        message(self, QCoreApplication.translate("Updater_MainWindow", "Download_Archive", None))
         telecharge_fichier(self, url, dest, file)
 
         # Efface le "EFK Launcher" de base
         try:
             os.remove("./EFK Launcher")
         except:
-            message(self, "ERREUR : effacement impossible...")
+            message(self, QCoreApplication.translate("Updater_MainWindow", "ERROR_Quit_LaunchAgain", None))
             break
 
         # Dezippe le EFK Launcher
         try:
-            message(self, "Decompression de l'archive")
+            message(self, QCoreApplication.translate("Updater_MainWindow", "Unzip_Archive", None))
             unzip(self, url, dest, file)
         except:
-            message(self, "Probleme de decompression du fichier Zip...")
+            message(self, QCoreApplication.translate("Updater_MainWindow", "ERROR_Unzip_Archive", None))
             time.sleep(1)
         # Efface le repertoire temporaire
         try:
-            message(self, "Nettoyage fichier temporaire")
+            message(self, QCoreApplication.translate("Updater_MainWindow", "Clean_Temp_Files", None))
             shutil.rmtree("tmp", True)
         except:
-            message(self, "impossible d'effacer le repertoire temporaire")
+            message(self, QCoreApplication.translate("Updater_MainWindow", "ERROR_Clean_Files", None))
             time.sleep(1)
 
         # Relance le EFK Launcher nouveau
@@ -104,8 +104,8 @@ def init_maj_process_nux(self, url, dest, file):
         os.system(f'chmod +x "EFK Launcher"')
         subprocess.Popen(f'"./EFK Launcher" -go',shell=True)
         sys.exit()
-        
-    self.pushButton_ok.setEnabled(True) 
+
+    self.pushButton_ok.setEnabled(True)
 
 
 

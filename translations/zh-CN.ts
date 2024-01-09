@@ -272,7 +272,7 @@
     </message>
 </context>
 <context>
-    <name>MainWindow</name>
+    <name>Updater_MainWindow</name>
     <message>
         <location filename="../updater.ui" line="38"/>
         <location filename="../updater.ui" line="80"/>
@@ -287,43 +287,50 @@
     <message>
         <location filename="../updater.py" line="38"/>
         <location filename="../updater.py" line="42"/>
-        <source>ECHEC : server is offline.</source>
-        <translation>ERROR : update server is offline.</translation>
+        <source>ERROR_Server_Offline</source>
+        <translation>ERROR : update Server is OFFLINE</translation>
     </message>
     <message>
         <location filename="../EFK/reseau.py" line="18"/>
-        <source>Creation repertoire destination</source>
-        <translation>Create Directory</translation>
+        <location filename="../EFK/reseau.py" line="72"/>
+        <source>Create_Temp_Directory</source>
+        <translation>Create_Temp_Directory</translation>
     </message>
     <message>
         <location filename="../EFK/reseau.py" line="23"/>
-        <source>Telechargement archive</source>
-        <translation>Download ZIP file</translation>
+        <location filename="../EFK/reseau.py" line="77"/>
+        <source>Download_Archive</source>
+        <translation>Download files</translation>
     </message>
     <message>
         <location filename="../EFK/reseau.py" line="30"/>
-        <source>ERREUR : Quitter EFK Launcher et recommencer...</source>
-        <translation>ERROR : Run EFK Launcher again...</translation>
+        <location filename="../EFK/reseau.py" line="84"/>
+        <source>ERROR_Quit_LaunchAgain</source>
+        <translation>ERROR : Quit and run EFK Launcher again</translation>
     </message>
     <message>
         <location filename="../EFK/reseau.py" line="35"/>
-        <source>Decompression de l&apos;archive</source>
-        <translation>Unzip files</translation>
+        <location filename="../EFK/reseau.py" line="89"/>
+        <source>Unzip_Archive</source>
+        <translation>Unzip archive file</translation>
     </message>
     <message>
         <location filename="../EFK/reseau.py" line="38"/>
-        <source>Probleme de decompression du fichier Zip...</source>
-        <translation>ERROR : can&apos;t UNZIP file...</translation>
+        <location filename="../EFK/reseau.py" line="92"/>
+        <source>ERROR_Unzip_Archive</source>
+        <translation>ERROR : Unzip process stopped</translation>
     </message>
     <message>
         <location filename="../EFK/reseau.py" line="42"/>
-        <source>Nettoyage fichier temporaire</source>
-        <translation>delete tempory files</translation>
+        <location filename="../EFK/reseau.py" line="96"/>
+        <source>Clean_Temp_Files</source>
+        <translation>Clean tempory files</translation>
     </message>
     <message>
         <location filename="../EFK/reseau.py" line="45"/>
-        <source>impossible d&apos;effacer le repertoire temporaire</source>
-        <translation>ERROR : Can&apos;t delete temp folder</translation>
+        <location filename="../EFK/reseau.py" line="99"/>
+        <source>ERROR_Clean_Files</source>
+        <translation>ERROR : cant&apos;t delete tempory files</translation>
     </message>
 </context>
 </TS>

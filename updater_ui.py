@@ -19,23 +19,23 @@ from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QProgressBar,
     QPushButton, QSizePolicy, QWidget)
 import ressources_rc
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(400, 140)
+class Ui_Updater_MainWindow(object):
+    def setupUi(self, Updater_MainWindow):
+        if not Updater_MainWindow.objectName():
+            Updater_MainWindow.setObjectName(u"Updater_MainWindow")
+        Updater_MainWindow.resize(400, 140)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
-        MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QSize(400, 140))
-        MainWindow.setMaximumSize(QSize(400, 140))
-        MainWindow.setBaseSize(QSize(400, 140))
+        sizePolicy.setHeightForWidth(Updater_MainWindow.sizePolicy().hasHeightForWidth())
+        Updater_MainWindow.setSizePolicy(sizePolicy)
+        Updater_MainWindow.setMinimumSize(QSize(400, 140))
+        Updater_MainWindow.setMaximumSize(QSize(400, 140))
+        Updater_MainWindow.setBaseSize(QSize(400, 140))
         icon = QIcon()
         icon.addFile(u":/gfx/gfx/tt.jpeg", QSize(), QIcon.Normal, QIcon.Off)
-        MainWindow.setWindowIcon(icon)
-        self.centralWidget = QWidget(MainWindow)
+        Updater_MainWindow.setWindowIcon(icon)
+        self.centralWidget = QWidget(Updater_MainWindow)
         self.centralWidget.setObjectName(u"centralWidget")
         self.label = QLabel(self.centralWidget)
         self.label.setObjectName(u"label")
@@ -65,18 +65,18 @@ class Ui_MainWindow(object):
         self.label_feedback.setObjectName(u"label_feedback")
         self.label_feedback.setGeometry(QRect(130, 70, 256, 31))
         self.label_feedback.setAlignment(Qt.AlignCenter)
-        MainWindow.setCentralWidget(self.centralWidget)
+        Updater_MainWindow.setCentralWidget(self.centralWidget)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(Updater_MainWindow)
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(Updater_MainWindow)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"EFK Launcher Updater", None))
+    def retranslateUi(self, Updater_MainWindow):
+        Updater_MainWindow.setWindowTitle(QCoreApplication.translate("Updater_MainWindow", u"EFK Launcher Updater", None))
         self.label.setText("")
-        self.label_titre.setText(QCoreApplication.translate("MainWindow", u"EFK Launcher Updater", None))
-        self.pushButton_ok.setText(QCoreApplication.translate("MainWindow", u"Update", None))
+        self.label_titre.setText(QCoreApplication.translate("Updater_MainWindow", u"EFK Launcher Updater", None))
+        self.pushButton_ok.setText(QCoreApplication.translate("Updater_MainWindow", u"Update", None))
         self.label_feedback.setText("")
     # retranslateUi
 
