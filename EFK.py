@@ -29,7 +29,6 @@ import EFK
 app = QtWidgets.QApplication(sys.argv)
 # Installe Traduction
 TRANSLATOR = QtCore.QTranslator(app)
-TRANSLATOR.load(":/translation/translations/en-GB.qm")
 app.installTranslator(TRANSLATOR)
 
 # Determine si le Launcher est lancé avec l arguments
@@ -41,15 +40,17 @@ for arg in sys.argv:
         
 # creation fichier config si rien n existe
 EFK.core.create_config()
+with open("config/EFKLauncher/config.json", "r") as fichier:
+    CONFIG = json.load(fichier)
+    
+TRANSLATOR.load(f":/translation/translations/{CONFIG['Langue']}.qm")
 
-if updater :
+if not updater :
     # Dirige le Launcher vers l interface de mise a jour
     UPDATER_APPS = Mw_updater()
     # affiche le formulaire
     UPDATER_APPS.show()
     # affiche l'Updater dans la langue du config
-    with open("config/EFKLauncher/config.json", "r") as fichier:
-        CONFIG = json.load(fichier)
     EFK.core.changeLangue(UPDATER_APPS, CONFIG["Langue"])
     sys.exit(app.exec())
 
