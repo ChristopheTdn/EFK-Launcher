@@ -35,7 +35,7 @@ v1.68 : 2024/01/06
     - [ADD] Korean translation (thx t3qquq)
 v1.69 : 
     - [CHANGE] Typo revision in Korean Translation (t3qquq)
-v1.70 :
+v1.70 : 2024/01/08
     - [ADD] EFK Updater Interface Translation
     - [CHANGE] uniformisation variable name in translation interface
     - [FIX] clean some code in reseau.py

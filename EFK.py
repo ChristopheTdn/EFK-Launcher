@@ -45,7 +45,7 @@ with open("config/EFKLauncher/config.json", "r") as fichier:
     
 TRANSLATOR.load(f":/translation/translations/{CONFIG['Langue']}.qm")
 
-if not updater :
+if updater :
     # Dirige le Launcher vers l interface de mise a jour
     UPDATER_APPS = Mw_updater()
     # affiche le formulaire
