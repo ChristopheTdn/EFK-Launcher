@@ -11,6 +11,7 @@ from pathlib import Path
 import shutil
 from . import disk
 from . import core
+from datetime import datetime
 
 def get_userPZDir(self: QtWidgets) -> None:
     repertoire = str((Path.home()).joinpath("Zomboid")).replace("\\", "/")
@@ -251,4 +252,6 @@ def delFile(self: QtWidgets) -> None:
             f" ERROR > Save Dir is not validate for WIPE MAP process."
         )
     core.writeLog(self, "Delfile", log)
-    core.writeLog(self, "DelFile", " Process WIPE MAP ending...")
+    now = datetime.now()
+    gdh = now.strftime("%Y-%m-%d %H:%M:%S")
+    core.writeLog(self, "DelFile", f"{gdh} -> Process WIPE MAP ending...")
