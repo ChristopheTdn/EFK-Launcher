@@ -13,6 +13,7 @@ import subprocess
 import EFK.launchsteam as launchsteam
 import EFK.disk as disk
 import EFK.reseau as reseau
+from datetime import datetime
 
 def init_application(self):
     # Définition Constantes
@@ -191,8 +192,10 @@ def writeLog(self, title, texte):
     if title == "CLEAR":
         self.textEdit_Log.clear()
     else :
+        now = datetime.now()
+        gdh = now.strftime("%Y-%m-%d %H:%M:%S")
         cursor = self.textEdit_Log.textCursor()
-        self.textEdit_Log.insertHtml(f'<strong>{title}</strong> : {texte}<br>')
+        self.textEdit_Log.insertHtml(f'<strong>{title}</strong> : {gdh}-> {texte}<br>')
         self.textEdit_Log.ensureCursorVisible()
 def sysInfo() :
     from sys import platform as _platform

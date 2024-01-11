@@ -40,7 +40,10 @@ v1.70 : 2024/01/08
     - [CHANGE] uniformisation variable name in translation interface
     - [FIX] clean some code in reseau.py
     - [FIX] some label size in EFK Updater UI
-    
+
+v1.71 : 2024/01/11
+    - [FIX] Use user config choice in EFK Updater Translation 
+    - [CHANGE] Process validation and log for autoWIPEMAP
 
 
 

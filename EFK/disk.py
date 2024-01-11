@@ -11,7 +11,6 @@ from pathlib import Path
 import shutil
 from . import disk
 from . import core
-from datetime import datetime
 
 def get_userPZDir(self: QtWidgets) -> None:
     repertoire = str((Path.home()).joinpath("Zomboid")).replace("\\", "/")
@@ -198,15 +197,31 @@ def delFileTarget(self, fichier: str):
     if os.path.isfile(fichier):
         lien = Path(fichier)
         lien.unlink()
-    print(f'Efface {fichier}')
+    core.writeLog(
+        self,
+        "delfile",
+        f'{fichier} deleted')
 
 def delFile(self: QtWidgets) -> None:
+
     """Efface une liste de fichier dans un repertoire hormis ceux
         present dans la liste du fichiers.txt """
 
-    core.writeLog(self, "CLEAR", "")
     core.writeLog(self, "DelFile", " Process WIPE MAP Start...")
     listeProtect = ["delfile.exe", "delfile.py", "fichiers.txt"]
+
+    if not (self.lineEdit_RepertoireSaveGame.text() != "" and \
+            disk.verif_lien(self,
+                        directory=os.path.join(self.lineEdit_ProfilPZ.text()+"/Saves/Sandbox",
+                                               self.lineEdit_RepertoireSaveGame.text()),
+                        icon=self.label_IconStatus_RepertoireSaveGame)):
+        core.writeLog(
+                    self,
+                    "DelFile",
+                    " ERROR > Save Dir is not validate for WIPE MAP process."
+                    )
+        return
+
     try:
         with open("config/delfile/fichiers.txt", "r") as f:
             for line in f:
@@ -252,6 +267,4 @@ def delFile(self: QtWidgets) -> None:
             f" ERROR > Save Dir is not validate for WIPE MAP process."
         )
     core.writeLog(self, "Delfile", log)
-    now = datetime.now()
-    gdh = now.strftime("%Y-%m-%d %H:%M:%S")
-    core.writeLog(self, "DelFile", f"{gdh} -> Process WIPE MAP ending...")
+    core.writeLog(self, "DelFile", "Process WIPE MAP ending...")

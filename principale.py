@@ -45,14 +45,27 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Pour automatiser WIPEMAP
         """
         if os.path.isfile(
-            self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.txt"
+            self.lineEdit_ProfilPZ.text() + 
+            "/Sandbox Presets/WIPEMAP.txt"
         ):
-            print("Process AUTO WIPEMAP activate")
-            EFK.disk.delFile(self)
+            EFK.core.writeLog(
+                    self,
+                    "AUTO-WIPEMAP",
+                    " Auto-Wipemap request detected."
+                    )
             EFK.disk.delFileTarget(
-                self, self.lineEdit_ProfilPZ.text() +
+                self,
+                self.lineEdit_ProfilPZ.text() +
                 "/Sandbox Presets/WIPEMAP.txt"
             )
+            EFK.core.writeLog(
+                    self,
+                    "AUTO-WIPEMAP",
+                    " Auto-Wipemap file deleted."
+                    )
+            print("Process AUTO WIPEMAP activate")
+            EFK.disk.delFile(self)
+
 
     @Slot()
     def on_pushButton_SetExePZ_clicked(self):
