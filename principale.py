@@ -45,27 +45,15 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         Pour automatiser WIPEMAP
         """
         if os.path.isfile(
-            self.lineEdit_ProfilPZ.text() + 
-            "/Sandbox Presets/WIPEMAP.txt"
+            self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.txt"
         ):
-            EFK.core.writeLog(
-                    self,
-                    "AUTO-WIPEMAP",
-                    " Auto-Wipemap request detected."
-                    )
+            EFK.core.writeLog(self, "AUTO-WIPEMAP", " Auto-Wipemap request detected.")
             EFK.disk.delFileTarget(
-                self,
-                self.lineEdit_ProfilPZ.text() +
-                "/Sandbox Presets/WIPEMAP.txt"
+                self, self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.txt"
             )
-            EFK.core.writeLog(
-                    self,
-                    "AUTO-WIPEMAP",
-                    " Auto-Wipemap file deleted."
-                    )
+            EFK.core.writeLog(self, "AUTO-WIPEMAP", " Auto-Wipemap file deleted.")
             print("Process AUTO WIPEMAP activate")
             EFK.disk.delFile(self)
-
 
     @Slot()
     def on_pushButton_SetExePZ_clicked(self):
@@ -160,7 +148,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.sounds.play(self)
         EFK.core.changeLangue(self, "ko-KR")
         EFK.disk.configSave("Langue", "ko-KR")
-    
+
     @Slot()
     def on_commandLinkButton_Twitch_clicked(self):
         """

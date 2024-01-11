@@ -37,15 +37,15 @@ updater = False
 for arg in sys.argv:
     if arg.lower() == "-updater" or arg == "-u":
         updater = True
-        
+
 # creation fichier config si rien n existe
 EFK.core.create_config()
 with open("config/EFKLauncher/config.json", "r") as fichier:
     CONFIG = json.load(fichier)
-    
+
 TRANSLATOR.load(f":/translation/translations/{CONFIG['Langue']}.qm")
 
-if updater :
+if updater:
     # Dirige le Launcher vers l interface de mise a jour
     UPDATER_APPS = Mw_updater()
     # affiche le formulaire

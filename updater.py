@@ -34,12 +34,19 @@ class Mw_updater(QtWidgets.QMainWindow, Ui_Updater_MainWindow):
         
         # Si le site n est pas consultable, bloque la possibilité d'Update
         if EFK.core.sysInfo() == "linux":
-            if not EFK.reseau.is_website_online("Updater_MainWindow", "https://su66.fr/ftp/efklauncher/nux/EFKLauncher.zip"):
-                EFK.reseau.message(self, QCoreApplication.translate("Updater_MainWindow","ERROR_Server_Offline"))
+            if not EFK.reseau.is_website_online("Updater_MainWindow",
+                                                "https://su66.fr/ftp/efklauncher/nux/EFKLauncher.zip"):
+                EFK.reseau.message(self,
+                                   QCoreApplication.translate("Updater_MainWindow",
+                                                                    "ERROR_Server_Offline"))
                 self.pushButton_ok.setEnabled(False)
         else :
-            if not EFK.reseau.is_website_online("Updater_MainWindow", "https://su66.fr/ftp/efklauncher/EFKLauncher.zip"):
-                EFK.reseau.message(self, QCoreApplication.translate("Updater_MainWindow","ERROR_Server_Offline",None))
+            if not EFK.reseau.is_website_online("Updater_MainWindow",
+                                                "https://su66.fr/ftp/efklauncher/EFKLauncher.zip"):
+                EFK.reseau.message(self,
+                                   QCoreApplication.translate("Updater_MainWindow",
+                                                              "ERROR_Server_Offline",
+                                                              None))
                 self.pushButton_ok.setEnabled(False)
         
     @Slot()
@@ -49,6 +56,5 @@ class Mw_updater(QtWidgets.QMainWindow, Ui_Updater_MainWindow):
         """
         if EFK.core.sysInfo() == "linux":
             EFK.reseau.init_maj_process_nux(self, "http://www.su66.fr/ftp/efklauncher/nux/EFKLauncher.zip", "tmp", "EFKLauncher.zip")
-        else :
+        else:
             EFK.reseau.init_maj_process_win(self, "http://www.su66.fr/ftp/efklauncher/EFKLauncher.zip", "tmp", "EFKLauncher.zip")
-
