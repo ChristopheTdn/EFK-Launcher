@@ -1,13 +1,17 @@
 """
-  _____ _____ _  __  _                           _
- | ____|  ___| |/ / | |    __ _ _   _ _ __   ___| |__   ___ _ __
- |  _| | |_  | ' /  | |   / _` | | | | '_ \ / __| '_ \ / _ \ '__|
- | |___|  _| | . \  | |__| (_| | |_| | | | | (__| | | |  __/ |
- |_____|_|   |_|\_\_|_____\__,_|\__,_|_| |_|\___|_| |_|\___|_|
- |  \/  | ___   __| |_   _| | ___
- | |\/| |/ _ \ / _` | | | | |/ _ \
- | |  | | (_) | (_| | |_| | |  __/
- |_|  |_|\___/ \__,_|\__,_|_|\___|
+███████╗███████╗██╗  ██╗██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗ 
+██╔════╝██╔════╝██║ ██╔╝██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██║  ██║██╔════╝██╔══██╗
+█████╗  █████╗  █████╔╝ ██║     ███████║██║   ██║██╔██╗ ██║██║     ███████║█████╗  ██████╔╝
+██╔══╝  ██╔══╝  ██╔═██╗ ██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══██║██╔══╝  ██╔══██╗
+███████╗██║     ██║  ██╗███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗██║  ██║███████╗██║  ██║
+╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+                                                                                           
+███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗                                      
+████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝                                      
+██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗                                        
+██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝                                        
+██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗                                      
+╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝                                      
 Module implementing Fenetre_Principale.
 """
 
@@ -17,6 +21,7 @@ from principale_ui import Ui_Fenetre_Principale
 import os
 import EFK
 import webbrowser
+import json
 import ressources_rc  # necessaire pour integrer les ressources
 
 
@@ -29,7 +34,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
     def __init__(self, parent=None):
         """
         Constructeur Fenetre Principale
-        @param parent reference to the parent widget (defaults to None)
+        @param parent reference to the parent widget (defaults to None) 
         """
         super().__init__(parent)
         timer = QTimer(self)
@@ -41,15 +46,20 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
 
     def TestWipeMapFile(self) -> None:
         """
-        Test presence WIPEMAP.txt
+        Test presence WIPEMAP.json
         Pour automatiser WIPEMAP
         """
-        if os.path.isfile(
-            self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.txt"
-        ):
+        if os.path.isfile(self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.json"):
+            with open(self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.json") as wipeMapFile:
+                STATWipeMap = json.load(wipeMapFile)
+
+            self.lineEdit_RepertoireSaveGame.setText(STATWipeMap["SaveGameDir"])
+            EFK.core.writeLog(self, "AUTO-WIPEMAP", " SaveGame Directory set.")
+            EFK.disk.configSave("SaveGame", STATWipeMap["SaveGameDir"])
+            EFK.core.setFlags(self)
             EFK.core.writeLog(self, "AUTO-WIPEMAP", " Auto-Wipemap request detected.")
             EFK.disk.delFileTarget(
-                self, self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.txt"
+                self, self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.json"
             )
             EFK.core.writeLog(self, "AUTO-WIPEMAP", " Auto-Wipemap file deleted.")
             print("Process AUTO WIPEMAP activate")

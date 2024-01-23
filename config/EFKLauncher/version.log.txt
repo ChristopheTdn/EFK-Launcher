@@ -44,6 +44,9 @@ v1.70 : 2024/01/08
 v1.71 : 2024/01/11
     - [FIX] Use user config choice in EFK Updater Translation 
     - [CHANGE] Process validation and log for autoWIPEMAP
+v1.72 : 2024/01/24
+    - [ADD] EFK Launcher can get SAVE Game Dir from Lua script
+    - [CHANGE] AutoWIPEmap Process
 
 
 
