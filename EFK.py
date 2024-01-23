@@ -13,7 +13,7 @@ source : https://github.com/ChristopheTdn/EFK-Launcher
 Idea : Tancred Terror
 code : MrGToF
 Traduction : MrGToF (fr,en), Screamff (cn)
-             ElPacsWTF (es)
+             ElPacsWTF (es), T3qquq (ko)
 Discord : https://discord.com/invite/rbd36ERXyu
 """
 

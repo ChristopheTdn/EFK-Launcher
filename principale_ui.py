@@ -414,11 +414,6 @@ class Ui_Fenetre_Principale(object):
         self.label_SignAlert.setGeometry(QRect(350, 20, 21, 51))
         self.label_SignAlert.setPixmap(QPixmap(u":/gfx/gfx/accolade.png"))
         self.label_SignAlert.setScaledContents(True)
-        self.label_UpdateAvailable_2 = QLabel(self.centralWidget)
-        self.label_UpdateAvailable_2.setObjectName(u"label_UpdateAvailable_2")
-        self.label_UpdateAvailable_2.setGeometry(QRect(120, 365, 166, 21))
-        self.label_UpdateAvailable_2.setTextFormat(Qt.RichText)
-        self.label_UpdateAvailable_2.setAlignment(Qt.AlignCenter)
         self.groupBox = QGroupBox(self.centralWidget)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(310, 5, 131, 101))
@@ -481,6 +476,11 @@ class Ui_Fenetre_Principale(object):
         icon13 = QIcon()
         icon13.addFile(u":/gfx/gfx/danger.png", QSize(), QIcon.Normal, QIcon.Off)
         self.checkBox_unlock.setIcon(icon13)
+        self.label_UpdateAvailable_2 = QLabel(self.centralWidget)
+        self.label_UpdateAvailable_2.setObjectName(u"label_UpdateAvailable_2")
+        self.label_UpdateAvailable_2.setGeometry(QRect(119, 356, 166, 20))
+        self.label_UpdateAvailable_2.setTextFormat(Qt.RichText)
+        self.label_UpdateAvailable_2.setAlignment(Qt.AlignCenter)
         Fenetre_Principale.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(Fenetre_Principale)
@@ -556,7 +556,6 @@ class Ui_Fenetre_Principale(object):
         self.radioButton_EFKNoModif.setText(QCoreApplication.translate("Fenetre_Principale", u"No Modif (For Modders Only)", None))
         self.label_alert.setText(QCoreApplication.translate("Fenetre_Principale", u"<html><head/><body><p><span style=\" font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;\">IMPORTANT :</span><span style=\" font-weight:700; text-decoration: underline;\"><br/></span>If you're not a Modder,<br/>Please make a choice EFK Enhanced<br/>or EFK Standard <span style=\" font-weight:700; text-decoration: underline;\">Before</span> Launch PZ</p></body></html>", None))
         self.label_SignAlert.setText("")
-        self.label_UpdateAvailable_2.setText(QCoreApplication.translate("Fenetre_Principale", u"<html><head/><body><p><img src=\":/gfx/gfx/danger.png\" width=\"20\"/><span style=\" font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;\">Mise a jour disponible</span></p></body></html>", None))
         self.groupBox.setTitle("")
 #if QT_CONFIG(tooltip)
         self.radioButton_France.setToolTip(QCoreApplication.translate("Fenetre_Principale", u"French", None))
@@ -576,5 +575,6 @@ class Ui_Fenetre_Principale(object):
 #endif // QT_CONFIG(tooltip)
         self.radioButton_Korean.setText("")
         self.checkBox_unlock.setText(QCoreApplication.translate("Fenetre_Principale", u"Active Bouton Wipe Map", None))
+        self.label_UpdateAvailable_2.setText(QCoreApplication.translate("Fenetre_Principale", u"<html><head/><body><p><img src=\":/gfx/gfx/danger.png\" width=\"20\"/><span style=\" font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;\">Mise a jour disponible</span></p></body></html>", None))
     # retranslateUi
 
