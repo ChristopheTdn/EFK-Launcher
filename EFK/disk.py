@@ -63,10 +63,15 @@ def get_ExeSteam(self: QtWidgets) -> None:
     Determine L executable STEAM pour lancer PZ
     """
     exeSteam = ""
-    if core.sysInfo() == "Linux":
+    platform = core.sysInfo()
+    if platform == "Linux":
         exeSteam = "steam"
-    elif core.sysInfo() == "win32":
+    elif platform == "win32":
         exeSteam = "steam.exe"
+    elif platform == "mac":
+        # todo : determine l executable steam sous mac 
+        pass
+        
     fichier = QtWidgets.QFileDialog.getOpenFileName(
         parent=self,
         caption="trouve l'executable Steam",
