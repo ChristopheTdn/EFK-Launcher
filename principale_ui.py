@@ -90,16 +90,7 @@ class Ui_Fenetre_Principale(object):
         self.tab_Log.setObjectName(u"tab_Log")
         self.textEdit_Log = QTextEdit(self.tab_Log)
         self.textEdit_Log.setObjectName(u"textEdit_Log")
-        self.textEdit_Log.setGeometry(QRect(10, 10, 556, 181))
-        self.checkBox_LOGWarn = QCheckBox(self.tab_Log)
-        self.checkBox_LOGWarn.setObjectName(u"checkBox_LOGWarn")
-        self.checkBox_LOGWarn.setGeometry(QRect(115, 195, 61, 20))
-        self.checkBox_LOGDebug = QCheckBox(self.tab_Log)
-        self.checkBox_LOGDebug.setObjectName(u"checkBox_LOGDebug")
-        self.checkBox_LOGDebug.setGeometry(QRect(255, 195, 61, 20))
-        self.checkBox_LOG = QCheckBox(self.tab_Log)
-        self.checkBox_LOG.setObjectName(u"checkBox_LOG")
-        self.checkBox_LOG.setGeometry(QRect(395, 195, 61, 20))
+        self.textEdit_Log.setGeometry(QRect(10, 10, 556, 212))
         self.tabWidget_FenetrePrincipale.addTab(self.tab_Log, "")
         self.tab_Options = QWidget()
         self.tab_Options.setObjectName(u"tab_Options")
@@ -485,7 +476,7 @@ class Ui_Fenetre_Principale(object):
 
         self.retranslateUi(Fenetre_Principale)
 
-        self.tabWidget_FenetrePrincipale.setCurrentIndex(3)
+        self.tabWidget_FenetrePrincipale.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Fenetre_Principale)
@@ -503,9 +494,6 @@ class Ui_Fenetre_Principale(object):
         self.label_difficultSTD.setText(QCoreApplication.translate("Fenetre_Principale", u"Standard (EFK_STD)", None))
         self.label_difficultHARD.setText(QCoreApplication.translate("Fenetre_Principale", u"Difficile (EFK_Hard)", None))
         self.tabWidget_FenetrePrincipale.setTabText(self.tabWidget_FenetrePrincipale.indexOf(self.tab), QCoreApplication.translate("Fenetre_Principale", u"Installation", None))
-        self.checkBox_LOGWarn.setText(QCoreApplication.translate("Fenetre_Principale", u"WARN", None))
-        self.checkBox_LOGDebug.setText(QCoreApplication.translate("Fenetre_Principale", u"DEBUG", None))
-        self.checkBox_LOG.setText(QCoreApplication.translate("Fenetre_Principale", u"LOG", None))
         self.tabWidget_FenetrePrincipale.setTabText(self.tabWidget_FenetrePrincipale.indexOf(self.tab_Log), QCoreApplication.translate("Fenetre_Principale", u"Log", None))
         self.groupBox_maj.setTitle(QCoreApplication.translate("Fenetre_Principale", u"Mise a Jour EFK Launcher", None))
         self.pushButton_MajEFK.setText(QCoreApplication.translate("Fenetre_Principale", u"Maj EFK Launcher", None))

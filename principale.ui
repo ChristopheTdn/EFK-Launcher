@@ -59,7 +59,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -230,47 +230,8 @@
         <x>10</x>
         <y>10</y>
         <width>556</width>
-        <height>181</height>
+        <height>212</height>
        </rect>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_LOGWarn">
-      <property name="geometry">
-       <rect>
-        <x>115</x>
-        <y>195</y>
-        <width>61</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>WARN</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_LOGDebug">
-      <property name="geometry">
-       <rect>
-        <x>255</x>
-        <y>195</y>
-        <width>61</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>DEBUG</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_LOG">
-      <property name="geometry">
-       <rect>
-        <x>395</x>
-        <y>195</y>
-        <width>61</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>LOG</string>
       </property>
      </widget>
     </widget>
