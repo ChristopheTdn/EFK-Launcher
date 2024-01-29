@@ -1,18 +1,18 @@
 """
-███████╗███████╗██╗  ██╗██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗ 
+███████╗███████╗██╗  ██╗██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗
 ██╔════╝██╔════╝██║ ██╔╝██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██║  ██║██╔════╝██╔══██╗
 █████╗  █████╗  █████╔╝ ██║     ███████║██║   ██║██╔██╗ ██║██║     ███████║█████╗  ██████╔╝
 ██╔══╝  ██╔══╝  ██╔═██╗ ██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══██║██╔══╝  ██╔══██╗
 ███████╗██║     ██║  ██╗███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗██║  ██║███████╗██║  ██║
 ╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-                                                                                           
-███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗                                      
-████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝                                      
-██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗                                        
-██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝                                        
-██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗                                      
-╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝                                      
-Module implementing Fenetre_Principale.
+
+███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗
+████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝
+██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗
+██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝
+██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗
+╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝
+# Module implementing Fenetre_Principale.
 """
 
 from PySide6.QtCore import Slot, QTranslator, QTimer
@@ -22,7 +22,8 @@ import os
 import EFK
 import webbrowser
 import json
-import ressources_rc  # necessaire pour integrer les ressources
+# necessaire pour integrer les ressources
+import ressources_rc
 
 
 class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
@@ -34,7 +35,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
     def __init__(self, parent=None):
         """
         Constructeur Fenetre Principale
-        @param parent reference to the parent widget (defaults to None) 
+        @param parent reference to the parent widget (defaults to None)
         """
         super().__init__(parent)
         timer = QTimer(self)
@@ -52,19 +53,24 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         if os.path.isfile(self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.json"):
             with open(self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.json") as wipeMapFile:
                 STATWipeMap = json.load(wipeMapFile)
-
             self.lineEdit_RepertoireSaveGame.setText(STATWipeMap["SaveGameDir"])
             EFK.core.writeLog(self, "AUTO-WIPEMAP", " SaveGame Directory set.")
             EFK.disk.configSave("SaveGame", STATWipeMap["SaveGameDir"])
             EFK.core.setFlags(self)
-            EFK.core.writeLog(self, "AUTO-WIPEMAP", " Auto-Wipemap request detected.")
+            EFK.core.writeLog(self,
+                              "AUTO-WIPEMAP",
+                              " Auto-Wipemap request detected.")
             EFK.disk.delFileTarget(
-                self, self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.json"
+                self,
+                self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/WIPEMAP.json"
             )
-            EFK.core.writeLog(self, "AUTO-WIPEMAP", " Auto-Wipemap file deleted.")
+            EFK.core.writeLog(self,
+                              "AUTO-WIPEMAP",
+                              " Auto-Wipemap file deleted.")
             print("Process AUTO WIPEMAP activate")
             EFK.disk.delFile(self)
-            EFK.sounds.play(self, son="qrc:/sounds/sounds/whoosh.mp3")
+            EFK.sounds.play(self,
+                            son="qrc:/sounds/sounds/whoosh.mp3")
 
     @Slot()
     def on_pushButton_SetExePZ_clicked(self):
@@ -101,9 +107,9 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         QT Evenement :
         Lance le WIPE MAP
         """
-        EFK.sounds.play(self)
         EFK.disk.delFile(self)
         self.checkBox_unlock.setChecked(False)
+        EFK.sounds.play(self, son="qrc:/sounds/sounds/whoosh.mp3")
 
     @Slot()
     def on_radioButton_France_clicked(self) -> None:

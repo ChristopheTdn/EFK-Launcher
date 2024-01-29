@@ -1,3 +1,21 @@
+"""
+███████╗███████╗██╗  ██╗██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗
+██╔════╝██╔════╝██║ ██╔╝██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██║  ██║██╔════╝██╔══██╗
+█████╗  █████╗  █████╔╝ ██║     ███████║██║   ██║██╔██╗ ██║██║     ███████║█████╗  ██████╔╝
+██╔══╝  ██╔══╝  ██╔═██╗ ██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══██║██╔══╝  ██╔══██╗
+███████╗██║     ██║  ██╗███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗██║  ██║███████╗██║  ██║
+╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+
+███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗
+████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝
+██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗
+██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝
+██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗
+╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝
+# Module interface reseau
+# Gere les acces reseau du EFK Launcher (upgrade process)
+"""
+
 from PySide6.QtCore import QCoreApplication
 from PySide6 import QtWidgets
 import sys
@@ -15,34 +33,55 @@ def init_maj_process_win(self, url, dest, file):
     self.pushButton_ok.setEnabled(False)
     while "Tout se deroule bien":
         # Creer le repertoire temporaire
-        message(self, QCoreApplication.translate("Updater_MainWindow", "Create_Temp_Directory", None))
+        message(self,
+                QCoreApplication.translate("Updater_MainWindow",
+                                           "Create_Temp_Directory",
+                                           None))
         if not os.path.exists(dest):
             os.makedirs(dest)
-            
+
         # Telecharge l'archive
-        message(self, QCoreApplication.translate("Updater_MainWindow", "Download_Archive", None))
+        message(self,
+                QCoreApplication.translate("Updater_MainWindow",
+                                           "Download_Archive",
+                                           None))
         telecharge_fichier(self, url, dest, file)
 
         # Efface le "EFK Launcher" de base
         try:
             os.remove("EFK Launcher.exe")
         except:
-            message(self, QCoreApplication.translate("Updater_MainWindow", "ERROR_Quit_LaunchAgain", None))
+            message(self,
+                    QCoreApplication.translate("Updater_MainWindow",
+                                               "ERROR_Quit_LaunchAgain",
+                                               None))
             break
 
         # Dezippe le EFK Launcher
         try:
-            message(self, QCoreApplication.translate("Updater_MainWindow", "Unzip_Archive", None))
+            message(self,
+                    QCoreApplication.translate("Updater_MainWindow",
+                                               "Unzip_Archive",
+                                               None))
             unzip(self, url, dest, file)
         except:
-            message(self, QCoreApplication.translate("Updater_MainWindow", "ERROR_Unzip_Archive", None))
+            message(self,
+                    QCoreApplication.translate("Updater_MainWindow",
+                                               "ERROR_Unzip_Archive",
+                                               None))
             time.sleep(1)
         # Efface le repertoire temporaire
         try:
-            message(self, QCoreApplication.translate("Updater_MainWindow", "Clean_Temp_Files", None))
+            message(self,
+                    QCoreApplication.translate("Updater_MainWindow",
+                                               "Clean_Temp_Files",
+                                               None))
             shutil.rmtree("tmp", True)
         except:
-            message(self, QCoreApplication.translate("Updater_MainWindow", "ERROR_Clean_Files", None))
+            message(self,
+                    QCoreApplication.translate("Updater_MainWindow",
+                                               "ERROR_Clean_Files",
+                                               None))
             time.sleep(1)
 
         # Relance le EFK Launcher nouveau
@@ -58,7 +97,9 @@ def init_maj_process_win(self, url, dest, file):
                 application_path = os.path.dirname(sys.executable)
             elif __file__:
                 application_path = os.path.dirname(__file__)
-            ExecNewLauncher = os.path.join(pathlib.Path(application_path).parent, "EFK Launcher.exe")
+            ExecNewLauncher = os.path.join(
+                pathlib.Path(application_path).parent,
+                "EFK Launcher.exe")
             subprocess.Popen(ExecNewLauncher)
         sys.exit()
 
@@ -112,6 +153,7 @@ def init_maj_process_nux(self, url, dest, file):
 def telecharge_fichier(self, url, dest, file):
     import urllib.request
     from threading import Thread
+
     class Telecharger(object):
         def __init__(self):
             self.count = 0

@@ -1,7 +1,20 @@
-#
+"""
+███████╗███████╗██╗  ██╗██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗
+██╔════╝██╔════╝██║ ██╔╝██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██║  ██║██╔════╝██╔══██╗
+█████╗  █████╗  █████╔╝ ██║     ███████║██║   ██║██╔██╗ ██║██║     ███████║█████╗  ██████╔╝
+██╔══╝  ██╔══╝  ██╔═██╗ ██║     ██╔══██║██║   ██║██║╚██╗██║██║     ██╔══██║██╔══╝  ██╔══██╗
+███████╗██║     ██║  ██╗███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╗██║  ██║███████╗██║  ██║
+╚══════╝╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+
+███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗
+████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝
+██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗
+██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝
+██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗
+╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝
 # Module Interface DISK
 # Gestion des acces disk et des liens
-#
+"""
 
 import os
 import json
@@ -11,14 +24,14 @@ from pathlib import Path
 import shutil
 from . import disk
 from . import core
-from . import sounds
 
 
 def get_userPZDir(self: QtWidgets) -> None:
     repertoire = str((Path.home()).joinpath("Zomboid")).replace("\\", "/")
 
     self.lineEdit_ProfilPZ.setText(repertoire)
-    if disk.verif_lien(self, directory=repertoire, icon=self.label_IconStatus_ProfilPZ):
+    if disk.verif_lien(self, directory=repertoire,
+                       icon=self.label_IconStatus_ProfilPZ):
         disk.configSave("Profil", repertoire)
 
 
@@ -37,7 +50,9 @@ def get_saveGameDir(self: QtWidgets) -> None:
     self.lineEdit_RepertoireSaveGame.setText(name)
     self.pushButton_WIPE.setEnabled(False)
     self.checkBox_unlock.setEnabled(False)
-    self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
+    self.label_IconStatus_WIPEMAP.setPixmap(
+        QtGui.QPixmap(":/gfx/gfx/supprimer.png")
+        )
     self.label_IconStatus_RepertoireSaveGame.setPixmap(
         QtGui.QPixmap(":/gfx/gfx/supprimer.png")
     )
@@ -70,9 +85,9 @@ def get_ExeSteam(self: QtWidgets) -> None:
     elif platform == "win32":
         exeSteam = "steam.exe"
     elif platform == "mac":
-        # TODO: determine l executable steam sous mac 
+        # TODO: determine l executable steam sous mac
         pass
-        
+
     fichier = QtWidgets.QFileDialog.getOpenFileName(
         parent=self,
         caption="trouve l'executable Steam",
@@ -81,17 +96,20 @@ def get_ExeSteam(self: QtWidgets) -> None:
     )
     if fichier[0] != "":
         self.lineEdit_ExePZ.setText(fichier[0])
-        if disk.verif_lien(self, file=fichier[0], icon=self.label_IconStatus_ExePZ):
+        if disk.verif_lien(self, file=fichier[0],
+                           icon=self.label_IconStatus_ExePZ):
             disk.configSave("ExePZ", fichier[0])
 
 
 def get_MODManager(self: QtWidgets) -> None:
     """
-    Determine la présence du fichier de base MODManager et le complete au besoin
+    Determine la présence du fichier de base MODManager
+    et le complete au besoin
     """
     if not os.path.isfile(self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt"):
         with open(
-            self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w"
+            self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt",
+            "w"
         ) as file:
             file.write("VERSION=2\n")
             file.write("mmFavorites:\n")
@@ -127,10 +145,13 @@ def install_MODManager_STD(self: QtWidgets) -> None:
 
 
 def install_MODManager_ADV(self: QtWidgets) -> None:
-    with open("config/modmanager/EFK_ADV.txt", "r") as file:
+    with open("config/modmanager/EFK_ADV.txt",
+              "r") as file:
         EFK_ADV = file.read()
     with open(
-        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r", encoding="utf-8"
+        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt",
+        "r",
+        encoding="utf-8"
     ) as file:
         df = file.readlines()
     finaltext = ""
@@ -140,14 +161,18 @@ def install_MODManager_ADV(self: QtWidgets) -> None:
     finaltext += EFK_ADV + "\n"
 
     with open(
-        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w", encoding="utf-8"
+        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt",
+        "w",
+        encoding="utf-8"
     ) as file:
         file.write(finaltext)
 
 
 def effaceModManagerProfil(self):
     with open(
-        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r", encoding="utf-8"
+        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt",
+        "r",
+        encoding="utf-8"
     ) as file:
         df = file.readlines()
 
@@ -161,7 +186,9 @@ def effaceModManagerProfil(self):
             finaltext += ligne
 
     with open(
-        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w", encoding="utf-8"
+        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt",
+        "w",
+        encoding="utf-8"
     ) as file:
         file.write(finaltext)
 
@@ -174,7 +201,9 @@ def install_EFKEnhanced(self: QtWidgets) -> None:
         self.lineEdit_ProfilPZ.text() + "/mods/default.txt",
     )
     core.writeLog(
-        self, "EFK Enhanced", f" Install Mods par defaut EFK Enhanced ({filePath})"
+        self,
+        "EFK Enhanced",
+        f" Install Mods par defaut EFK Enhanced ({filePath})"
     )
 
 
@@ -186,7 +215,9 @@ def install_EFKStandard(self: QtWidgets) -> None:
         self.lineEdit_ProfilPZ.text() + "/mods/default.txt",
     )
     core.writeLog(
-        self, "EFK Standard", f" Install Mods par defaut EFK Standard ({filePath})"
+        self,
+        "EFK Standard",
+        f" Install Mods par defaut EFK Standard ({filePath})"
     )
 
 
@@ -208,7 +239,7 @@ def verif_lien(self: QtWidgets, directory="", file="", icon=None) -> None:
         else:
             icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/supprimer.png"))
             return False
-    if file != "" and icon != None:
+    if file != "" and icon is not None:
         if os.path.isfile(file):
             icon.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
             return True
@@ -256,7 +287,9 @@ def delFile(self: QtWidgets) -> None:
         )
     ):
         core.writeLog(
-            self, "DelFile", " ERROR > Save Dir is not validate for WIPE MAP process."
+            self,
+            "DelFile",
+            " ERROR > Save Dir is not validate for WIPE MAP process."
         )
         return
 
@@ -266,7 +299,8 @@ def delFile(self: QtWidgets) -> None:
                 listeProtect.append(line.strip())
     except:
         core.writeLog(
-            "DelFile", " ERROR > fichiers.txt missing in EFK Launcher config dir."
+            "DelFile",
+            " ERROR > fichiers.txt missing in EFK Launcher config dir."
         )
         self.tabWidget_FenetrePrincipale.setCurrentIndex(1)
     log = ""
@@ -276,7 +310,8 @@ def delFile(self: QtWidgets) -> None:
             self.lineEdit_RepertoireSaveGame.text(),
         )
         files = os.listdir(repertoire)
-        # pour chaque fichier, test si les fichiers sont dans la liste de fichier à conserver sinon, efface
+        # pour chaque fichier, test si les fichiers sont dans la liste
+        # de fichier à conserver sinon, efface
         for file in files:
             if file not in listeProtect and file[0] != ".":
                 try:
@@ -287,7 +322,9 @@ def delFile(self: QtWidgets) -> None:
                         log += f"<strong>Delfile</strong> : {file} deleted<br>"
                     else:
                         core.writeLog(
-                            self, "Delfile", f"INFO > {file} not found. no deletion"
+                            self,
+                            "Delfile",
+                            f"INFO > {file} not found. no deletion"
                         )
 
                 except:
@@ -299,8 +336,9 @@ def delFile(self: QtWidgets) -> None:
                     self.tabWidget_FenetrePrincipale.setCurrentIndex(1)
     else:
         core.writeLog(
-            self, "DelFile", " ERROR > Save Dir is not validate for WIPE MAP process."
+            self,
+            "DelFile",
+            " ERROR > Save Dir is not validate for WIPE MAP process."
         )
     core.writeLog(self, "Delfile", log)
     core.writeLog(self, "DelFile", "Process WIPE MAP ending...")
-
