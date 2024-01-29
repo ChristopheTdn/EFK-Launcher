@@ -110,7 +110,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         QT Evenement :
         Valide la langue Francaise et modifie l'interface a la volée
         """
-        # TODO: not implemented yet
         EFK.sounds.play(self)
         EFK.core.changeLangue(self, "fr-FR")
         EFK.disk.configSave("Langue", "fr-FR")
@@ -121,7 +120,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         QT Evenement :
         Valide la langue Francaise et modifie l'interface a la volée
         """
-        # TODO: not implemented yet
         EFK.sounds.play(self)
         EFK.core.changeLangue(self, "en-GB")
         EFK.disk.configSave("Langue", "en-GB")
@@ -132,7 +130,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         QT Evenement :
         Valide la langue Francaise et modifie l'interface a la volée
         """
-        # TODO: not implemented yet
         EFK.sounds.play(self)
         EFK.core.changeLangue(self, "es-ES")
         EFK.disk.configSave("Langue", "es-ES")
@@ -143,7 +140,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         QT Evenement :
         Valide la langue Chinoise et modifie l'interface a la volée
         """
-        # TODO: not implemented yet
         EFK.sounds.play(self)
         EFK.core.changeLangue(self, "zh-CN")
         EFK.disk.configSave("Langue", "zh-CN")
@@ -154,7 +150,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         QT Evenement :
         Valide la langue Sud Coreen et modifie l'interface a la volée
         """
-        # TODO: not implemented yet
         EFK.sounds.play(self)
         EFK.core.changeLangue(self, "ko-KR")
         EFK.disk.configSave("Langue", "ko-KR")
@@ -165,7 +160,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         QT Evenement :
         Ouvre le lien internet TWITCH TANCRED TERROR
         """
-        # TODO: not implemented yet
         EFK.sounds.play(self)
         webbrowser.open("https://www.twitch.tv/tancredterror")
 
@@ -175,7 +169,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         QT Evenement :
         Ouvre le lien internet YOUTUBE TANCRED TERROR
         """
-        # TODO: not implemented yet
         EFK.sounds.play(self)
         webbrowser.open("https://www.youtube.com/@TancredTerror")
 

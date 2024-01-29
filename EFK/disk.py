@@ -69,7 +69,7 @@ def get_ExeSteam(self: QtWidgets) -> None:
     elif platform == "win32":
         exeSteam = "steam.exe"
     elif platform == "mac":
-        # todo : determine l executable steam sous mac 
+        # TODO: determine l executable steam sous mac 
         pass
         
     fichier = QtWidgets.QFileDialog.getOpenFileName(

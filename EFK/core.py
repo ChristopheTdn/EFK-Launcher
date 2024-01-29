@@ -138,7 +138,7 @@ def setFlags(self) -> None:
             self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ
         )
     elif platform == 'mac':
-        # todo : valider l executrable steam sous mac (la commande 'steam' ouvre t elle steam ?)
+        # TODO: valider l executrable steam sous mac (la commande 'steam' ouvre t elle steam ?)
         pass
 
     disk.verif_lien(
@@ -274,7 +274,7 @@ def launch_EFK_launcher_updater(self):
     elif platform == "win32":  # windows:
         executable = "EFK Launcher.exe"  # environnement windows
     elif platform == "mac":  # mac
-        #todo : trouver nom executable EFK Launcher sous mac
+        # TODO: trouver nom executable EFK Launcher sous mac
         pass
     
     # création repertoire tmp
@@ -293,7 +293,7 @@ def launch_EFK_launcher_updater(self):
         # Windows
         subprocess.Popen([f"tmp/{executable}", "-updater"])
     elif platform == "mac":  # mac
-        #todo : lancer executable dans le repertoire tmp sous mac...
+        # TODO: lancer executable dans le repertoire tmp sous mac...
         pass
     
     # quitte l'application en cours
