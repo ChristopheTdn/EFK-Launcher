@@ -133,11 +133,11 @@ def setFlags(self) -> None:
     if platform == "linux":
         # pas besoin de trouver l executable de steam sous Linux
         self.label_IconStatus_ExePZ.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
-    elif platform == 'win32':
+    elif platform == "win32":
         disk.verif_lien(
             self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ
         )
-    elif platform == 'mac':
+    elif platform == "mac":
         # TODO: valider l executrable steam sous mac (la commande 'steam' ouvre t elle steam ?)
         pass
 
@@ -255,7 +255,7 @@ def sysInfo():
         return "linux"
     elif _platform == "win32":
         return "win32"
-    elif _platform == 'darwin':
+    elif _platform == "darwin":
         return "mac"
     else:
         return "unknown system"
@@ -267,7 +267,7 @@ def launch_EFK_launcher_updater(self):
     - lance avec le parametre '--updater'
     - ferme l'application courante.'
     """
-    
+
     platform = sysInfo()
     if platform == "linux":  # environnement Linux
         executable = "EFK Launcher"
@@ -276,26 +276,26 @@ def launch_EFK_launcher_updater(self):
     elif platform == "mac":  # mac
         # TODO: trouver nom executable EFK Launcher sous mac
         pass
-    
+
     # création repertoire tmp
     if not os.path.exists("tmp"):
         os.makedirs("tmp")
-        
+
     # copie executable EFK Launcher
     shutil.copyfile(executable, "tmp/" + executable)
-    
+
     # Lance EFKLauncher --updater
     if platform == "linux":
         os.system(f'chmod +x "./tmp/{executable}"')
         subprocess.Popen(f'"./tmp/{executable}" -updater', shell=True)
-        
+
     elif platform == "win32":
         # Windows
         subprocess.Popen([f"tmp/{executable}", "-updater"])
     elif platform == "mac":  # mac
         # TODO: lancer executable dans le repertoire tmp sous mac...
         pass
-    
+
     # quitte l'application en cours
     sys.exit()
 

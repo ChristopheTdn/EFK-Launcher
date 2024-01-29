@@ -64,6 +64,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
             EFK.core.writeLog(self, "AUTO-WIPEMAP", " Auto-Wipemap file deleted.")
             print("Process AUTO WIPEMAP activate")
             EFK.disk.delFile(self)
+            EFK.sounds.play(self, son="qrc:/sounds/sounds/whoosh.mp3")
 
     @Slot()
     def on_pushButton_SetExePZ_clicked(self):

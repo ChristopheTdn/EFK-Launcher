@@ -28,6 +28,7 @@
     <file>gfx/valide.png</file>
   </qresource>
   <qresource prefix="sounds">
+    <file>sounds/whoosh.mp3</file>
     <file>sounds/clic.mp3</file>
   </qresource>
   <qresource prefix="translation">

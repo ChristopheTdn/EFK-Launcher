@@ -11,6 +11,7 @@ from pathlib import Path
 import shutil
 from . import disk
 from . import core
+from . import sounds
 
 
 def get_userPZDir(self: QtWidgets) -> None:
@@ -109,7 +110,8 @@ def install_MODManager_STD(self: QtWidgets) -> None:
     with open("config/modmanager/EFK_STD.txt", "r") as file:
         EFK_STD = file.read()
     with open(
-        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r", encoding="utf-8"
+        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "r",
+        encoding="utf-8"
     ) as file:
         df = file.readlines()
     finaltext = ""
@@ -118,7 +120,8 @@ def install_MODManager_STD(self: QtWidgets) -> None:
             finaltext += ligne
     finaltext += EFK_STD + "\n"
     with open(
-        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w", encoding="utf-8"
+        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt", "w",
+        encoding="utf-8"
     ) as file:
         file.write(finaltext)
 
@@ -300,3 +303,4 @@ def delFile(self: QtWidgets) -> None:
         )
     core.writeLog(self, "Delfile", log)
     core.writeLog(self, "DelFile", "Process WIPE MAP ending...")
+
