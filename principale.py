@@ -70,7 +70,8 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
             print("Process AUTO WIPEMAP activate")
             EFK.disk.delFile(self)
             EFK.sounds.play(self,
-                            son="qrc:/sounds/sounds/whoosh.mp3")
+                            son="qrc:/sounds/sounds/whoosh.mp3",
+                            volume=0.6)
 
     @Slot()
     def on_pushButton_SetExePZ_clicked(self):
@@ -109,7 +110,9 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         EFK.disk.delFile(self)
         self.checkBox_unlock.setChecked(False)
-        EFK.sounds.play(self, son="qrc:/sounds/sounds/whoosh.mp3")
+        EFK.sounds.play(self,
+                        son="qrc:/sounds/sounds/whoosh.mp3",
+                        volume=0.6)
 
     @Slot()
     def on_radioButton_France_clicked(self) -> None:

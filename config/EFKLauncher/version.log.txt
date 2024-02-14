@@ -47,6 +47,8 @@ v1.71 : 2024/01/11
 v1.72 : 2024/01/24
     - [ADD] EFK Launcher can get SAVE Game Dir from Lua script
     - [CHANGE] AutoWIPEmap Process
+v1.73 : 2024/02/14
+    - [ADD] Woosh sound when wipemap and autowipe.
 
 
 
