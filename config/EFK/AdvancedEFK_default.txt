@@ -52,7 +52,6 @@ mods
 	mod = SZ_EVAC_Muldraugh,
 	mod = SZ_Muldraugh_Blockade,
 	mod = WestPointExpansion,
-	mod = EFT,
 	mod = REORDER_CONTAINERS,
 	mod = REORDER_THE_HOTBAR,
 	mod = INVENTORY_TETRIS,
