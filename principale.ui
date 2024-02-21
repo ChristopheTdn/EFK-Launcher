@@ -59,7 +59,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -433,9 +433,9 @@
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>100</y>
-        <width>41</width>
+        <x>42</x>
+        <y>101</y>
+        <width>54</width>
         <height>16</height>
        </rect>
       </property>
@@ -446,7 +446,7 @@
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>37</x>
         <y>120</y>
         <width>41</width>
         <height>16</height>
@@ -459,8 +459,8 @@
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>140</y>
+        <x>6</x>
+        <y>141</y>
         <width>71</width>
         <height>16</height>
        </rect>
@@ -472,8 +472,8 @@
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>85</x>
-        <y>100</y>
+        <x>79</x>
+        <y>101</y>
         <width>181</width>
         <height>16</height>
        </rect>
@@ -485,8 +485,8 @@
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>85</x>
-        <y>120</y>
+        <x>81</x>
+        <y>121</y>
         <width>101</width>
         <height>16</height>
        </rect>
@@ -498,21 +498,21 @@
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>115</x>
-        <y>140</y>
-        <width>176</width>
-        <height>36</height>
+        <x>82</x>
+        <y>139</y>
+        <width>187</width>
+        <height>50</height>
        </rect>
       </property>
       <property name="text">
-       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;MrGToF &lt;/span&gt;(fr,en)&lt;span style=&quot; font-weight:700;&quot;&gt;, screamff &lt;/span&gt;(cn)&lt;br/&gt;&lt;a name=&quot;message-username-1185756075388063835&quot;/&gt;&lt;span style=&quot; font-family:'inherit'; font-size:large; font-weight:700; color:#000000;&quot;&gt;E&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#000000;&quot;&gt;lPacsWTF &lt;/span&gt;(es) &lt;a name=&quot;message-username-1193274896193695815&quot;/&gt;&lt;span style=&quot; font-family:'inherit'; font-size:large; font-weight:700; color:#000000;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#000000;&quot;&gt;3qquq&lt;/span&gt;(ko)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt; font-weight:700;&quot;&gt;MrGToF &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;(fr,en)&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:700;&quot;&gt;, screamff &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;(cn)&lt;br/&gt;&lt;/span&gt;&lt;a name=&quot;message-username-1185756075388063835&quot;/&gt;&lt;span style=&quot; font-family:'inherit'; font-size:8pt; font-weight:700; color:#000000;&quot;&gt;E&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:700; color:#000000;&quot;&gt;lPacsWTF &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;(es) &lt;/span&gt;&lt;a name=&quot;message-username-1193274896193695815&quot;/&gt;&lt;span style=&quot; font-family:'inherit'; font-size:8pt; font-weight:700; color:#000000;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:700; color:#000000;&quot;&gt;3qquq&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;(ko)&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:700;&quot;&gt;Shishail&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; (ru)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_13">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>200</y>
+        <x>9</x>
+        <y>204</y>
         <width>91</width>
         <height>16</height>
        </rect>
@@ -524,8 +524,8 @@
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>180</y>
+        <x>26</x>
+        <y>184</y>
         <width>91</width>
         <height>16</height>
        </rect>
@@ -568,8 +568,8 @@
       <widget class="QLabel" name="label_18">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>60</y>
+         <x>4</x>
+         <y>64</y>
          <width>51</width>
          <height>31</height>
         </rect>
@@ -587,8 +587,8 @@
       <widget class="QLabel" name="label_19">
        <property name="geometry">
         <rect>
-         <x>60</x>
-         <y>60</y>
+         <x>64</x>
+         <y>63</y>
          <width>201</width>
          <height>36</height>
         </rect>
@@ -634,20 +634,20 @@
         <rect>
          <x>60</x>
          <y>105</y>
-         <width>126</width>
+         <width>189</width>
          <height>36</height>
         </rect>
        </property>
        <property name="text">
-        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2023 EFK Launcher&lt;br/&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Licence GNU AGPLv3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2023-2024 EFK Launcher&lt;br/&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Licence GNU AGPLv3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </widget>
      <widget class="QLabel" name="label_AboutGithub">
       <property name="geometry">
        <rect>
-        <x>145</x>
-        <y>200</y>
+        <x>101</x>
+        <y>205</y>
         <width>46</width>
         <height>16</height>
        </rect>
@@ -662,8 +662,8 @@
      <widget class="QLabel" name="label_AboutDiscord">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>175</y>
+        <x>82</x>
+        <y>181</y>
         <width>76</width>
         <height>26</height>
        </rect>
@@ -1123,7 +1123,7 @@
      <rect>
       <x>445</x>
       <y>20</y>
-      <width>141</width>
+      <width>153</width>
       <height>46</height>
      </rect>
     </property>
@@ -1150,9 +1150,9 @@
    <widget class="QCheckBox" name="checkBox_DebugMode">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>461</x>
       <y>70</y>
-      <width>101</width>
+      <width>130</width>
       <height>20</height>
      </rect>
     </property>
@@ -1239,9 +1239,9 @@
     <widget class="QLabel" name="label_alert">
      <property name="geometry">
       <rect>
-       <x>375</x>
+       <x>359</x>
        <y>10</y>
-       <width>196</width>
+       <width>210</width>
        <height>71</height>
       </rect>
      </property>
@@ -1259,8 +1259,8 @@
     <widget class="QLabel" name="label_SignAlert">
      <property name="geometry">
       <rect>
-       <x>350</x>
-       <y>20</y>
+       <x>343</x>
+       <y>19</y>
        <width>21</width>
        <height>51</height>
       </rect>
@@ -1428,6 +1428,32 @@
      <property name="icon">
       <iconset resource="ressources.qrc">
        <normaloff>:/gfx/gfx/korean.png</normaloff>:/gfx/gfx/korean.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>34</width>
+       <height>34</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_Russian">
+     <property name="geometry">
+      <rect>
+       <x>69</x>
+       <y>69</y>
+       <width>61</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Russian</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="ressources.qrc">
+       <normaloff>:/gfx/gfx/russe.png</normaloff>:/gfx/gfx/russe.png</iconset>
      </property>
      <property name="iconSize">
       <size>

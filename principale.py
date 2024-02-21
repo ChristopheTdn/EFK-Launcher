@@ -155,6 +155,16 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.configSave("Langue", "zh-CN")
 
     @Slot()
+    def on_radioButton_Russian_clicked(self) -> None:
+        """
+        QT Evenement :
+        Valide la langue Chinoise et modifie l'interface a la volée
+        """
+        EFK.sounds.play(self)
+        EFK.core.changeLangue(self, "ru-RU")
+        EFK.disk.configSave("Langue", "ru-RU")
+
+    @Slot()
     def on_radioButton_Korean_clicked(self) -> None:
         """
         QT Evenement :

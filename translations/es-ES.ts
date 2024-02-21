@@ -125,7 +125,7 @@
     </message>
     <message>
         <location filename="../principale.ui" line="324"/>
-        <location filename="../principale.ui" line="1489"/>
+        <location filename="../principale.ui" line="1515"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise a jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Actualización disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -195,7 +195,12 @@
         <translation>Korean</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1472"/>
+        <location filename="../principale.ui" line="1449"/>
+        <source>Russian</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="1498"/>
         <source>Active Bouton Wipe Map</source>
         <translation>Desbloquear el Boton Reinicar Mapas</translation>
     </message>

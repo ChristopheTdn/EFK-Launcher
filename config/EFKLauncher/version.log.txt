@@ -53,6 +53,9 @@ v1.74 : 2024/02/15
     - [FIX] Recompil Pyinstaller source from 6.4.0 version to avoid false positive trojan detection.
 v1.75 : 2024/02/16
     - [FIX] update MOD List 
+v1.76
+    - [ADD] add Russian Traduction (thx to Shishail)
+    - [FIX] some error in french traduction
 
 
 
