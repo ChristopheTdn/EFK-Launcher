@@ -115,64 +115,23 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
                         volume=0.6)
 
     @Slot()
-    def on_radioButton_France_clicked(self) -> None:
-        """
-        QT Evenement :
-        Valide la langue Francaise et modifie l'interface a la volée
-        """
+    def on_comboBox_Translate_currentIndexChanged(self):
+        langage = "en-EN"
+        if self.comboBox_Translate.currentIndex() == 0:
+            langage = 'fr-FR'
+        elif self.comboBox_Translate.currentIndex() == 1:
+            langage = 'zh-CN'
+        elif self.comboBox_Translate.currentIndex() == 2:
+            langage = 'en-GB'
+        elif self.comboBox_Translate.currentIndex() == 3:
+            langage = 'ko-KR'
+        elif self.comboBox_Translate.currentIndex() == 4:
+            langage = 'ru-RU'
+        elif self.comboBox_Translate.currentIndex() == 5:
+            langage = 'es-ES'
         EFK.sounds.play(self)
-        EFK.core.changeLangue(self, "fr-FR")
-        EFK.disk.configSave("Langue", "fr-FR")
-
-    @Slot()
-    def on_radioButton_English_clicked(self) -> None:
-        """
-        QT Evenement :
-        Valide la langue Francaise et modifie l'interface a la volée
-        """
-        EFK.sounds.play(self)
-        EFK.core.changeLangue(self, "en-GB")
-        EFK.disk.configSave("Langue", "en-GB")
-
-    @Slot()
-    def on_radioButton_Espagne_clicked(self) -> None:
-        """
-        QT Evenement :
-        Valide la langue Francaise et modifie l'interface a la volée
-        """
-        EFK.sounds.play(self)
-        EFK.core.changeLangue(self, "es-ES")
-        EFK.disk.configSave("Langue", "es-ES")
-
-    @Slot()
-    def on_radioButton_Chine_clicked(self) -> None:
-        """
-        QT Evenement :
-        Valide la langue Chinoise et modifie l'interface a la volée
-        """
-        EFK.sounds.play(self)
-        EFK.core.changeLangue(self, "zh-CN")
-        EFK.disk.configSave("Langue", "zh-CN")
-
-    @Slot()
-    def on_radioButton_Russian_clicked(self) -> None:
-        """
-        QT Evenement :
-        Valide la langue Chinoise et modifie l'interface a la volée
-        """
-        EFK.sounds.play(self)
-        EFK.core.changeLangue(self, "ru-RU")
-        EFK.disk.configSave("Langue", "ru-RU")
-
-    @Slot()
-    def on_radioButton_Korean_clicked(self) -> None:
-        """
-        QT Evenement :
-        Valide la langue Sud Coreen et modifie l'interface a la volée
-        """
-        EFK.sounds.play(self)
-        EFK.core.changeLangue(self, "ko-KR")
-        EFK.disk.configSave("Langue", "ko-KR")
+        EFK.core.changeLangue(self, langage)
+        EFK.disk.configSave("Langue", langage)
 
     @Slot()
     def on_commandLinkButton_Twitch_clicked(self):

@@ -98,8 +98,11 @@ def loadConfig(self) -> None:
 
     if sysInfo() == "linux":
         self.lineEdit_ExePZ.setText("steam")
-    else:
+    elif sysInfo() == "win32":
         self.lineEdit_ExePZ.setText(LocateSteam_windows())
+    elif sysInfo() == "mac":
+        # todo: Verifier le bon fonctionnement de cette commande sous mac
+        self.lineEdit_ExePZ.setText("/Applications/Steam.app/Contents/MacOS/steam_osx ")
 
     self.lineEdit_RepertoireSaveGame.setText(CONFIG["SaveGame"])
     self.checkBox_DebugMode.setChecked(CONFIG["DebugMode"])
@@ -118,18 +121,19 @@ def loadConfig(self) -> None:
         self.radioButton_EFKNoModif.setChecked(True)
 
     if CONFIG["Langue"] == "fr-FR":
-        self.radioButton_France.setChecked(True)
+        self.comboBox_Translate.setCurrentIndex(0)
     elif CONFIG["Langue"] == "es-ES":
-        self.radioButton_Espagne.setChecked(True)
+        self.comboBox_Translate.setCurrentIndex(5)
     elif CONFIG["Langue"] == "zh-CN":
-        self.radioButton_Chine.setChecked(True)
+        self.comboBox_Translate.setCurrentIndex(1)
     elif CONFIG["Langue"] == "ko-KR":
-        self.radioButton_Korean.setChecked(True)
+        self.comboBox_Translate.setCurrentIndex(3)
     elif CONFIG["Langue"] == "ru-RU":
-        self.radioButton_Russian.setChecked(True)
+        self.comboBox_Translate.setCurrentIndex(4)
     else:
         CONFIG["Langue"] == "en-GB"
-        self.radioButton_English.setChecked(True)
+        self.comboBox_Translate.setCurrentIndex(2)
+        
     changeLangue(self, CONFIG["Langue"])
     setFlags(self)
 
@@ -154,7 +158,7 @@ def setFlags(self) -> None:
             self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ
         )
     elif platform == "mac":
-        # TODO: valider l executrable steam sous mac (la commande 'steam' ouvre t elle steam ?)
+        # TODO: valider l executable steam sous mac (la commande 'steam' ouvre t elle steam ?)
         pass
 
     disk.verif_lien(
@@ -285,6 +289,7 @@ def launch_EFK_launcher_updater(self):
     """
 
     platform = sysInfo()
+    executable = ""
     if platform == "linux":  # environnement Linux
         executable = "EFK Launcher"
     elif platform == "win32":  # windows:

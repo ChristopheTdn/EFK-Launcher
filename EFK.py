@@ -14,6 +14,7 @@ Idea : Tancred Terror
 code : MrGToF
 Traduction : MrGToF (fr,en), Screamff (cn)
              ElPacsWTF (es), T3qquq (ko)
+             Shishail (ru)
 Discord : https://discord.com/invite/rbd36ERXyu
 """
 
