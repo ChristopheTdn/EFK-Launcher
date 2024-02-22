@@ -59,7 +59,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -886,7 +886,7 @@
      <rect>
       <x>105</x>
       <y>0</y>
-      <width>241</width>
+      <width>297</width>
       <height>71</height>
      </rect>
     </property>
@@ -1334,93 +1334,93 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_Translate">
+   <widget class="QGroupBox" name="groupBox_langage">
     <property name="geometry">
      <rect>
-      <x>315</x>
-      <y>31</y>
-      <width>124</width>
-      <height>33</height>
+      <x>320</x>
+      <y>16</y>
+      <width>122</width>
+      <height>67</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
+    <property name="title">
+     <string>Langage</string>
     </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <property name="maxVisibleItems">
-     <number>6</number>
-    </property>
-    <item>
-     <property name="text">
-      <string>French</string>
+    <widget class="QComboBox" name="comboBox_Translate">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>24</y>
+       <width>104</width>
+       <height>33</height>
+      </rect>
      </property>
-     <property name="icon">
-      <iconset resource="ressources.qrc">
-       <normaloff>:/gfx/gfx/france.png</normaloff>:/gfx/gfx/france.png</iconset>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
      </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>China</string>
+     <property name="currentIndex">
+      <number>0</number>
      </property>
-     <property name="icon">
-      <iconset resource="ressources.qrc">
-       <normaloff>:/gfx/gfx/chine.png</normaloff>:/gfx/gfx/chine.png</iconset>
+     <property name="maxVisibleItems">
+      <number>6</number>
      </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>English</string>
-     </property>
-     <property name="icon">
-      <iconset resource="ressources.qrc">
-       <normaloff>:/gfx/gfx/royaumeunis.png</normaloff>:/gfx/gfx/royaumeunis.png</iconset>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Korean</string>
-     </property>
-     <property name="icon">
-      <iconset resource="ressources.qrc">
-       <normaloff>:/gfx/gfx/korean.png</normaloff>:/gfx/gfx/korean.png</iconset>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Russian</string>
-     </property>
-     <property name="icon">
-      <iconset resource="ressources.qrc">
-       <normaloff>:/gfx/gfx/russe.png</normaloff>:/gfx/gfx/russe.png</iconset>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Spanish</string>
-     </property>
-     <property name="icon">
-      <iconset resource="ressources.qrc">
-       <normaloff>:/gfx/gfx/espagne.png</normaloff>:/gfx/gfx/espagne.png</iconset>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_chooseTraduction">
-    <property name="geometry">
-     <rect>
-      <x>316</x>
-      <y>13</y>
-      <width>119</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Langue Interface :</string>
-    </property>
+     <item>
+      <property name="text">
+       <string>French</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ressources.qrc">
+        <normaloff>:/gfx/gfx/france.png</normaloff>:/gfx/gfx/france.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>China</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ressources.qrc">
+        <normaloff>:/gfx/gfx/chine.png</normaloff>:/gfx/gfx/chine.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>English</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ressources.qrc">
+        <normaloff>:/gfx/gfx/royaumeunis.png</normaloff>:/gfx/gfx/royaumeunis.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Korean</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ressources.qrc">
+        <normaloff>:/gfx/gfx/korean.png</normaloff>:/gfx/gfx/korean.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Russian</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ressources.qrc">
+        <normaloff>:/gfx/gfx/russe.png</normaloff>:/gfx/gfx/russe.png</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Spanish</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ressources.qrc">
+        <normaloff>:/gfx/gfx/espagne.png</normaloff>:/gfx/gfx/espagne.png</iconset>
+      </property>
+     </item>
+    </widget>
    </widget>
   </widget>
  </widget>

@@ -56,8 +56,10 @@ v1.75 : 2024/02/16
 v1.76 : 2024/02/21
     - [ADD] add Russian Traduction (thx to Shishail)
     - [FIX] some error in french traduction
-v1.77 : 2024/02/21
+v1.77 : 2024/02/23
     - [CHANGE] use COMBOList to select language
+    - [CHANGE] Use new Sound system (pysound)
+    - [CHANGE] new Whoosh sound effect
 
 
 

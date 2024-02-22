@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'principale.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.1
+## Created by: Qt User Interface Compiler version 6.6.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -284,7 +284,7 @@ class Ui_Fenetre_Principale(object):
         self.pushButton_SetExePZ.setGeometry(QRect(495, 30, 71, 24))
         self.label_Titre = QLabel(self.centralWidget)
         self.label_Titre.setObjectName(u"label_Titre")
-        self.label_Titre.setGeometry(QRect(105, 0, 241, 71))
+        self.label_Titre.setGeometry(QRect(105, 0, 297, 71))
         self.label_2 = QLabel(self.centralWidget)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(5, 10, 91, 91))
@@ -425,7 +425,10 @@ class Ui_Fenetre_Principale(object):
         self.label_UpdateAvailable_2.setGeometry(QRect(119, 356, 166, 20))
         self.label_UpdateAvailable_2.setTextFormat(Qt.RichText)
         self.label_UpdateAvailable_2.setAlignment(Qt.AlignCenter)
-        self.comboBox_Translate = QComboBox(self.centralWidget)
+        self.groupBox_langage = QGroupBox(self.centralWidget)
+        self.groupBox_langage.setObjectName(u"groupBox_langage")
+        self.groupBox_langage.setGeometry(QRect(320, 16, 122, 67))
+        self.comboBox_Translate = QComboBox(self.groupBox_langage)
         icon9 = QIcon()
         icon9.addFile(u":/gfx/gfx/france.png", QSize(), QIcon.Normal, QIcon.Off)
         self.comboBox_Translate.addItem(icon9, "")
@@ -445,19 +448,14 @@ class Ui_Fenetre_Principale(object):
         icon14.addFile(u":/gfx/gfx/espagne.png", QSize(), QIcon.Normal, QIcon.Off)
         self.comboBox_Translate.addItem(icon14, "")
         self.comboBox_Translate.setObjectName(u"comboBox_Translate")
-        self.comboBox_Translate.setGeometry(QRect(315, 31, 124, 33))
-        font10 = QFont()
-        font10.setPointSize(12)
-        self.comboBox_Translate.setFont(font10)
+        self.comboBox_Translate.setGeometry(QRect(9, 24, 104, 33))
+        self.comboBox_Translate.setFont(font1)
         self.comboBox_Translate.setMaxVisibleItems(6)
-        self.label_chooseTraduction = QLabel(self.centralWidget)
-        self.label_chooseTraduction.setObjectName(u"label_chooseTraduction")
-        self.label_chooseTraduction.setGeometry(QRect(316, 13, 119, 16))
         Fenetre_Principale.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(Fenetre_Principale)
 
-        self.tabWidget_FenetrePrincipale.setCurrentIndex(2)
+        self.tabWidget_FenetrePrincipale.setCurrentIndex(0)
         self.comboBox_Translate.setCurrentIndex(0)
 
 
@@ -528,6 +526,7 @@ class Ui_Fenetre_Principale(object):
         self.label_SignAlert.setText("")
         self.checkBox_unlock.setText(QCoreApplication.translate("Fenetre_Principale", u"Active Bouton Wipe Map", None))
         self.label_UpdateAvailable_2.setText(QCoreApplication.translate("Fenetre_Principale", u"<html><head/><body><p><img src=\":/gfx/gfx/danger.png\" width=\"20\"/><span style=\" font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;\">Mise a jour disponible</span></p></body></html>", None))
+        self.groupBox_langage.setTitle(QCoreApplication.translate("Fenetre_Principale", u"Langage", None))
         self.comboBox_Translate.setItemText(0, QCoreApplication.translate("Fenetre_Principale", u"French", None))
         self.comboBox_Translate.setItemText(1, QCoreApplication.translate("Fenetre_Principale", u"China", None))
         self.comboBox_Translate.setItemText(2, QCoreApplication.translate("Fenetre_Principale", u"English", None))
@@ -535,6 +534,5 @@ class Ui_Fenetre_Principale(object):
         self.comboBox_Translate.setItemText(4, QCoreApplication.translate("Fenetre_Principale", u"Russian", None))
         self.comboBox_Translate.setItemText(5, QCoreApplication.translate("Fenetre_Principale", u"Spanish", None))
 
-        self.label_chooseTraduction.setText(QCoreApplication.translate("Fenetre_Principale", u"Langue Interface :", None))
     # retranslateUi
 

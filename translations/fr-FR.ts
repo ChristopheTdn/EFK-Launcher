@@ -125,7 +125,7 @@
     </message>
     <message>
         <location filename="../principale.ui" line="324"/>
-        <location filename="../principale.ui" line="1515"/>
+        <location filename="../principale.ui" line="1328"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise a jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise à jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -170,37 +170,42 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1301"/>
+        <location filename="../principale.ui" line="1347"/>
+        <source>Langage</source>
+        <translation>Langage</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="1371"/>
         <source>French</source>
-        <translation></translation>
+        <translation>Français</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1333"/>
+        <location filename="../principale.ui" line="1380"/>
+        <source>China</source>
+        <translation>Chinois</translation>
+    </message>
+    <message>
+        <location filename="../principale.ui" line="1389"/>
         <source>English</source>
-        <translation></translation>
+        <translation>Anglais</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1365"/>
-        <source>Chinese</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../principale.ui" line="1397"/>
+        <location filename="../principale.ui" line="1416"/>
         <source>Spanish</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1423"/>
+        <location filename="../principale.ui" line="1398"/>
         <source>Korean</source>
-        <translation>Korean</translation>
+        <translation>Coréen</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1449"/>
+        <location filename="../principale.ui" line="1407"/>
         <source>Russian</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1498"/>
+        <location filename="../principale.ui" line="1311"/>
         <source>Active Bouton Wipe Map</source>
         <translation>Autorise Bouton Wipe Map</translation>
     </message>
@@ -275,8 +280,8 @@
         <translation>Mise à jour</translation>
     </message>
     <message>
-        <location filename="../updater.py" line="41"/>
-        <location filename="../updater.py" line="49"/>
+        <location filename="../updater.py" line="45"/>
+        <location filename="../updater.py" line="53"/>
         <source>ERROR_Server_Offline</source>
         <translation>ERREUR : Le serveur n&apos;est pas joignable</translation>
     </message>
