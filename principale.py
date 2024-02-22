@@ -111,8 +111,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.disk.delFile(self)
         self.checkBox_unlock.setChecked(False)
         EFK.sounds.play(self,
-                        son="qrc:/sounds/sounds/whoosh.mp3",
-                        volume=0.6)
+                        son="whoosh.wav")
 
     @Slot()
     def on_comboBox_Translate_currentIndexChanged(self):
