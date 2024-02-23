@@ -19,7 +19,7 @@
 from PySide6.QtCore import QUrl
 from PySide6.QtMultimedia import QMediaPlayer, QAudioOutput
 import ressources_rc
-import playsound
+from playsound import playsound
 import os
 
 def play(self, son="clic.wav"):
@@ -30,7 +30,7 @@ def play(self, son="clic.wav"):
         volume (float, optional): set volume max=1. Defaults to 0.4.
     """
     son = os.path.dirname(__file__) + "/sounds/"+son
-    playsound.playsound(son, False)
+    playsound(son, False)
     #self.player = QMediaPlayer()
     #self.audio = QAudioOutput()
     #self.player.setAudioOutput(self.audio)
