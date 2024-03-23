@@ -1,4 +1,4 @@
-"""
+"""webbrowser
 ███████╗███████╗██╗  ██╗██╗      █████╗ ██╗   ██╗███╗   ██╗ ██████╗██╗  ██╗███████╗██████╗
 ██╔════╝██╔════╝██║ ██╔╝██║     ██╔══██╗██║   ██║████╗  ██║██╔════╝██║  ██║██╔════╝██╔══██╗
 █████╗  █████╗  █████╔╝ ██║     ███████║██║   ██║██╔██╗ ██║██║     ███████║█████╗  ██████╔╝
@@ -71,16 +71,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
             EFK.disk.delFile(self)
             EFK.sounds.play(self,
                             son="whoosh.wav")
-
-    @Slot()
-    def on_pushButton_SetExePZ_clicked(self):
-        """
-        QT Evenement :
-        Evenement appelé lors du clique sur le bouton pour Localiser
-        l'éxécutable Steam
-        """
-        EFK.sounds.play(self)
-        EFK.disk.get_ExeSteam(self)
 
     @Slot()
     def on_pushButton_RunPZ_clicked(self):
@@ -213,16 +203,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         self.label_alert.setVisible(True)
         self.label_SignAlert.setVisible(True)
         EFK.disk.configSave("Performance", "")
-
-    @Slot()
-    def on_radioButton_EFKStandard_clicked(self) -> None:
-        """
-        QT Evenement :
-        Determine la selections des Mods pour EFK Standard
-        """
-        EFK.sounds.play(self)
-        EFK.disk.install_EFKStandard(self)
-        EFK.disk.configSave("Performance", "Standard")
 
     @Slot()
     def on_pushButton_MajEFK_clicked(self) -> None:

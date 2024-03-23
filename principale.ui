@@ -2,18 +2,21 @@
 <ui version="4.0">
  <class>Fenetre_Principale</class>
  <widget class="QMainWindow" name="Fenetre_Principale">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>605</width>
-    <height>710</height>
+    <height>680</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>605</width>
-    <height>710</height>
+    <height>680</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -44,8 +47,8 @@
    <widget class="QTabWidget" name="tabWidget_FenetrePrincipale">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>370</y>
+      <x>11</x>
+      <y>332</y>
       <width>576</width>
       <height>256</height>
      </rect>
@@ -59,7 +62,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -683,7 +686,7 @@
       <x>15</x>
       <y>160</y>
       <width>576</width>
-      <height>116</height>
+      <height>83</height>
      </rect>
     </property>
     <property name="title">
@@ -692,8 +695,8 @@
     <widget class="QLineEdit" name="lineEdit_ProfilPZ">
      <property name="geometry">
       <rect>
-       <x>95</x>
-       <y>55</y>
+       <x>94</x>
+       <y>22</y>
        <width>351</width>
        <height>21</height>
       </rect>
@@ -711,8 +714,8 @@
     <widget class="QLabel" name="label_IconStatus_RepertoireSaveGame">
      <property name="geometry">
       <rect>
-       <x>455</x>
-       <y>75</y>
+       <x>454</x>
+       <y>42</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -730,8 +733,8 @@
     <widget class="QLineEdit" name="lineEdit_RepertoireSaveGame">
      <property name="geometry">
       <rect>
-       <x>95</x>
-       <y>80</y>
+       <x>94</x>
+       <y>47</y>
        <width>351</width>
        <height>21</height>
       </rect>
@@ -752,8 +755,8 @@
     <widget class="QLabel" name="label_IconStatus_ProfilPZ">
      <property name="geometry">
       <rect>
-       <x>455</x>
-       <y>50</y>
+       <x>454</x>
+       <y>17</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -771,8 +774,8 @@
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>55</y>
+       <x>9</x>
+       <y>22</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -787,8 +790,8 @@
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>80</y>
+       <x>9</x>
+       <y>47</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -803,75 +806,8 @@
     <widget class="QPushButton" name="pushButton_SetRepertoireSaveGame">
      <property name="geometry">
       <rect>
-       <x>495</x>
-       <y>80</y>
-       <width>71</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>choisir</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_ExePZ">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>30</y>
-       <width>351</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <kerning>true</kerning>
-      </font>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_IconStatus_ExePZ">
-     <property name="geometry">
-      <rect>
-       <x>455</x>
-       <y>25</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string notr="true"/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="ressources.qrc">:/gfx/gfx/supprimer.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>81</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Exe Steam :</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_SetExePZ">
-     <property name="geometry">
-      <rect>
-       <x>495</x>
-       <y>30</y>
+       <x>494</x>
+       <y>47</y>
        <width>71</width>
        <height>24</height>
       </rect>
@@ -917,7 +853,7 @@
     <property name="geometry">
      <rect>
       <x>295</x>
-      <y>640</y>
+      <y>601</y>
       <width>51</width>
       <height>46</height>
      </rect>
@@ -936,7 +872,7 @@
     <property name="geometry">
      <rect>
       <x>85</x>
-      <y>635</y>
+      <y>596</y>
       <width>166</width>
       <height>51</height>
      </rect>
@@ -955,7 +891,7 @@
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>630</y>
+      <y>591</y>
       <width>226</width>
       <height>71</height>
      </rect>
@@ -1065,7 +1001,7 @@
     <property name="geometry">
      <rect>
       <x>25</x>
-      <y>635</y>
+      <y>596</y>
       <width>51</width>
       <height>46</height>
      </rect>
@@ -1084,9 +1020,9 @@
     <property name="geometry">
      <rect>
       <x>15</x>
-      <y>110</y>
+      <y>95</y>
       <width>581</width>
-      <height>51</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -1151,7 +1087,7 @@
     <property name="geometry">
      <rect>
       <x>461</x>
-      <y>70</y>
+      <y>68</y>
       <width>130</width>
       <height>20</height>
      </rect>
@@ -1163,8 +1099,8 @@
    <widget class="QGroupBox" name="groupBox_EFKEnhanced">
     <property name="geometry">
      <rect>
-      <x>15</x>
-      <y>275</y>
+      <x>14</x>
+      <y>245</y>
       <width>576</width>
       <height>86</height>
      </rect>
@@ -1172,24 +1108,11 @@
     <property name="title">
      <string>EFK Performances impact</string>
     </property>
-    <widget class="QRadioButton" name="radioButton_EFKStandard">
-     <property name="geometry">
-      <rect>
-       <x>65</x>
-       <y>40</y>
-       <width>281</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>EFK Standard (Low CPU Power)</string>
-     </property>
-    </widget>
     <widget class="QRadioButton" name="radioButton_EFKEnhanced">
      <property name="geometry">
       <rect>
-       <x>65</x>
-       <y>20</y>
+       <x>68</x>
+       <y>22</y>
        <width>281</width>
        <height>20</height>
       </rect>
@@ -1226,8 +1149,8 @@
     <widget class="QRadioButton" name="radioButton_EFKNoModif">
      <property name="geometry">
       <rect>
-       <x>65</x>
-       <y>60</y>
+       <x>67</x>
+       <y>44</y>
        <width>281</width>
        <height>20</height>
       </rect>
@@ -1259,7 +1182,7 @@
     <widget class="QLabel" name="label_SignAlert">
      <property name="geometry">
       <rect>
-       <x>343</x>
+       <x>309</x>
        <y>19</y>
        <width>21</width>
        <height>51</height>
@@ -1302,7 +1225,7 @@
     <property name="geometry">
      <rect>
       <x>65</x>
-      <y>685</y>
+      <y>646</y>
       <width>211</width>
       <height>20</height>
      </rect>
@@ -1422,6 +1345,39 @@
      </item>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_TooltipSteamCollection">
+    <property name="geometry">
+     <rect>
+      <x>102</x>
+      <y>133</y>
+      <width>389</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt; font-weight:700; color:#aa0000;&quot;&gt;IMPORTANT : &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic; color:#000000;&quot;&gt;Subscribing to this collection &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic; text-decoration: underline; color:#000000;&quot;&gt;is a must to play EFK.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <zorder>label_TooltipSteamCollection</zorder>
+   <zorder>tabWidget_FenetrePrincipale</zorder>
+   <zorder>groupBox_UserDir</zorder>
+   <zorder>label_Titre</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_Danger</zorder>
+   <zorder>pushButton_WIPE</zorder>
+   <zorder>label_Titre_2</zorder>
+   <zorder>commandLinkButton_Twitch</zorder>
+   <zorder>commandLinkButton_Youtube</zorder>
+   <zorder>commandLinkButton_Discord</zorder>
+   <zorder>label_IconStatus_WIPEMAP</zorder>
+   <zorder>commandLinkButton_STEAM</zorder>
+   <zorder>pushButton_RunPZ</zorder>
+   <zorder>checkBox_DebugMode</zorder>
+   <zorder>groupBox_EFKEnhanced</zorder>
+   <zorder>label_version</zorder>
+   <zorder>checkBox_unlock</zorder>
+   <zorder>label_UpdateAvailable_2</zorder>
+   <zorder>groupBox_langage</zorder>
   </widget>
  </widget>
  <resources>

@@ -90,19 +90,23 @@ def create_config():
     if "Performance" not in CONFIG:
         disk.configSave("Performance", "")
 
+def exePZ() -> str :
+    """
+    Ouvre le fichier exePZ
+
+    """
+    if sysInfo() == "linux":
+        return "steam"
+    elif sysInfo() == "win32":
+        return LocateSteam_windows()
+    elif sysInfo() == "mac":
+        # todo: Verifier le bon fonctionnement de cette commande sous mac
+        return "/Applications/Steam.app/Contents/MacOS/steam_osx "
 
 def loadConfig(self) -> None:
     # Recupere les configs enregistrées
     with open("config/EFKLauncher/config.json", "r") as fichier:
         CONFIG = json.load(fichier)
-
-    if sysInfo() == "linux":
-        self.lineEdit_ExePZ.setText("steam")
-    elif sysInfo() == "win32":
-        self.lineEdit_ExePZ.setText(LocateSteam_windows())
-    elif sysInfo() == "mac":
-        # todo: Verifier le bon fonctionnement de cette commande sous mac
-        self.lineEdit_ExePZ.setText("/Applications/Steam.app/Contents/MacOS/steam_osx ")
 
     self.lineEdit_RepertoireSaveGame.setText(CONFIG["SaveGame"])
     self.checkBox_DebugMode.setChecked(CONFIG["DebugMode"])
@@ -133,7 +137,7 @@ def loadConfig(self) -> None:
     else:
         CONFIG["Langue"] == "en-GB"
         self.comboBox_Translate.setCurrentIndex(2)
-        
+
     changeLangue(self, CONFIG["Langue"])
     setFlags(self)
 
@@ -149,17 +153,7 @@ def setFlags(self) -> None:
     self.pushButton_WIPE.setEnabled(False)
     self.label_Titre_2.setVisible(False)
     self.label_Danger.setVisible(False)
-    platform = sysInfo()
-    if platform == "linux":
-        # pas besoin de trouver l executable de steam sous Linux
-        self.label_IconStatus_ExePZ.setPixmap(QtGui.QPixmap(":/gfx/gfx/valide.png"))
-    elif platform == "win32":
-        disk.verif_lien(
-            self, file=self.lineEdit_ExePZ.text(), icon=self.label_IconStatus_ExePZ
-        )
-    elif platform == "mac":
-        # TODO: valider l executable steam sous mac (la commande 'steam' ouvre t elle steam ?)
-        pass
+
 
     disk.verif_lien(
         self,
@@ -229,14 +223,14 @@ def setFlags(self) -> None:
 
 
 def runPz(self) -> None:
-    self.process = launchsteam.LaunchSteam(self, self.lineEdit_ExePZ.text())
+    self.process = launchsteam.LaunchSteam(self, exePZ())
     self.process.start()
 
 
 def openEFKCollection(self):
     self.process = launchsteam.LaunchSteam(
         self,
-        self.lineEdit_ExePZ.text(),
+        exePZ(),
         argument=[
             "steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=3048855836"
         ],
