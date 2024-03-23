@@ -31,10 +31,3 @@ def play(self, son="clic.wav"):
     """
     son = os.path.dirname(__file__) + "/sounds/"+son
     playsound(son, False)
-    #self.player = QMediaPlayer()
-    #self.audio = QAudioOutput()
-    #self.player.setAudioOutput(self.audio)
-    #self.player.setSource(QUrl(son))
-    #self.audio.setVolume(volume)
-    #self.player.play()
-    

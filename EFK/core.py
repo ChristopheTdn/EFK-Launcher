@@ -93,7 +93,6 @@ def create_config():
 def exePZ() -> str :
     """
     Ouvre le fichier exePZ
-
     """
     if sysInfo() == "linux":
         return "steam"
@@ -116,9 +115,6 @@ def loadConfig(self) -> None:
     if CONFIG["Performance"] == "Enhanced":
         self.radioButton_EFKEnhanced.setChecked(True)
         disk.install_EFKEnhanced(self)
-    elif CONFIG["Performance"] == "Standard":
-        disk.install_EFKStandard(self)
-        self.radioButton_EFKStandard.setChecked(True)
     else:
         self.label_alert.setVisible(True)
         self.label_SignAlert.setVisible(True)
@@ -183,43 +179,20 @@ def setFlags(self) -> None:
             QtGui.QPixmap(":/gfx/gfx/supprimer.png")
         )
 
-    # MOD Manager
-    disk.verif_lien(
-        self,
-        file=self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt",
-        icon=self.label_IconStatus_MODManager,
-    )
-
     # Preset Difficulty
     shutil.copy(
         "config/difficulty/EFK Easy.cfg",
         self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/",
     )
-    disk.verif_lien(
-        self,
-        file=self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/EFK Easy.cfg",
-        icon=self.label_IconStatus_difficultEASY,
-    )
-
     shutil.copy(
         "config/difficulty/EFK STD.cfg",
         self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/",
     )
-    disk.verif_lien(
-        self,
-        file=self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/EFK STD.cfg",
-        icon=self.label_IconStatus_difficultSTD,
-    )
-
     shutil.copy(
         "config/difficulty/EFK Hard.cfg",
         self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/",
     )
-    disk.verif_lien(
-        self,
-        file=self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/EFK Hard.cfg",
-        icon=self.label_IconStatus_difficultHARD,
-    )
+
 
 
 def runPz(self) -> None:
