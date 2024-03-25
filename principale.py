@@ -78,6 +78,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         QT Evenement :
         Lance l'executable PZ dans un Process.
         """
+        EFK.disk.install_EFKMods(self)
         EFK.sounds.play(self)
         EFK.core.runPz(self)
 
@@ -90,17 +91,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         """
         EFK.sounds.play(self)
         EFK.disk.get_saveGameDir(self)
-
-    @Slot()
-    def on_pushButton_WIPE_clicked(self) -> None:
-        """
-        QT Evenement :
-        Lance le WIPE MAP
-        """
-        EFK.disk.delFile(self)
-        self.checkBox_unlock.setChecked(False)
-        EFK.sounds.play(self,
-                        son="whoosh.wav")
 
     @Slot()
     def on_comboBox_Translate_currentIndexChanged(self):
@@ -157,19 +147,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.sounds.play(self)
         EFK.core.openEFKCollection(self)
 
-    @Slot()
-    def on_checkBox_unlock_stateChanged(self):
-        """
-        QT Evenement :
-        Slot documentation goes here.
-        @param checked DESCRIPTION
-        @type bool
-        """
-        EFK.sounds.play(self)
-        buttonState = self.checkBox_unlock.isChecked()
-        self.label_Titre_2.setVisible(buttonState)
-        self.label_Danger.setVisible(buttonState)
-        self.pushButton_WIPE.setEnabled(buttonState)
 
     @Slot()
     def on_checkBox_DebugMode_stateChanged(self):
@@ -187,23 +164,20 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
     def on_radioButton_EFKEnhanced_clicked(self) -> None:
         """
         QT Evenement :
-        Determine la selections des Mods pour EFK Enhanced
+        Determine la selections des Mods pour EFK
         """
         EFK.sounds.play(self)
-        EFK.disk.install_EFKEnhanced(self)
         EFK.disk.configSave("Performance", "Enhanced")
 
     @Slot()
-    def on_radioButton_EFKNoModif_clicked(self):
+    def on_radioButton_EFKNoModif_clicked(self) -> None:
         """
         QT Evenement :
-        Determine la selections des Mods pour EFK Standard
+        Determine la selections des Mods pour EFK
         """
         EFK.sounds.play(self)
-        self.label_alert.setVisible(True)
-        self.label_SignAlert.setVisible(True)
-        EFK.disk.configSave("Performance", "")
-
+        EFK.disk.configSave("Performance", "NoModif")
+        
     @Slot()
     def on_pushButton_MajEFK_clicked(self) -> None:
         """

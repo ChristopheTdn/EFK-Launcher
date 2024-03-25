@@ -10,19 +10,19 @@
     <x>0</x>
     <y>0</y>
     <width>605</width>
-    <height>680</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>605</width>
-    <height>680</height>
+    <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>605</width>
-    <height>710</height>
+    <height>600</height>
    </size>
   </property>
   <property name="baseSize">
@@ -62,7 +62,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_Log">
      <attribute name="title">
@@ -690,64 +690,6 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_Danger">
-    <property name="geometry">
-     <rect>
-      <x>295</x>
-      <y>601</y>
-      <width>51</width>
-      <height>46</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string notr="true"/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="ressources.qrc">:/gfx/gfx/danger.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_WIPE">
-    <property name="geometry">
-     <rect>
-      <x>85</x>
-      <y>596</y>
-      <width>166</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>WIPE MAP</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_Titre_2">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>591</y>
-      <width>226</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>8</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;- &lt;/span&gt;Entre 2 raids&lt;br/&gt;- personnage dans la base&lt;br/&gt;- Quitter PZ ou au Menu principal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
    <widget class="QCommandLinkButton" name="commandLinkButton_Twitch">
     <property name="geometry">
      <rect>
@@ -838,32 +780,13 @@
      </size>
     </property>
    </widget>
-   <widget class="QLabel" name="label_IconStatus_WIPEMAP">
-    <property name="geometry">
-     <rect>
-      <x>25</x>
-      <y>596</y>
-      <width>51</width>
-      <height>46</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string notr="true"/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="ressources.qrc">:/gfx/gfx/supprimer.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QCommandLinkButton" name="commandLinkButton_STEAM">
     <property name="geometry">
      <rect>
-      <x>15</x>
-      <y>95</y>
+      <x>17</x>
+      <y>102</y>
       <width>581</width>
-      <height>61</height>
+      <height>52</height>
      </rect>
     </property>
     <property name="font">
@@ -1000,45 +923,6 @@
       <string>No Modif (For Modders Only)</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_alert">
-     <property name="geometry">
-      <rect>
-       <x>359</x>
-       <y>10</y>
-       <width>210</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <pointsize>9</pointsize>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700; text-decoration: underline; color:#aa0000;&quot;&gt;IMPORTANT :&lt;/span&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;&lt;br/&gt;&lt;/span&gt;If you're not a Modder,&lt;br/&gt;Please make a choice EFK Enhanced&lt;br/&gt;or EFK Standard &lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Before&lt;/span&gt; Launch PZ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_SignAlert">
-     <property name="geometry">
-      <rect>
-       <x>309</x>
-       <y>19</y>
-       <width>21</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="ressources.qrc">:/gfx/gfx/accolade.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
    </widget>
    <widget class="QLabel" name="label_version">
     <property name="enabled">
@@ -1060,23 +944,6 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_unlock">
-    <property name="geometry">
-     <rect>
-      <x>65</x>
-      <y>646</y>
-      <width>211</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Active Bouton Wipe Map</string>
-    </property>
-    <property name="icon">
-     <iconset resource="ressources.qrc">
-      <normaloff>:/gfx/gfx/danger.png</normaloff>:/gfx/gfx/danger.png</iconset>
     </property>
    </widget>
    <widget class="QLabel" name="label_UpdateAvailable_2">
@@ -1189,9 +1056,9 @@
    <widget class="QLabel" name="label_TooltipSteamCollection">
     <property name="geometry">
      <rect>
-      <x>102</x>
-      <y>133</y>
-      <width>389</width>
+      <x>105</x>
+      <y>143</y>
+      <width>447</width>
       <height>16</height>
      </rect>
     </property>
@@ -1204,19 +1071,14 @@
    <zorder>groupBox_UserDir</zorder>
    <zorder>label_Titre</zorder>
    <zorder>label_2</zorder>
-   <zorder>label_Danger</zorder>
-   <zorder>pushButton_WIPE</zorder>
-   <zorder>label_Titre_2</zorder>
    <zorder>commandLinkButton_Twitch</zorder>
    <zorder>commandLinkButton_Youtube</zorder>
    <zorder>commandLinkButton_Discord</zorder>
-   <zorder>label_IconStatus_WIPEMAP</zorder>
    <zorder>commandLinkButton_STEAM</zorder>
    <zorder>pushButton_RunPZ</zorder>
    <zorder>checkBox_DebugMode</zorder>
    <zorder>groupBox_EFKEnhanced</zorder>
    <zorder>label_version</zorder>
-   <zorder>checkBox_unlock</zorder>
    <zorder>label_UpdateAvailable_2</zorder>
    <zorder>groupBox_langage</zorder>
   </widget>

@@ -110,15 +110,10 @@ def loadConfig(self) -> None:
     self.lineEdit_RepertoireSaveGame.setText(CONFIG["SaveGame"])
     self.checkBox_DebugMode.setChecked(CONFIG["DebugMode"])
 
-    self.label_alert.setVisible(False)
-    self.label_SignAlert.setVisible(False)
-    if CONFIG["Performance"] == "Enhanced":
-        self.radioButton_EFKEnhanced.setChecked(True)
-        disk.install_EFKEnhanced(self)
-    else:
-        self.label_alert.setVisible(True)
-        self.label_SignAlert.setVisible(True)
+    if CONFIG["Performance"] == "NoModif":
         self.radioButton_EFKNoModif.setChecked(True)
+    else:
+        self.radioButton_EFKEnhanced.setChecked(True)
 
     if CONFIG["Langue"] == "fr-FR":
         self.comboBox_Translate.setCurrentIndex(0)
@@ -143,41 +138,12 @@ def setFlags(self) -> None:
     Verifie l'ensemble des liens pour en determiner la validité
     et modifier les icones correspondant sur l interface
     """
-    # etat initial Bouton
-    self.checkBox_unlock.setChecked(False)
-    self.checkBox_unlock.setEnabled(False)
-    self.pushButton_WIPE.setEnabled(False)
-    self.label_Titre_2.setVisible(False)
-    self.label_Danger.setVisible(False)
-
 
     disk.verif_lien(
         self,
         directory=self.lineEdit_ProfilPZ.text(),
         icon=self.label_IconStatus_ProfilPZ,
     )
-    if self.lineEdit_RepertoireSaveGame.text() != "" and disk.verif_lien(
-        self,
-        directory=os.path.join(
-            self.lineEdit_ProfilPZ.text() + "/Saves/Sandbox",
-            self.lineEdit_RepertoireSaveGame.text(),
-        ),
-        icon=self.label_IconStatus_RepertoireSaveGame,
-    ):
-        self.checkBox_unlock.setEnabled(True)
-        self.checkBox_unlock.setChecked(False)
-        self.label_IconStatus_WIPEMAP.setPixmap(QtGui.QPixmap(":/gfx/gfx/checked.png"))
-
-    else:
-        self.label_IconStatus_RepertoireSaveGame.setPixmap(
-            QtGui.QPixmap(":/gfx/gfx/supprimer.png")
-        )
-        self.pushButton_WIPE.setEnabled(False)
-        self.checkBox_unlock.setChecked(False)
-        self.checkBox_unlock.setEnabled(False)
-        self.label_IconStatus_WIPEMAP.setPixmap(
-            QtGui.QPixmap(":/gfx/gfx/supprimer.png")
-        )
 
     # Preset Difficulty
     shutil.copy(

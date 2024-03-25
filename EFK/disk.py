@@ -48,11 +48,6 @@ def get_saveGameDir(self: QtWidgets) -> None:
     )
     name = os.path.basename(repertoire)
     self.lineEdit_RepertoireSaveGame.setText(name)
-    self.pushButton_WIPE.setEnabled(False)
-    self.checkBox_unlock.setEnabled(False)
-    self.label_IconStatus_WIPEMAP.setPixmap(
-        QtGui.QPixmap(":/gfx/gfx/supprimer.png")
-        )
     self.label_IconStatus_RepertoireSaveGame.setPixmap(
         QtGui.QPixmap(":/gfx/gfx/supprimer.png")
     )
@@ -65,10 +60,6 @@ def get_saveGameDir(self: QtWidgets) -> None:
             icon=self.label_IconStatus_RepertoireSaveGame,
         ):
             disk.configSave("SaveGame", name)
-            self.checkBox_unlock.setEnabled(True)
-            self.label_IconStatus_WIPEMAP.setPixmap(
-                QtGui.QPixmap(":/gfx/gfx/valide.png")
-            )
             self.label_IconStatus_RepertoireSaveGame.setPixmap(
                 QtGui.QPixmap(":/gfx/gfx/valide.png")
             )
@@ -114,31 +105,6 @@ def get_MODManager(self: QtWidgets) -> None:
             file.write("VERSION=2\n")
             file.write("mmFavorites:\n")
 
-    disk.install_MODManager_ADV(self)
-
-def install_MODManager_ADV(self: QtWidgets) -> None:
-    with open("config/modmanager/EFK_ADV.txt",
-              "r") as file:
-        EFK_ADV = file.read()
-    with open(
-        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt",
-        "r",
-        encoding="utf-8"
-    ) as file:
-        df = file.readlines()
-    finaltext = ""
-    for ligne in df:
-        if "Escape From Knox Project ADV:" not in ligne:
-            finaltext += ligne
-    finaltext += EFK_ADV + "\n"
-
-    with open(
-        self.lineEdit_ProfilPZ.text() + "/Lua/saved_modlists.txt",
-        "w",
-        encoding="utf-8"
-    ) as file:
-        file.write(finaltext)
-
 
 def effaceModManagerProfil(self):
     with open(
@@ -165,33 +131,18 @@ def effaceModManagerProfil(self):
         file.write(finaltext)
 
 
-def install_EFKEnhanced(self: QtWidgets) -> None:
+def install_EFKMods(self: QtWidgets) -> None:
     self.label_alert.setVisible(False)
     self.label_SignAlert.setVisible(False)
     filePath = shutil.copy(
-        "config/EFK/AdvancedEFK_default.txt",
+        "config/EFK/default.txt",
         self.lineEdit_ProfilPZ.text() + "/mods/default.txt",
     )
     core.writeLog(
         self,
-        "EFK Enhanced",
-        f" Install Mods par defaut EFK Enhanced ({filePath})"
+        "EFK Mods",
+        f" Install Mods par defaut EFK ({filePath})"
     )
-
-
-def install_EFKStandard(self: QtWidgets) -> None:
-    self.label_alert.setVisible(False)
-    self.label_SignAlert.setVisible(False)
-    filePath = shutil.copy(
-        "config/EFK/StandardEFK_default.txt",
-        self.lineEdit_ProfilPZ.text() + "/mods/default.txt",
-    )
-    core.writeLog(
-        self,
-        "EFK Standard",
-        f" Install Mods par defaut EFK Standard ({filePath})"
-    )
-
 
 def verif_lien(self: QtWidgets, directory="", file="", icon=None) -> None:
     """Verification du fichier/repertoire passé en parametre
