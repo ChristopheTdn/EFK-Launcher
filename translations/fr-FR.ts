@@ -14,27 +14,27 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Pour desintaller EFK :&lt;br/&gt;&lt;/span&gt;1 - Quitter Project Zomboid&lt;br/&gt;2 - Se Désabonner à la collection Steam EFK&lt;br/&gt;&lt;/span&gt;3 - Cliquer sur &lt;span style=&quot; font-weight:700;&quot;&gt;Desinstaller EFK&lt;br/&gt;&lt;/span&gt;4 - Une fois le EFK Launcher Fermé&lt;br/&gt;Supprimer votre repertoire local du &lt;span style=&quot; font-weight:700;&quot;&gt;EFK Launcher&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="671"/>
+        <location filename="../principale.ui" line="639"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:700;&quot;&gt;ESCAPE FROM&lt;br/&gt;KNOX COUNTY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="802"/>
+        <location filename="../principale.ui" line="770"/>
         <source>La collection de mods EFKC</source>
         <translation>La collection de mods EFKC</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="805"/>
+        <location filename="../principale.ui" line="773"/>
         <source>Abonnements à la collection STEAM ESCAPE FROM KNOX COUNTY</source>
         <translation>Abonnements à la collection STEAM  : ESCAPE FROM KNOX COUNTY</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="885"/>
+        <location filename="../principale.ui" line="853"/>
         <source>EFK Enhanced (High CPU Power)</source>
         <translation>Pré-installation des Mods EFK</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="923"/>
+        <location filename="../principale.ui" line="891"/>
         <source>No Modif (For Modders Only)</source>
         <translation>No Modif (pour les Moddeurs )</translation>
     </message>
@@ -75,7 +75,7 @@
     </message>
     <message>
         <location filename="../principale.ui" line="168"/>
-        <location filename="../principale.ui" line="959"/>
+        <location filename="../principale.ui" line="927"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise a jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise à jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -120,151 +120,131 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="978"/>
+        <location filename="../principale.ui" line="946"/>
         <source>Langage</source>
         <translation>Langage</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1002"/>
+        <location filename="../principale.ui" line="970"/>
         <source>French</source>
         <translation>Français</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1011"/>
+        <location filename="../principale.ui" line="979"/>
         <source>China</source>
         <translation>Chinois</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1020"/>
+        <location filename="../principale.ui" line="988"/>
         <source>English</source>
         <translation>Anglais</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1047"/>
+        <location filename="../principale.ui" line="1015"/>
         <source>Spanish</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1066"/>
+        <location filename="../principale.ui" line="1034"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt; font-weight:700; color:#aa0000;&quot;&gt;IMPORTANT : &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic; color:#000000;&quot;&gt;Subscribing to this collection &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic; text-decoration: underline; color:#000000;&quot;&gt;is a must to play EFK.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt ; font-weight:700 ; color:#aa0000 ;&quot;&gt;IMPORTANT : &lt;/span&gt;&lt;span style=&quot; font-size:8pt ; font-style:italic ; color:#000000 ;&quot;&gt;L&apos;abonnement à cette collection &lt;/span&gt;&lt;span style=&quot; font-size:8pt ; font-style:italic ; text-decoration : underline ; color:#000000 ;&quot;&gt;est indispensable pour jouer à EFK.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1029"/>
+        <location filename="../principale.ui" line="997"/>
         <source>Korean</source>
         <translation>Coréen</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="1038"/>
+        <location filename="../principale.ui" line="1006"/>
         <source>Russian</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="709"/>
+        <location filename="../principale.ui" line="677"/>
         <source>Chaine Twitch de Tancred terror</source>
         <translation>Chaine Twitch de Tancred terror</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="735"/>
+        <location filename="../principale.ui" line="703"/>
         <source>Chaine YOUTUBE de Tancred terror</source>
         <translation>YOUTUBE de Tancred terror</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="767"/>
+        <location filename="../principale.ui" line="735"/>
         <source>DISCORD de Tancred terror</source>
         <translation>DISCORD de Tancred terror</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="837"/>
+        <location filename="../principale.ui" line="805"/>
         <source>RUN PZ</source>
         <translation>Lancer PZ</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="860"/>
+        <location filename="../principale.ui" line="828"/>
         <source>Mode DEBUG</source>
         <translation>Mode Debug</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="873"/>
+        <location filename="../principale.ui" line="841"/>
         <source>EFK Performances impact</source>
         <translation>EFK Performances impact</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="625"/>
+        <location filename="../principale.ui" line="606"/>
         <source>Profil PZ :</source>
         <translation>Profil PZ :</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="641"/>
+        <location filename="../principale.ui" line="622"/>
         <source>Sauvegardes :</source>
         <translation>Sauvegarde :</translation>
     </message>
     <message>
-        <location filename="../principale.ui" line="657"/>
         <source>choisir</source>
-        <translation>Localiser</translation>
+        <translation type="vanished">Localiser</translation>
     </message>
 </context>
 <context>
     <name>Updater_MainWindow</name>
     <message>
-        <location filename="../updater.ui" line="38"/>
-        <location filename="../updater.ui" line="80"/>
         <source>EFK Launcher Updater</source>
-        <translation>EFK Launcher Updater</translation>
+        <translation type="vanished">EFK Launcher Updater</translation>
     </message>
     <message>
-        <location filename="../updater.ui" line="101"/>
         <source>Update</source>
-        <translation>Mise à jour</translation>
+        <translation type="vanished">Mise à jour</translation>
     </message>
     <message>
-        <location filename="../updater.py" line="45"/>
-        <location filename="../updater.py" line="53"/>
         <source>ERROR_Server_Offline</source>
-        <translation>ERREUR : Le serveur n&apos;est pas joignable</translation>
+        <translation type="vanished">ERREUR : Le serveur n&apos;est pas joignable</translation>
     </message>
     <message>
-        <location filename="../EFK/reseau.py" line="39"/>
-        <location filename="../EFK/reseau.py" line="113"/>
         <source>Create_Temp_Directory</source>
-        <translation>Création répertoire temporaire</translation>
+        <translation type="vanished">Création répertoire temporaire</translation>
     </message>
     <message>
-        <location filename="../EFK/reseau.py" line="47"/>
-        <location filename="../EFK/reseau.py" line="118"/>
         <source>Download_Archive</source>
-        <translation>Téléchargement fichiers</translation>
+        <translation type="vanished">Téléchargement fichiers</translation>
     </message>
     <message>
-        <location filename="../EFK/reseau.py" line="57"/>
-        <location filename="../EFK/reseau.py" line="125"/>
         <source>ERROR_Quit_LaunchAgain</source>
-        <translation>ERREUR : relancer EFK Launcher</translation>
+        <translation type="vanished">ERREUR : relancer EFK Launcher</translation>
     </message>
     <message>
-        <location filename="../EFK/reseau.py" line="65"/>
-        <location filename="../EFK/reseau.py" line="130"/>
         <source>Unzip_Archive</source>
-        <translation>Décompresse le fichier archive</translation>
+        <translation type="vanished">Décompresse le fichier archive</translation>
     </message>
     <message>
-        <location filename="../EFK/reseau.py" line="71"/>
-        <location filename="../EFK/reseau.py" line="133"/>
         <source>ERROR_Unzip_Archive</source>
-        <translation>ERREUR : décompression archive impossible</translation>
+        <translation type="vanished">ERREUR : décompression archive impossible</translation>
     </message>
     <message>
-        <location filename="../EFK/reseau.py" line="78"/>
-        <location filename="../EFK/reseau.py" line="137"/>
         <source>Clean_Temp_Files</source>
-        <translation>Nettoyage fichiers temporaires</translation>
+        <translation type="vanished">Nettoyage fichiers temporaires</translation>
     </message>
     <message>
-        <location filename="../EFK/reseau.py" line="84"/>
-        <location filename="../EFK/reseau.py" line="140"/>
         <source>ERROR_Clean_Files</source>
-        <translation>ERREUR : impossible d&apos;effacer fichier temporaire</translation>
+        <translation type="vanished">ERREUR : impossible d&apos;effacer fichier temporaire</translation>
     </message>
 </context>
 </TS>

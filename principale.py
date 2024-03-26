@@ -83,16 +83,6 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         EFK.core.runPz(self)
 
     @Slot()
-    def on_pushButton_SetRepertoireSaveGame_clicked(self):
-        """
-        QT Evenement :
-        Evenement appelé lors du clique sur le bouton pour choisir
-        le repertoire de sauvegarde
-        """
-        EFK.sounds.play(self)
-        EFK.disk.get_saveGameDir(self)
-
-    @Slot()
     def on_comboBox_Translate_currentIndexChanged(self):
         langage = "en-EN"
         if self.comboBox_Translate.currentIndex() == 0:

@@ -538,7 +538,7 @@
       <rect>
        <x>94</x>
        <y>22</y>
-       <width>351</width>
+       <width>406</width>
        <height>21</height>
       </rect>
      </property>
@@ -552,31 +552,12 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_IconStatus_RepertoireSaveGame">
-     <property name="geometry">
-      <rect>
-       <x>454</x>
-       <y>42</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string notr="true"/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="ressources.qrc">:/gfx/gfx/supprimer.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="lineEdit_RepertoireSaveGame">
      <property name="geometry">
       <rect>
        <x>94</x>
        <y>47</y>
-       <width>351</width>
+       <width>405</width>
        <height>21</height>
       </rect>
      </property>
@@ -596,7 +577,7 @@
     <widget class="QLabel" name="label_IconStatus_ProfilPZ">
      <property name="geometry">
       <rect>
-       <x>454</x>
+       <x>513</x>
        <y>17</y>
        <width>31</width>
        <height>31</height>
@@ -642,19 +623,6 @@
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_SetRepertoireSaveGame">
-     <property name="geometry">
-      <rect>
-       <x>494</x>
-       <y>47</y>
-       <width>71</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>choisir</string>
      </property>
     </widget>
    </widget>

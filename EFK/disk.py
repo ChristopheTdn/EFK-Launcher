@@ -132,8 +132,6 @@ def effaceModManagerProfil(self):
 
 
 def install_EFKMods(self: QtWidgets) -> None:
-    self.label_alert.setVisible(False)
-    self.label_SignAlert.setVisible(False)
     filePath = shutil.copy(
         "config/EFK/default.txt",
         self.lineEdit_ProfilPZ.text() + "/mods/default.txt",
@@ -141,7 +139,7 @@ def install_EFKMods(self: QtWidgets) -> None:
     core.writeLog(
         self,
         "EFK Mods",
-        f" Install Mods par defaut EFK ({filePath})"
+        f" Pré install EFK Mods ({filePath})"
     )
 
 def verif_lien(self: QtWidgets, directory="", file="", icon=None) -> None:
@@ -200,14 +198,6 @@ def delFile(self: QtWidgets) -> None:
 
     if not (
         self.lineEdit_RepertoireSaveGame.text() != ""
-        and disk.verif_lien(
-            self,
-            directory=os.path.join(
-                self.lineEdit_ProfilPZ.text() + "/Saves/Sandbox",
-                self.lineEdit_RepertoireSaveGame.text(),
-            ),
-            icon=self.label_IconStatus_RepertoireSaveGame,
-        )
     ):
         core.writeLog(
             self,
