@@ -141,6 +141,16 @@ def install_EFKMods(self: QtWidgets) -> None:
         "EFK Mods",
         f" Pré install EFK Mods ({filePath})"
     )
+    filePath = shutil.copy(
+        "config/EFK/SurvivorOptions.lua",
+        self.lineEdit_ProfilPZ.text() + "/Lua/SurvivorOptions.lua",
+    )
+    core.writeLog(
+        self,
+        "EFK Mods",
+        f" Pré install EFK Mods ({filePath})"
+    )
+
 
 def verif_lien(self: QtWidgets, directory="", file="", icon=None) -> None:
     """Verification du fichier/repertoire passé en parametre
