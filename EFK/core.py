@@ -60,8 +60,8 @@ def init_application(self):
         versionExe = fichier.readline().rstrip()
 
     if versionOnline != "" and versionOnline != versionExe:
-        self.label_UpdateAvailable.setVisible(True)
-        self.label_UpdateAvailable_2.setVisible(True)
+        # Force Auto Update 
+        launch_EFK_launcher_updater(self)
 
     # Affiche le numero de version
     with open("config/EFKLauncher/version.txt", "r") as fichier:

@@ -67,6 +67,10 @@ v2.00 : 2024/03/26 MAJOR UPGRADE VERSION
 v2.01 : 2024/03/27 
     - [FIX] review SurvivorOptions.lua copy
 
+V2.02 : 2024/03/28
+    - [CHANGE] Force Auto Update when version is not the same
+
+
 
 
 
