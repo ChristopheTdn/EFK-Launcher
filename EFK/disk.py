@@ -227,6 +227,7 @@ def delFile(self: QtWidgets) -> None:
         )
         self.tabWidget_FenetrePrincipale.setCurrentIndex(1)
     log = ""
+    nbrFile = 0
     if self.lineEdit_RepertoireSaveGame.text() != "":
         repertoire = os.path.join(
             self.lineEdit_ProfilPZ.text() + "/Saves/Sandbox/",
@@ -242,7 +243,7 @@ def delFile(self: QtWidgets) -> None:
                     if os.path.isfile(fichier):
                         lien = Path(fichier)
                         lien.unlink()
-                        log += f"<strong>Delfile</strong> : {file} deleted<br>"
+                        nbrFile += 1    
                     else:
                         core.writeLog(
                             self,
@@ -263,5 +264,6 @@ def delFile(self: QtWidgets) -> None:
             "DelFile",
             " ERROR > Save Dir is not validate for WIPE MAP process."
         )
+    log += f"<strong>Delfile</strong> : {nbrFile} deleted<br>"
     core.writeLog(self, "Delfile", log)
     core.writeLog(self, "DelFile", "Process WIPE MAP ending...")
