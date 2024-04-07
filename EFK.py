@@ -39,6 +39,8 @@ for arg in sys.argv:
     if arg.lower() == "-updater" or arg == "-u":
         updater = True
 
+
+
 # creation fichier config si rien n existe
 EFK.core.create_config()
 with open("config/EFKLauncher/config.json", "r") as fichier:

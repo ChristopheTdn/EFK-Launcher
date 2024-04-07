@@ -59,6 +59,8 @@ def init_application(self):
     with open("config/EFKLauncher/version.txt") as fichier:
         versionExe = fichier.readline().rstrip()
 
+
+
     if versionOnline != "" and versionOnline != versionExe:
         # Force Auto Update 
         launch_EFK_launcher_updater(self)
