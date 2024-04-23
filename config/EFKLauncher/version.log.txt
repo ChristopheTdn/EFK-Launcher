@@ -70,6 +70,9 @@ v2.01 : 2024/03/27
 V2.02 : 2024/03/28
     - [CHANGE] Force Auto Update when version is not the same
 
+v 2.10 : 2024/04/23
+    - [CHANGE] version Release Update  C44.01
+    
 
 
 

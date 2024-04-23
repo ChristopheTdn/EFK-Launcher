@@ -24,6 +24,7 @@ mods
 	mod = ssr-core,
 	mod = Arsenal(26)GunFighter[MAIN MOD 2.0],
 	mod = SubparSurvivors,
+	mod = EFKtravel,
 	mod = EQUIPMENT_UI,
 	mod = SecretZ_Core_v2,
 	mod = NVAPI,
@@ -102,15 +103,15 @@ mods
 	mod = MiniHealthPanel,
 	mod = errorMagnifier,
 	mod = GunFighter_Radial_Menu,
+	mod = WaterGoesBad,
+	mod = V_SlowerSprinters_NewRunners,
 	mod = MoreDescriptionForTraits4166,
-	mod = EFKtravel,
 	mod = EFK_CORE,
 	mod = EFK_PROPS,
 	mod = EFK_HIDEOUT,
 	mod = EFK_QUESTS,
 	mod = EFK_SCAVS,
 	mod = EFK_FIX,
-	mod = EFK_TRAD_PACK,
 }
 
 maps
