@@ -73,6 +73,8 @@ V2.02 : 2024/03/28
 v 2.10 : 2024/04/23
     - [CHANGE] version Release Update  C44.01
     
+v 2.11 : 2024/04/24 
+    - [FIX] Defaut.txt not calling tradPack and some other mod
 
 
 

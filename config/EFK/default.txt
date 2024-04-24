@@ -104,14 +104,17 @@ mods
 	mod = errorMagnifier,
 	mod = GunFighter_Radial_Menu,
 	mod = WaterGoesBad,
+	mod = UNSet,
+	mod = zReArmorPackBYKK,
 	mod = V_SlowerSprinters_NewRunners,
 	mod = MoreDescriptionForTraits4166,
 	mod = EFK_CORE,
+	mod = EFK_FIX,
 	mod = EFK_PROPS,
 	mod = EFK_HIDEOUT,
 	mod = EFK_QUESTS,
 	mod = EFK_SCAVS,
-	mod = EFK_FIX,
+	mod = EFK_TRAD_PACK,
 }
 
 maps
