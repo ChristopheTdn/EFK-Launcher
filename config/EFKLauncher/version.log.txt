@@ -76,6 +76,10 @@ v 2.10 : 2024/04/23
 v 2.11 : 2024/04/24 
     - [FIX] Defaut.txt not calling tradPack and some other mod
 
+v2.12 : 2024/04/25
+    -  [ADD] Some Mods in defaut.txt
+    
+
 
 
 
