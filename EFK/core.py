@@ -28,6 +28,7 @@ import EFK.launchsteam as launchsteam
 import EFK.disk as disk
 import EFK.reseau as reseau
 from datetime import datetime
+from pathlib import Path
 
 
 def init_application(self):
@@ -149,17 +150,20 @@ def setFlags(self) -> None:
 
     # Preset Difficulty
     shutil.copy(
-        "config/difficulty/EFK Easy.cfg",
-        self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/",
-    )
-    shutil.copy(
         "config/difficulty/EFK STD.cfg",
         self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/",
     )
-    shutil.copy(
-        "config/difficulty/EFK Hard.cfg",
-        self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/",
-    )
+
+    # delete obsolete EFK Easy.cfg and EFK Hard.cfg
+    file = self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/EFK Easy.cfg"
+    if os.path.isfile(file):
+            lien = Path(file)
+            lien.unlink()
+    file = self.lineEdit_ProfilPZ.text() + "/Sandbox Presets/EFK Hard.cfg"
+    if os.path.isfile(file):
+            lien = Path(file)
+            lien.unlink()
+        
 
 
 

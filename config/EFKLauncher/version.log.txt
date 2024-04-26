@@ -78,6 +78,9 @@ v 2.11 : 2024/04/24
 
 v2.12 : 2024/04/25
     -  [ADD] Some Mods in defaut.txt
+
+v2.13 : 2024/04/26
+    -  [CHANGE] delete obsolete EFK Easy.cfg and EFK Hard.cfg
     
 
 
