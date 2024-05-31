@@ -96,7 +96,7 @@ ZombieConfig.RallyTravelDistance=50
 ZombieConfig.RallyGroupSeparation=15
 
 # How close members of a group stay to the group's leader.\nMinimum=1 Maximum=10 Default=3
-ZombieConfig.RallyGroupRadius=5
+ZombieConfig.RallyGroupRadius=7
 
 # Changing this sets the \"Population Multiplier\" advanced option.\nDefault=Normal
 Zombies=5
@@ -130,34 +130,34 @@ WaterShutModifier=14
 ElecShutModifier=14
 
 # Default=Rare (loot x 0.6)
-FoodLoot=4
+FoodLoot=5
 
 # Default=Rare (loot x 0.6)
-CannedFoodLoot=4
+CannedFoodLoot=5
 
 # Default=Rare (loot x 0.6)
-LiteratureLoot=4
+LiteratureLoot=5
 
 # Seeds, Nails, Saws, Fishing Rods, various tools, etc...\nDefault=Rare (loot x 0.6)
-SurvivalGearsLoot=4
+SurvivalGearsLoot=5
 
 # Default=Rare (loot x 0.6)
-MedicalLoot=4
+MedicalLoot=5
 
 # Default=Rare (loot x 0.6)
-WeaponLoot=4
+WeaponLoot=5
 
 # Default=Rare (loot x 0.6)
-RangedWeaponLoot=4
+RangedWeaponLoot=5
 
 # Default=Rare (loot x 0.6)
-AmmoLoot=4
+AmmoLoot=5
 
 # Default=Rare (loot x 0.6)
-MechanicsLoot=4
+MechanicsLoot=5
 
 # Everything else. Also affects foraging for all items in Town/Road zones.\nDefault=Rare (loot x 0.6)
-OtherLoot=4
+OtherLoot=5
 
 # Controls the global temperature.\nDefault=Normal
 Temperature=1
@@ -265,7 +265,7 @@ VehicleStoryChance=1
 ZoneStoryChance=1
 
 # Impacts on how often a looted map will have annotations marked on it by a deceased survivor.\nDefault=Sometimes
-AnnotatedMapChance=4
+AnnotatedMapChance=1
 
 # Adds free points during character creation.\nMinimum=-100 Maximum=100 Default=0
 CharacterFreePoints=0
@@ -286,7 +286,7 @@ InjurySeverity=2
 BoneFracture=true
 
 # How long before zombie bodies disappear.\nMinimum=-1,00 Maximum=2147483647,00 Default=216,00
-HoursForCorpseRemoval=216.0
+HoursForCorpseRemoval=-1.0
 
 # Governs impact that nearby decaying bodies has on the player's health and emotions.\nDefault=Normal
 DecayingCorpseHealthImpact=3
@@ -329,7 +329,7 @@ AllClothesUnlocked=false
 EnableTaintedWaterText=true
 
 # Governs how frequently cars are discovered on the map\nDefault=Low
-CarSpawnRate=4
+CarSpawnRate=1
 
 # Governs the chances of finding vehicles with gas in the tank.\nDefault=Low
 ChanceHasGas=1
@@ -1261,55 +1261,55 @@ A26.BoolSURammo=true
 # 
 # Find the balance that is right for you.
 # \nMinimum=1 Maximum=10 Default=2
-AZSZ.NumberOfZombiesPerSpawn=10
+AZSZ.NumberOfZombiesPerSpawn=2
 
 # Chance of spawning a zombie, checked once for EACH square , when loaded for the first time
 # If = 4, one zombie will spawn ever 25 tiles on average.
 # If = 50, one zombie will spawn every 2 tiles on average
 # \nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.DeepForestChance=0.01
+AZSZ.DeepForestChance=0.02
 
 # Chance of spawning a zombie, checked once for EACH square, when loaded for the first time
 # If = 4, one zombie will spawn ever 25 tiles on average.
 # If = 50, one zombie will spawn every 2 tiles on average
 # \nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.ForestChance=0.02
+AZSZ.ForestChance=0.04
 
 # Chance of spawning a zombie, checked once for EACH square, when loaded for the first time
 # If = 4, one zombie will spawn ever 25 tiles on average.
 # If = 50, one zombie will spawn every 2 tiles on average
 # \nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.VegitationChance=0.05
+AZSZ.VegitationChance=0.1
 
 # Chance of spawning a zombie, checked once for EACH square, when loaded for the first time
 # If = 4, one zombie will spawn ever 25 tiles on average.
 # If = 50, one zombie will spawn every 2 tiles on average
 # \nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.NavChance=0.2
+AZSZ.NavChance=0.3
 
 # Chance of spawning a zombie, checked once for EACH square, when loaded for the first time
 # If = 4, one zombie will spawn ever 25 tiles on average.
 # If = 50, one zombie will spawn every 2 tiles on average
 # \nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.TownZoneChance=0.4
+AZSZ.TownZoneChance=0.5
 
 # Chance of spawning a zombie, checked once for EACH square, when loaded for the first time
 # If = 4, one zombie will spawn ever 25 tiles on average.
 # If = 50, one zombie will spawn every 2 tiles on average
 # \nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.TrailerParkChance=0.2
+AZSZ.TrailerParkChance=0.3
 
 # Chance of spawning a zombie, checked once for EACH square, when loaded for the first time
 # If = 4, one zombie will spawn ever 25 tiles on average.
 # If = 50, one zombie will spawn every 2 tiles on average
 # \nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.FarmChance=0.1
+AZSZ.FarmChance=0.15
 
 # Chance of spawning a zombie, checked once for EACH square, when loaded for the first time
 # If = 4, one zombie will spawn ever 25 tiles on average.
 # If = 50, one zombie will spawn every 2 tiles on average
 # \nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.FarmLandChance=0.1
+AZSZ.FarmLandChance=0.15
 
 # Chance of spawning a zombie, checked once for EACH square, when loaded for the first time
 # If = 4, one zombie will spawn ever 25 tiles on average.
@@ -1317,11 +1317,11 @@ AZSZ.FarmLandChance=0.1
 # 
 # The new Ranch zone is coming in build 42, but you can find them around chicken coops and other animal stations in build 41,
 # as the devs have already started to map them. However, they most likely won't be mapped on custom modded maps.\nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.RanchChance=0.1
+AZSZ.RanchChance=0.15
 
 # In case a square doesn't have a zone, or if its zone has an unknown type. It can rarely happen on custom maps and specific parts of the vanilla map.
 # \nMinimum=0,00 Maximum=100,00 Default=0,00
-AZSZ.NoZoneChance=0.4
+AZSZ.NoZoneChance=0.5
 
 # Chance of spawning a zombie, checked once for each outside square. This value will be added to the corresponding zone chance.
 #  Example: If = Outside chance = 4 and Forest Chance = 4, the chance of spawning zombies in forests will be 8%.
@@ -1602,7 +1602,7 @@ TrueCrawl.RealisticEndurance=true
 TrueCrawl.CancelCrawlWhenSpotted=false
 
 # This value controls the zombie sight radius when player is crawling. It goes from 1(Extremely Small) to 20(Extremely Far). Default is 5 (Medium Radius). My recommendation is to keep between 5 - 10 to have a more immersive gameplay.\nMinimum=1 Maximum=20 Default=5
-TrueCrawl.ZombieRadius=5
+TrueCrawl.ZombieRadius=7
 
 # TRUE = With any GPS, you will have access to the interactive map (world map) or to your red position marker depending on the sandbox options, if FALSE = only the GPS equipped with a mini map will give you access to the world map or at your position marker.
 # 
@@ -1981,7 +1981,7 @@ MechanicsTablesMaxRolls=4
 OtherTablesMaxRolls=4
 
 # Fresh and non-perishable food.\nMinimum=0,00 Maximum=10,00 Default=1,00
-FoodLootMultiplier=0.7
+FoodLootMultiplier=1.0
 
 # Nonranged weapons of all kinds, except pens, forks and spoons.
 # Includes Sledgehammer. Also includes instruments and some cooking tools.\nMinimum=0,00 Maximum=10,00 Default=1,00
@@ -2001,7 +2001,7 @@ SurvivalGearLootMultiplier=1.0
 MechanicsLootMultiplier=1.0
 
 # Medicine, bandages, splint, needles, first aid kits...\nMinimum=0,00 Maximum=10,00 Default=1,00
-MedicalLootMultiplier=0.3
+MedicalLootMultiplier=1.0
 
 # Books and magazines\nMinimum=0,00 Maximum=10,00 Default=1,00
 LiteratureLootMultiplier=1.0
@@ -2240,12 +2240,12 @@ ImprovedProjectile.IPPJAimMinLimit=12
 # Decrease penalty from 'Crosshair Min Size Penalty' per Aiming Level
 # [Example] Crosshair Min Size Penalty = 15 & Decrease per Level = 5
 # -> No min size penalty at aiming level 3 (15 - 5 * 3 = 0)\nMinimum=0 Maximum=50 Default=4
-ImprovedProjectile.IPPJAimMinLimitLvl=4
+ImprovedProjectile.IPPJAimMinLimitLvl=2
 
 # When player's aiming level is less than option value, farther you aim, the larger minimum crosshair size
 # Penalty is affected by aiming level and max range of weapon
 # Even if you aim at the same distance, higher the weapon max range, lower the penalty\nDefault=< Aiming Lvl 4
-ImprovedProjectile.IPPJDistancePenalty=8
+ImprovedProjectile.IPPJDistancePenalty=1
 
 # Value of the max penalty of 'Aim Distance Penalty' option when aiming is 0 & aiming at max range
 # This decreases linearly according to aiming level\nMinimum=20 Maximum=80 Default=25

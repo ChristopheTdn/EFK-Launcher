@@ -67,6 +67,7 @@ v2.00 : 2024/03/26 MAJOR UPGRADE VERSION
 v2.01 : 2024/03/27 
     - [FIX] review SurvivorOptions.lua copy
 
+
 V2.02 : 2024/03/28
     - [CHANGE] Force Auto Update when version is not the same
 
@@ -82,7 +83,8 @@ v2.12 : 2024/04/25
 v2.13 : 2024/04/26
     -  [CHANGE] delete obsolete EFK Easy.cfg and EFK Hard.cfg
     
-
+v2.50 : 2024/05/31
+    - Release for EFK v. C44.02
 
 
 
