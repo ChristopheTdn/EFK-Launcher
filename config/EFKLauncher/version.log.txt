@@ -1,0 +1,90 @@
+v1.01 :
+ - initial release
+
+v1.50 : Introduce a bug in update systeme
+    - Multiples Corrections de Bug interface
+    - Ajout prise en charge Linux
+    - Ajout systeme de sécurité pour eviter d'appuyer par erreur sur le WIPE MAP Bouton
+    - Correction traduction EN, CN
+    - Ajout tab A propos
+    - migration de PYQT vers Pyside6
+
+V 1.61 :
+    - [FIX] fix Upgrade process 
+    - [ADD] Spanish Language support (Thx @ElPacsWTF )
+    - [ADD] API Steam to launch PZ :
+        no more need to locate PZ executable..... The launcher must find the Steam exe  file....
+    - [CHANGE] some change in interface for Linux version.
+V 1.62 : 2023/12/18
+    - [CHANGE] EFK Mod Pack Link in the interface point directly in Steam workshop Interface
+
+v 1.66 : 2023/12/26
+    - [FIX] Unlock system WIPEMAP enable/disable
+    - [FIX] Wipemap Info Feedback error in EFK Launcher Log windows
+    - [FIX] Selection steam.exe or steam (linux environnement)
+    - [ADD] System AUTO for the WIPEMAP if a file WIPEMAP.txt is find in Zomboid\Sandbox Presets
+    - [ADD] some commentary in code
+    - [CHANGE] Icon EFK Launcher
+    - [CHANGE] update some translation (es, en, fr)
+    - [CHANGE] Use Nuika compiler for EFK Launcher.exe
+
+v1.67 : 2023/12/28
+    - [FIX] new compil method with Pyinstaller (Windows Env)
+
+v1.68 : 2024/01/06
+    - [ADD] Korean translation (thx t3qquq)
+v1.69 : 
+    - [CHANGE] Typo revision in Korean Translation (t3qquq)
+v1.70 : 2024/01/08
+    - [ADD] EFK Updater Interface Translation
+    - [CHANGE] uniformisation variable name in translation interface
+    - [FIX] clean some code in reseau.py
+    - [FIX] some label size in EFK Updater UI
+
+v1.71 : 2024/01/11
+    - [FIX] Use user config choice in EFK Updater Translation 
+    - [CHANGE] Process validation and log for autoWIPEMAP
+v1.72 : 2024/01/24
+    - [ADD] EFK Launcher can get SAVE Game Dir from Lua script
+    - [CHANGE] AutoWIPEmap Process
+v1.73 : 2024/02/14
+    - [ADD] Woosh sound when wipemap and autowipe.
+v1.74 : 2024/02/15
+    - [FIX] Recompil Pyinstaller source from 6.4.0 version to avoid false positive trojan detection.
+v1.75 : 2024/02/16
+    - [FIX] update MOD List 
+v1.76 : 2024/02/21
+    - [ADD] add Russian Traduction (thx to Shishail)
+    - [FIX] some error in french traduction
+v1.77 : 2024/02/23
+    - [CHANGE] use COMBOList to select language
+    - [CHANGE] Use new Sound system (pysound)
+    - [CHANGE] new Whoosh sound effect
+
+v2.00 : 2024/03/26 MAJOR UPGRADE VERSION
+    - [CHANGE] Total revision for C44 release
+
+v2.01 : 2024/03/27 
+    - [FIX] review SurvivorOptions.lua copy
+
+
+V2.02 : 2024/03/28
+    - [CHANGE] Force Auto Update when version is not the same
+
+v 2.10 : 2024/04/23
+    - [CHANGE] version Release Update  C44.01
+    
+v 2.11 : 2024/04/24 
+    - [FIX] Defaut.txt not calling tradPack and some other mod
+
+v2.12 : 2024/04/25
+    -  [ADD] Some Mods in defaut.txt
+
+v2.13 : 2024/04/26
+    -  [CHANGE] delete obsolete EFK Easy.cfg and EFK Hard.cfg
+    
+v2.50 : 2024/05/31
+    - Release for EFK v. C44.02
+
+
+
