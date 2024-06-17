@@ -1,6 +1,7 @@
 /build
 /dist
 /EFK_env
+/EFK_Env
 /__pycache__
 config/EFKLauncher/config.json
 /EFK/__pycache__
