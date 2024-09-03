@@ -89,5 +89,8 @@ v2.50 : 2024/05/31
 v2.51 : 2024/06/18
     - Maj Modlist
 
+v2.70 : 2024/09/03
+    - [CHANGE] version Release Update v C44.05
+
 
 
