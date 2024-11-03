@@ -62,7 +62,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab_Log">
      <attribute name="title">
@@ -152,7 +152,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/supprimer.png&quot; width=&quot;22&quot;/&gt;&lt;span style=&quot; font-size:12pt; vertical-align:super;&quot;&gt;Serveur MAJ non trouvé&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignCenter</set>
+        <set>Qt::AlignmentFlag::AlignCenter</set>
        </property>
       </widget>
       <widget class="QLabel" name="label_UpdateAvailable">
@@ -168,10 +168,10 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise a jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="textFormat">
-        <enum>Qt::RichText</enum>
+        <enum>Qt::TextFormat::RichText</enum>
        </property>
        <property name="alignment">
-        <set>Qt::AlignCenter</set>
+        <set>Qt::AlignmentFlag::AlignCenter</set>
        </property>
       </widget>
      </widget>
@@ -568,7 +568,7 @@
       </font>
      </property>
      <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -606,7 +606,7 @@
       <string>Profil PZ :</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -622,7 +622,7 @@
       <string>Sauvegardes :</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
      </property>
     </widget>
    </widget>
@@ -749,6 +749,9 @@
     </property>
    </widget>
    <widget class="QCommandLinkButton" name="commandLinkButton_STEAM">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>17</x>
@@ -768,6 +771,9 @@
     </property>
     <property name="toolTip">
      <string>La collection de mods EFKC</string>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
     </property>
     <property name="text">
      <string>Abonnements à la collection STEAM ESCAPE FROM KNOX COUNTY</string>
@@ -911,7 +917,7 @@
      <string notr="true">v 0.0.0000</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_UpdateAvailable_2">
@@ -927,10 +933,10 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/gfx/gfx/danger.png&quot; width=&quot;20&quot;/&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; color:#ff5500; vertical-align:super;&quot;&gt;Mise a jour disponible&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::RichText</enum>
+     <enum>Qt::TextFormat::RichText</enum>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox_langage">
@@ -1034,7 +1040,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:8pt; font-weight:700; color:#aa0000;&quot;&gt;IMPORTANT : &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic; color:#000000;&quot;&gt;Subscribing to this collection &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-style:italic; text-decoration: underline; color:#000000;&quot;&gt;is a must to play EFK.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <zorder>label_TooltipSteamCollection</zorder>
+   <zorder>commandLinkButton_STEAM</zorder>
    <zorder>tabWidget_FenetrePrincipale</zorder>
    <zorder>groupBox_UserDir</zorder>
    <zorder>label_Titre</zorder>
@@ -1042,13 +1048,13 @@
    <zorder>commandLinkButton_Twitch</zorder>
    <zorder>commandLinkButton_Youtube</zorder>
    <zorder>commandLinkButton_Discord</zorder>
-   <zorder>commandLinkButton_STEAM</zorder>
    <zorder>pushButton_RunPZ</zorder>
    <zorder>checkBox_DebugMode</zorder>
    <zorder>groupBox_EFKEnhanced</zorder>
    <zorder>label_version</zorder>
    <zorder>label_UpdateAvailable_2</zorder>
    <zorder>groupBox_langage</zorder>
+   <zorder>label_TooltipSteamCollection</zorder>
   </widget>
  </widget>
  <resources>
