@@ -95,5 +95,8 @@ v2.70 : 2024/09/03
 v2.80 : 2024/11/02
     - [CHANGE] version Release Update v C44.06?
 
+v2.81 : 2024/11/14
+    - [CHANGE] Maj List Mod
+
 
 
