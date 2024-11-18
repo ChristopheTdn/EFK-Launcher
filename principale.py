@@ -40,7 +40,7 @@ class Fenetre_Principale(QMainWindow, Ui_Fenetre_Principale):
         super().__init__(parent)
         timer = QTimer(self)
         timer.timeout.connect(self.TestWipeMapFile)
-        timer.start(15000)  # toute les x secondes * 1000
+        timer.start(10000)  # toutes les x secondes * 1000
         self.translator = QTranslator()
         self.setupUi(self)
         EFK.core.init_application(self)
