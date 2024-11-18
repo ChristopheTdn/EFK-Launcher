@@ -252,7 +252,7 @@ class Ui_Fenetre_Principale(object):
         self.commandLinkButton_STEAM = QCommandLinkButton(self.centralWidget)
         self.commandLinkButton_STEAM.setObjectName(u"commandLinkButton_STEAM")
         self.commandLinkButton_STEAM.setEnabled(True)
-        self.commandLinkButton_STEAM.setGeometry(QRect(17, 102, 581, 52))
+        self.commandLinkButton_STEAM.setGeometry(QRect(17, 102, 581, 57))
         font6 = QFont()
         font6.setFamilies([u"Segoe UI"])
         font6.setPointSize(11)
@@ -260,7 +260,8 @@ class Ui_Fenetre_Principale(object):
         font6.setItalic(True)
         font6.setKerning(False)
         self.commandLinkButton_STEAM.setFont(font6)
-        self.commandLinkButton_STEAM.setAutoFillBackground(True)
+        self.commandLinkButton_STEAM.setAutoFillBackground(False)
+        self.commandLinkButton_STEAM.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));")
         icon6 = QIcon()
         icon6.addFile(u":/gfx/gfx/Steam_Icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.commandLinkButton_STEAM.setIcon(icon6)
@@ -338,7 +339,7 @@ class Ui_Fenetre_Principale(object):
         self.comboBox_Translate.setMaxVisibleItems(6)
         self.label_TooltipSteamCollection = QLabel(self.centralWidget)
         self.label_TooltipSteamCollection.setObjectName(u"label_TooltipSteamCollection")
-        self.label_TooltipSteamCollection.setGeometry(QRect(105, 143, 447, 16))
+        self.label_TooltipSteamCollection.setGeometry(QRect(100, 142, 447, 16))
         Fenetre_Principale.setCentralWidget(self.centralWidget)
         self.commandLinkButton_STEAM.raise_()
         self.tabWidget_FenetrePrincipale.raise_()
@@ -358,7 +359,7 @@ class Ui_Fenetre_Principale(object):
 
         self.retranslateUi(Fenetre_Principale)
 
-        self.tabWidget_FenetrePrincipale.setCurrentIndex(2)
+        self.tabWidget_FenetrePrincipale.setCurrentIndex(0)
         self.comboBox_Translate.setCurrentIndex(0)
 
 

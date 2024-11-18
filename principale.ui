@@ -62,7 +62,7 @@
      <string/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_Log">
      <attribute name="title">
@@ -687,11 +687,17 @@
    <widget class="QCommandLinkButton" name="commandLinkButton_Youtube">
     <property name="geometry">
      <rect>
-      <x>125</x>
+      <x>130</x>
       <y>70</y>
-      <width>41</width>
-      <height>41</height>
+      <width>36</width>
+      <height>34</height>
      </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
     </property>
     <property name="font">
      <font>
@@ -719,10 +725,10 @@
    <widget class="QCommandLinkButton" name="commandLinkButton_Discord">
     <property name="geometry">
      <rect>
-      <x>165</x>
+      <x>167</x>
       <y>70</y>
-      <width>41</width>
-      <height>41</height>
+      <width>39</width>
+      <height>36</height>
      </rect>
     </property>
     <property name="font">
@@ -733,6 +739,9 @@
     </property>
     <property name="toolTip">
      <string>DISCORD de Tancred terror</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string notr="true"/>
@@ -757,7 +766,7 @@
       <x>17</x>
       <y>102</y>
       <width>581</width>
-      <height>52</height>
+      <height>57</height>
      </rect>
     </property>
     <property name="font">
@@ -773,7 +782,10 @@
      <string>La collection de mods EFKC</string>
     </property>
     <property name="autoFillBackground">
-     <bool>true</bool>
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));</string>
     </property>
     <property name="text">
      <string>Abonnements à la collection STEAM ESCAPE FROM KNOX COUNTY</string>
@@ -1030,8 +1042,8 @@
    <widget class="QLabel" name="label_TooltipSteamCollection">
     <property name="geometry">
      <rect>
-      <x>105</x>
-      <y>143</y>
+      <x>100</x>
+      <y>142</y>
       <width>447</width>
       <height>16</height>
      </rect>
