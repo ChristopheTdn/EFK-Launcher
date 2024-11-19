@@ -102,5 +102,6 @@ v2.82 : 2024/11/18
     - [FIX] Background appareance with link about Steam Collection
     - [CHANGE] Test wipemap file every 10 secondes
 
-
+2.90 : 2024/11/19
+    - [CHANGE] Maj List Mod
 
