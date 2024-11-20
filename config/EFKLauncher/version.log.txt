@@ -105,3 +105,5 @@ v2.82 : 2024/11/18
 2.90 : 2024/11/19
     - [CHANGE] Maj List Mod
 
+2.91 : 
+    -[FIX] Beaten treat bug in Modlist
